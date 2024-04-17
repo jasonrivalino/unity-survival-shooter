@@ -1,0 +1,296 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.21f1 (bf09ca542b87) revision 12519882'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 28356 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\unity-hub\2022.3.21f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/tubes-unity-afg/if3210-2024-unity-afg
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50719
+Successfully changed project path to: D:/tubes-unity-afg/if3210-2024-unity-afg
+D:/tubes-unity-afg/if3210-2024-unity-afg
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [26836] Host "[IP] 192.168.18.44 [Port] 0 [Flags] 2 [Guid] 2687364961 [EditorId] 2687364961 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-MKLV2BI3) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [26836] Host "[IP] 192.168.18.44 [Port] 0 [Flags] 2 [Guid] 2687364961 [EditorId] 2687364961 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-MKLV2BI3) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
+Refreshing native plugins compatible for Editor in 6.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.21f1 (bf09ca542b87)
+[Subsystems] Discovering subsystems at path D:/unity-hub/2022.3.21f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/tubes-unity-afg/if3210-2024-unity-afg/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3050 Laptop GPU (ID=0x25e2)
+    Vendor:   NVIDIA
+    VRAM:     3977 MB
+    Driver:   31.0.15.3227
+Initialize mono
+Mono path[0] = 'D:/unity-hub/2022.3.21f1/Editor/Data/Managed'
+Mono path[1] = 'D:/unity-hub/2022.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/unity-hub/2022.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56364
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/unity-hub/2022.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002684 seconds.
+- Loaded All Assemblies, in  0.351 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.319 seconds
+Domain Reload Profiling: 670ms
+	BeginReloadAssembly (121ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (130ms)
+		LoadAssemblies (120ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (128ms)
+			TypeCache.Refresh (126ms)
+				TypeCache.ScanAssembly (114ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (319ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (250ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (155ms)
+			ProcessInitializeOnLoadMethodAttributes (75ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.691 seconds
+Refreshing native plugins compatible for Editor in 1.83 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.454 seconds
+Domain Reload Profiling: 1146ms
+	BeginReloadAssembly (135ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (482ms)
+		LoadAssemblies (401ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (155ms)
+			TypeCache.Refresh (137ms)
+				TypeCache.ScanAssembly (124ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (455ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (330ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (45ms)
+			ProcessInitializeOnLoadAttributes (260ms)
+			ProcessInitializeOnLoadMethodAttributes (17ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3202 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.3 KB). Loaded Objects now: 3665.
+Memory consumption went from 124.1 MB to 124.0 MB.
+Total: 3.674400 ms (FindLiveObjects: 0.333300 ms CreateObjectMapping: 0.125300 ms MarkObjects: 3.049000 ms  DeleteObjects: 0.165300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/MobileInput.cs:  -> 094eccf16dcee9e537a49331f8b7fb21
+  custom:scripting/monoscript/fileName/CinematicController.cs:  -> 9b057fbc96b4588cde21915543ce8586
+  custom:scripting/monoscript/fileName/GrenadeManager.cs:  -> 417247388b87763d5d59f93877bc368e
+  custom:scripting/monoscript/fileName/MixLevels.cs:  -> 8552bf539f46dcc2f30866b0681737b4
+  custom:scripting/monoscript/fileName/FaerieHappy.cs:  -> 9cd064292411b44e371f2c405d3be90c
+  custom:scripting/monoscript/fileName/CrossPlatformInputManager.cs:  -> ebb6941962551b9b9d144f9072bfd55e
+  custom:scripting/monoscript/fileName/VignetteModel.cs:  -> ab6733272f937ac0155aab47b4a8e58e
+  custom:scripting/monoscript/fileName/EyeAdaptationModel.cs:  -> 5bcc92c7d981d480ed07d6af7dd1a959
+  custom:scripting/monoscript/fileName/GetSetAttribute.cs:  -> b786c1938e0c0f5ecaf463807c2d7653
+  custom:scripting/monoscript/fileName/PostProcessingContext.cs:  -> be8a0bc1565c6324b1fd40a33f66279b
+  custom:scripting/monoscript/fileName/PausibleObject.cs:  -> b9f722930206727becf17f410f25867c
+  custom:scripting/monoscript/fileName/AsyncLoad.cs:  -> f35bff15449f85f7f3ae0cbb7c48cd8a
+  custom:scripting/monoscript/fileName/PoolManager.cs:  -> 79304122961842ef5d500d5f04a44855
+  custom:scripting/monoscript/fileName/EnemyHealth.cs:  -> 9196260127df3b25ee6d413bd79df6bb
+  custom:scripting/monoscript/fileName/EyeAdaptationComponent.cs:  -> 0cb2aaf8cdc20c0baee2205168cbc73c
+  custom:scripting/monoscript/fileName/FxaaComponent.cs:  -> 9d1fd3efb92e1fef6fd176ee45003f08
+  custom:scripting/monoscript/fileName/LevelManager.cs:  -> b1375e13f485515724bd4cd068af840e
+  custom:scripting/monoscript/fileName/DitheringModel.cs:  -> fa99c50231ddc7ca26b5d6c9a68b4b31
+  custom:scripting/monoscript/fileName/TrackballAttribute.cs:  -> f1962deba67196a6cd6b7953be1caf36
+  custom:scripting/monoscript/fileName/PostProcessingProfile.cs:  -> e94a21971fab43a541218a4f91e0403c
+  custom:scripting/monoscript/fileName/PauseManager.cs:  -> 0396bd8b7e1a9bd823e7dab64ce9caf2
+  custom:scripting/monoscript/fileName/DynamicPhysicMaterial.cs:  -> c1f0960688c98a560c03d3750816ffa3
+  custom:scripting/monoscript/fileName/BuiltinDebugViewsModel.cs:  -> 4a09809f2c0ed6cca27229b06ce1d289
+  custom:scripting/monoscript/fileName/RenderTextureFactory.cs:  -> b11bc916a1a88ed67d986ee69a536511
+  custom:scripting/monoscript/fileName/StandaloneInput.cs:  -> 6a63c1efc93349627f672a616aca7a16
+  custom:scripting/monoscript/fileName/FaerieCircle.cs:  -> f091921cb205fd1100142673e63a5ecf
+  custom:scripting/monoscript/fileName/DepthOfFieldModel.cs:  -> ab243c09a4b44fd7a53f73051db01cbc
+  custom:scripting/monoscript/fileName/PlayerShooting.cs:  -> 1db25f99480c43cc37f039181d559394
+  custom:scripting/monoscript/fileName/ColorGradingModel.cs:  -> d1c2ef15f5e9e4868052777d51361b40
+  custom:scripting/monoscript/fileName/ScreenSpaceReflectionModel.cs:  -> 507d9c80d381478e1c14f5bfe34012ae
+  custom:scripting/monoscript/fileName/CameraFollow.cs:  -> 5cbf8af5b6fe0bf973ab5d5a86bcda3e
+  custom:scripting/monoscript/fileName/TrackballGroupAttribute.cs:  -> 6d071733b141a3fb3360b110560ed1cc
+  custom:scripting/monoscript/fileName/RandomAnimationPoint.cs:  -> 4d15c729510b226df0732b3cd0fb2ab0
+  custom:scripting/monoscript/fileName/RandomParticlePoint.cs:  -> 76832ea4225de6ed40a15d978e1fc9cb
+  custom:scripting/monoscript/fileName/BloomComponent.cs:  -> 755f611bb4d32a54d162192a9fc6dd86
+  custom:scripting/monoscript/fileName/MotionBlurComponent.cs:  -> 6cf5a99eefa473d803af3e64f841a0a6
+  custom:scripting/monoscript/fileName/BuiltinDebugViewsComponent.cs:  -> 1b8215a7f6eae55c3fc6a97379498db3
+  custom:scripting/monoscript/fileName/AmbientOcclusionModel.cs:  -> ac26bcd19cab8c88e9b65cb75ee1c356
+  custom:scripting/monoscript/fileName/MobileControlRig.cs:  -> 3524fff44c8126dee0548f9b6ab19d53
+  custom:scripting/monoscript/fileName/EnemyManager.cs:  -> ac327cf729b7e31e3d95be758d009060
+  custom:scripting/monoscript/fileName/TriggerTest.cs:  -> f4691648ae273ccdf53f3ca3a9702b70
+  custom:scripting/monoscript/fileName/AmbientOcclusionComponent.cs:  -> ae5a7089fb97a5a97a8f11138ce7c9d2
+  custom:scripting/monoscript/fileName/GraphicsUtils.cs:  -> f7df21c2acb52bb931f99c0a424b6be0
+  custom:scripting/monoscript/fileName/DepthOfFieldComponent.cs:  -> b0afd8f8844e3e4017df6130c14d0dfc
+  custom:scripting/monoscript/fileName/ColorGradingCurve.cs:  -> e1e989893ee31e7801923212f0468312
+  custom:scripting/monoscript/fileName/PlayerHealth.cs:  -> 9f83d72ecad01f7ac0331755d700ca70
+  custom:scripting/monoscript/fileName/AntialiasingModel.cs:  -> 325b0130eaada61513aeac7b8c97a9d7
+  custom:scripting/monoscript/fileName/ChromaticAberrationModel.cs:  -> 3f166f1ecbc6f39ed2f6b10cbc5b4ba4
+  custom:scripting/monoscript/fileName/EnemyAttack.cs:  -> 7773c953ed727979651c80ffba8c73c0
+  custom:scripting/monoscript/fileName/FaerieAngry.cs:  -> fcdb940d857f305f40239e3febb2ce9a
+  custom:scripting/monoscript/fileName/VirtualInput.cs:  -> 64027d62c73150f39936b69edcd697da
+  custom:scripting/monoscript/fileName/TaaComponent.cs:  -> 7c343e97072a6712c3a2b01e75fdb7fa
+  custom:scripting/monoscript/fileName/PostProcessingModel.cs:  -> 2f64caba6afa59bc78865f13b6f9065d
+  custom:scripting/monoscript/fileName/FaerieCooling.cs:  -> 5db4465fa30d2f765f76433b83d67fce
+  custom:scripting/monoscript/fileName/TopMover.cs:  -> e0318b1f124c52b965809bc0c2ad6d0b
+  custom:scripting/monoscript/fileName/ChromaticAberrationComponent.cs:  -> cda95994b71ba23d0c0f0fe0f241aab9
+  custom:scripting/monoscript/fileName/EventManager.cs:  -> 87ee7de46d04cadf3e133bb1e9dacf18
+  custom:scripting/monoscript/fileName/ScreenSpaceReflectionComponent.cs:  -> 79ad7ef64576d014e73a91b6c3af0688
+  custom:scripting/monoscript/fileName/MotionBlurModel.cs:  -> 4e24ef1d444a45a9e0056ed75c7c7eb7
+  custom:scripting/monoscript/fileName/PostProcessingComponent.cs:  -> 85236d6b86a55b2f46a14367ab625049
+  custom:scripting/monoscript/fileName/MaterialFactory.cs:  -> 39b00f1518fc675c62e508eb4bdec486
+  custom:scripting/monoscript/fileName/ColorGradingComponent.cs:  -> fc28099e3cee649b1f5925a07b57ea96
+  custom:scripting/monoscript/fileName/Grenade.cs:  -> 361363989b806b1d0d17e5ead92970ad
+  custom:scripting/monoscript/fileName/UserLutModel.cs:  -> ce559ad59b29fc066f37249281afd441
+  custom:scripting/monoscript/fileName/MinAttribute.cs:  -> 941c73502025168e3301edfeaed1b25e
+  custom:scripting/monoscript/fileName/GrainComponent.cs:  -> fae958f48caa0fab6bcf7f9c48b915e1
+  custom:scripting/monoscript/fileName/EnemyMovement.cs:  -> bcf831193dbb6525e8aedcbbd13434f8
+  custom:scripting/monoscript/fileName/FogComponent.cs:  -> 2dfe6d4c859eabd11b82ff8fc7d7ad22
+  custom:scripting/monoscript/fileName/VignetteComponent.cs:  -> 293deb083808f71d2d18d818ef588272
+  custom:scripting/monoscript/fileName/Joystick.cs:  -> c13c665079b3ba178e3a8ef05c62070b
+  custom:scripting/monoscript/fileName/FogModel.cs:  -> c4cd4da1fb97c7abf787083602f52bf5
+  custom:scripting/monoscript/fileName/FaerieAnger.cs:  -> eb6a888e75e6691faa5d46878825643c
+  custom:scripting/monoscript/fileName/PlayerMovement.cs:  -> 2d67e0ba8ecd387826f16f76aec1d54f
+  custom:scripting/monoscript/fileName/DitheringComponent.cs:  -> 83d905897534466960141b85361bb6b4
+  custom:scripting/monoscript/fileName/ScoreManager.cs:  -> 362b436a1fc89afb53f1f11f4645e7a4
+  custom:scripting/monoscript/fileName/UserLutComponent.cs:  -> 944143ce5f543a40c92ecea777f35ae4
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp:  -> ae7fa821ddc1b657655adac73091022e
+  custom:scripting/monoscript/fileName/GameOverManager.cs:  -> fd74a8b05c1dc035e77f5ad73117588f
+  custom:scripting/monoscript/fileName/PostProcessingBehaviour.cs:  -> b0fbf7f67aeee9a6f7db03386dbc8c1e
+  custom:scripting/monoscript/fileName/VolumeHandler.cs:  -> 303c59d05adff1349cd2df9cecce2cb8
+  custom:scripting/monoscript/fileName/FaerieStateBehaviour.cs:  -> 14730112a5d9a3d113b0fa847cb0372d
+  custom:scripting/monoscript/fileName/BloomModel.cs:  -> b4ba3e478c2698eb99512ead9d78d360
+  custom:scripting/monoscript/fileName/GrainModel.cs:  -> ce4589c9bbcb55f8f632b6617dc5d1f0
+========================================================================
+Received Import Request.
+  Time since last request: 1256.271489 seconds.
+  path: Assets/Scenes/Level01.unity
+  artifactKey: Guid(0c35443dc6f0fab47a5fa12039cfc4af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level01.unity using Guid(0c35443dc6f0fab47a5fa12039cfc4af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '014b2a30ae0377b8fb7fc9b911a313a3') in 0.003532 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 11.633215 seconds.
+  path: Assets/Scenes/Level02.unity
+  artifactKey: Guid(3d626e763a1c9084db63dd8d2c16ff7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level02.unity using Guid(3d626e763a1c9084db63dd8d2c16ff7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35c5c46e9d5c102afc035d8b1958d515') in 0.000803 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.649261 seconds.
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(11930b577543f644eb2aed6e2001fd38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(11930b577543f644eb2aed6e2001fd38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7aa3763dfeed596471e69c3f35c09f3') in 0.000617 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 12.257104 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a85bec50c8be757587fedfaade313866') in 0.000501 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
