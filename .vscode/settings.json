@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "if3210-2024-unity-afg.sln"
+    "dotnet.defaultSolution": "if3210-2024-unity-bug.sln"
 }
