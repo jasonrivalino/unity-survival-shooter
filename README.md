@@ -1,4 +1,4 @@
-# IF3210-2024-Unity-AFG
+# IF3210-2024-Unity-BUG
 
 ## Deskripsi Aplikasi
 
