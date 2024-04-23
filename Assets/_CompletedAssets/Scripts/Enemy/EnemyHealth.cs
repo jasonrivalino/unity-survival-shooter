@@ -5,12 +5,12 @@ namespace CompleteProject
     public class EnemyHealth : MonoBehaviour
     {
         public int startingHealth = 100;            // The amount of health the enemy starts the game with.
-        public int currentHealth;                   // The current health the enemy has.
+        public float currentHealth;                   // The current health the enemy has.
         public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
         public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
         public AudioClip deathClip;                 // The sound to play when the enemy dies.
-
-
+        
+        OrbManager orbManager;                      // The manager to drop orb
         Animator anim;                              // Reference to the animator.
         AudioSource enemyAudio;                     // Reference to the audio source.
         ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
@@ -26,6 +26,7 @@ namespace CompleteProject
             enemyAudio = GetComponent <AudioSource> ();
             hitParticles = GetComponentInChildren <ParticleSystem> ();
             capsuleCollider = GetComponent <CapsuleCollider> ();
+            orbManager = UnityEngine.GameObject.FindGameObjectWithTag("OrbManager").GetComponent<OrbManager>();
 
             // Setting the current health when the enemy first spawns.
             currentHealth = startingHealth;
@@ -43,7 +44,7 @@ namespace CompleteProject
         }
 
 
-        public void TakeDamage (int amount, Vector3 hitPoint)
+        public void TakeDamage (float amount, Vector3 hitPoint)
         {
             // If the enemy is dead...
             if(isDead)
@@ -90,6 +91,9 @@ namespace CompleteProject
 
         public void StartSinking ()
         {
+            // Drop the orb
+            orbManager.Spawn();
+
             // Find and disable the Nav Mesh Agent.
             GetComponent <UnityEngine.AI.NavMeshAgent> ().enabled = false;
 
