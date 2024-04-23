@@ -8,7 +8,7 @@ namespace CompleteProject
         public int damagePerShot = 20;                  // The damage inflicted by each bullet.
         public float timeBetweenBullets = 0.15f;        // The time between each shot.
         public float range = 100f;                      // The distance the gun can fire.
-
+        public float powerUp = 0f;
 
         float timer;                                    // A timer to determine when to fire.
         Ray shootRay = new Ray();                       // A ray from the gun end forwards.
@@ -20,7 +20,6 @@ namespace CompleteProject
         Light gunLight;                                 // Reference to the light component.
 		public Light faceLight;								// Duh
         float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
-
 
         void Awake ()
         {
@@ -76,6 +75,7 @@ namespace CompleteProject
 
         void Shoot ()
         {
+            Debug.Log("Damage: "+(damagePerShot*(1f + powerUp)));
             // Reset the timer.
             timer = 0f;
 
@@ -108,7 +108,7 @@ namespace CompleteProject
                 if(enemyHealth != null)
                 {
                     // ... the enemy should take damage.
-                    enemyHealth.TakeDamage (damagePerShot, shootHit.point);
+                    enemyHealth.TakeDamage (damagePerShot*(1f+powerUp), shootHit.point);
                 }
 
                 // Set the second position of the line renderer to the point the raycast hit.
