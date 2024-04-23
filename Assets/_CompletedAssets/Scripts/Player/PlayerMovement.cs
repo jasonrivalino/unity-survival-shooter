@@ -6,7 +6,8 @@ namespace CompleteProject
     public class PlayerMovement : MonoBehaviour
     {
         public float speed = 6f;            // The speed that the player will move at.
-
+        public float speedUp = 1f;
+        public float speedUpTime = 0f;
 
         Vector3 movement;                   // The vector to store the direction of the player's movement.
         Animator anim;                      // Reference to the animator component.
@@ -48,11 +49,12 @@ namespace CompleteProject
 
         void Move (float h, float v)
         {
+            Debug.Log("speed total: " + (speed*speedUp));
             // Set the movement vector based on the axis input.
             movement.Set (h, 0f, v);
             
             // Normalise the movement vector and make it proportional to the speed per second.
-            movement = movement.normalized * speed * Time.deltaTime;
+            movement = movement.normalized * speed * speedUp * Time.deltaTime;
 
             // Move the player to it's current position plus the movement.
             playerRigidbody.MovePosition (transform.position + movement);
@@ -112,6 +114,21 @@ namespace CompleteProject
 
             // Tell the animator whether or not the player is walking.
             anim.SetBool ("IsWalking", walking);
+        }
+
+        private void Update()
+        {
+            // Reducing speedUpTime if any
+            if (speedUpTime > 0) { 
+                speedUpTime -= Time.deltaTime;
+
+                // If speedUpTime over, set speedUp back to 1
+                if (speedUpTime <= 0) { 
+                    speedUpTime = 0;
+                    speedUp = 1f;
+                }
+            }
+
         }
     }
 }

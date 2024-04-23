@@ -4,31 +4,30 @@ using UnityEngine;
 
 namespace CompleteProject
 {
-    public class DamageOrbDropped : MonoBehaviour
+    public class SpeedOrbDropped : MonoBehaviour
     {
         UnityEngine.GameObject player; // Reference to the player GameObject.
-        PlayerShooting playerShooting;
+        PlayerMovement playerMovement;
         float timer;
         void Awake()
         {
             // Setting up the references
             player = UnityEngine.GameObject.FindGameObjectWithTag("Player");
-            playerShooting = player.GetComponentInChildren<PlayerShooting>();
+            playerMovement = player.GetComponentInChildren<PlayerMovement>();
             timer = 0f;
         }
 
         void OnCollisionEnter(UnityEngine.Collision collision)
         {
             // If the entering collider is the player 
+            Debug.Log("Nyentuh speed orb");
             if (collision.gameObject == player)
             {
-                // If player is not pick damageOrb 15 times or more
-                if (playerShooting.powerUp < 1.5f)
-                {
-                    playerShooting.powerUp += 0.1f;
-                    GetComponent<Renderer>().enabled = false;
-                    Destroy(gameObject, 1f);
-                }
+                // Set speedup for player
+                playerMovement.speedUp = 1.2f;
+                playerMovement.speedUpTime = 15f;
+                GetComponent<Renderer>().enabled = false;
+                Destroy(gameObject, 1f);
             }
         }
 
@@ -43,9 +42,7 @@ namespace CompleteProject
             {
                 GetComponent<Renderer>().enabled = false;
                 Destroy(gameObject, 1f);
-
             }
         }
     }
-
 }

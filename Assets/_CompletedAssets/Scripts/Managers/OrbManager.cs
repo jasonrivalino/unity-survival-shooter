@@ -23,44 +23,41 @@ namespace CompleteProject
 
             // Generate Random Point for Spawn
             Vector3 spawnPoint = Vector3.zero;
-            spawnPoint.y = 1f;
-            bool validSpawnPoint = false;
-            while (!validSpawnPoint)
+            spawnPoint.y = 0.11f;
+           
+            // Get random point
+            spawnPoint.x = playerTransform.position.x + (2 * Random.value - 1) * spawnRadius;
+            spawnPoint.z = playerTransform.position.z + (2 * Random.value - 1) * spawnRadius;
+
+            // Adjust to not exit the orb spawn radiu
+            if (spawnPoint.x < 0)
             {
-                // Get random point
-                spawnPoint.x = playerTransform.position.x + (2 * Random.value - 1) * spawnRadius;
-                spawnPoint.z = playerTransform.position.z + (2 * Random.value - 1) * spawnRadius;
-
-                // Adjust to not exit the orb spawn radiu
-                if (spawnPoint.x < 0)
-                {
-                    spawnPoint.x = Mathf.Max(spawnPoint.x, -spawnRadius);
-                }
-                else if (spawnPoint.x > 0) { 
-                    spawnPoint.x = Mathf.Min(spawnPoint.x, spawnRadius);
-                }
-
-                if (spawnPoint.z < 0)
-                {
-                    spawnPoint.z = Mathf.Max(spawnPoint.z, -spawnRadius);
-                }
-                else if (spawnPoint.z > 0)
-                {
-                    spawnPoint.z = Mathf.Min(spawnPoint.z, spawnRadius);
-                }
-
-
-                if (!Physics.CheckSphere(spawnPoint, spawnCollisionCheckRadius))
-                {
-                    validSpawnPoint = true;
-                }
+                spawnPoint.x = Mathf.Max(spawnPoint.x, -spawnRadius);
+            }
+            else if (spawnPoint.x > 0) { 
+                spawnPoint.x = Mathf.Min(spawnPoint.x, spawnRadius);
             }
 
-            // Randomly select orb type to spawn
-            int orbTypeIdx = Random.Range(0, orbs.Length);
+            if (spawnPoint.z < 0)
+            {
+                spawnPoint.z = Mathf.Max(spawnPoint.z, -spawnRadius);
+            }
+            else if (spawnPoint.z > 0)
+            {
+                spawnPoint.z = Mathf.Min(spawnPoint.z, spawnRadius);
+            }
+         
 
-            // Create an instance of the orb prefab at the randomly selected spawn point's position and rotation.
-            Instantiate(orbs[orbTypeIdx], spawnPoint, Random.rotation);
+            if (!Physics.CheckSphere(spawnPoint, spawnCollisionCheckRadius))
+            {
+                // Randomly select orb type to spawn
+                int orbTypeIdx = Random.Range(0, orbs.Length);
+
+                // Create an instance of the orb prefab at the randomly selected spawn point's position and rotation.
+                Instantiate(orbs[orbTypeIdx], spawnPoint, playerTransform.rotation);
+            }
+            
+
         }
     }
 }
