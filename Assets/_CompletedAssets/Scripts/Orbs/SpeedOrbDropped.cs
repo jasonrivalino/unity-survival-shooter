@@ -20,12 +20,11 @@ namespace CompleteProject
         void OnCollisionEnter(UnityEngine.Collision collision)
         {
             // If the entering collider is the player 
-            Debug.Log("Nyentuh speed orb");
             if (collision.gameObject == player)
             {
+                Debug.Log("Nyentuh speed orb");
                 // Set speedup for player
-                playerMovement.speedUp = 1.2f;
-                playerMovement.speedUpTime = 15f;
+                playerMovement.SpeedUp();
                 GetComponent<Renderer>().enabled = false;
                 Destroy(gameObject, 1f);
             }

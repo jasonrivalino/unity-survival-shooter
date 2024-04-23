@@ -116,6 +116,11 @@ namespace CompleteProject
             anim.SetBool ("IsWalking", walking);
         }
 
+        public void SpeedUp() {
+            speedUp = 1.2f;
+            speedUpTime = 15f;
+        }
+
         private void Update()
         {
             // Reducing speedUpTime if any

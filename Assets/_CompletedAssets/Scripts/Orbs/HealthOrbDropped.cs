@@ -4,16 +4,16 @@ using UnityEngine;
 
 namespace CompleteProject
 {
-    public class DamageOrbDropped : MonoBehaviour
+    public class HealthOrbDropped : MonoBehaviour
     {
         UnityEngine.GameObject player; // Reference to the player GameObject.
-        PlayerShooting playerShooting;
+        PlayerHealth playerHealth;
         float timer;
         void Awake()
         {
             // Setting up the references
             player = UnityEngine.GameObject.FindGameObjectWithTag("Player");
-            playerShooting = player.GetComponentInChildren<PlayerShooting>();
+            playerHealth = player.GetComponentInChildren<PlayerHealth>();
             timer = 0f;
         }
 
@@ -22,13 +22,12 @@ namespace CompleteProject
             // If the entering collider is the player 
             if (collision.gameObject == player)
             {
-                // If player is not pick damageOrb 15 times or more
-                if (playerShooting.powerUp < 1.5f)
-                {
-                    playerShooting.PowerUp();
-                    GetComponent<Renderer>().enabled = false;
-                    Destroy(gameObject, 1f);
-                }
+                Debug.Log("Nyentuh Health orb");
+
+                // Heal the player
+                playerHealth.Heal();
+                GetComponent<Renderer>().enabled = false;
+                Destroy(gameObject, 1f);
             }
         }
 
@@ -43,9 +42,7 @@ namespace CompleteProject
             {
                 GetComponent<Renderer>().enabled = false;
                 Destroy(gameObject, 1f);
-
             }
         }
     }
-
 }

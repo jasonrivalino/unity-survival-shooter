@@ -72,6 +72,10 @@ namespace CompleteProject
             gunLight.enabled = false;
         }
 
+        public void PowerUp()
+        {
+            powerUp += 0.1f;
+        }
 
         void Shoot ()
         {
