@@ -492,6 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 596044856}
   - component: {fileID: 596044855}
+  - component: {fileID: 596044857}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -511,6 +512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937a4aee1c6417d4cab3552595ea8d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 2023067227}
+  dialogueText: {fileID: 1978091833}
+  animator: {fileID: 1139190137}
+  dialogueTypingSoundClip: {fileID: 8300000, guid: e9708b69e4c077b4cbbb08a829e91813,
+    type: 3}
 --- !u!4 &596044856
 Transform:
   m_ObjectHideFlags: 0
@@ -519,13 +525,53 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596044854}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 993.5023, y: 280.2343, z: 174.51288}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596044857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596044854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c910f4963708884f8ba424fd7c1fcb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - sentences: Kepala Jirna yang pening membuatnya mengeluh. Matanya masih tertutup.
+      Dia secara perlahan membuka matanya...
+    name: Narator
+  - sentences: Hah? Di mana aku? KENAPA AKU MEGANG SHOTGUN??
+    name: Jirna
+  - sentences: Ini adalah tempat yang menakutkan... apa aku jadi orang yang kecil??
+    name: Jirna
+  - sentences: Hah, ternyata ada catatan di lantai. Apa ya tulisannya?
+    name: Jirna
+  - sentences: 'Halo Jirna. Aku tahu kamu sekarang bingung apa yang terjadi, namun
+      misi kamu untuk sekarang hanya satu: BERTAHAN HIDUP'
+    name: Tulisan misterius
+  - sentences: Aku sudah menyediakan senjata-senjata untukmu untuk mengalahkan musuh-musuh
+      di kamar ini.
+    name: Tulisan misterius
+  - sentences: Jika kamu bertahan hidup selama semenit, semua mob akan berhenti menyerang,
+      dan aku akan memberimu instruksi selanjutnya
+    name: Tulisan misterius
+  - sentences: Ikuti misi ini dan berikutnya, dan kamu akan mendapatkan jawaban dari
+      semua kekeosan ini.
+    name: Tulisan misterius
+  - sentences: Good luck, and survive!
+    name: Tulisan misterius
+  - sentences: Musuh? Musuh seperti apa? Aku masih bingung.
+    name: Jirna
+  - sentences: Waduh! Musuhnya akan datang! Aku perlu mempersiapkan senjata ini.
+    name: Jirna
 --- !u!1 &636207312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,6 +1108,82 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.28490877
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26030847
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.20409584
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5465301
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.44867015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.44867015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.54653007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2849083
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29675734
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.7190113
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000680983
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 2.9103824e-11
+      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
       propertyPath: m_RootOrder
       value: 6
