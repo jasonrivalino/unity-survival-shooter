@@ -14,17 +14,23 @@ public class DialogueManager : MonoBehaviour
     public Animator animator;
     private Queue<Dialogue> dialogueQueue;
 
+    GameObject blurpanel;
+
+    GameObject blankimage;
+
     [Header("Audio")]
     [SerializeField] private AudioClip dialogueTypingSoundClip;
 
     void Awake()
     {
-        dialogueAudio = this.gameObject.AddComponent<AudioSource>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         dialogueQueue = new Queue<Dialogue>();
+        dialogueAudio = this.gameObject.AddComponent<AudioSource>();
+        blurpanel = GameObject.Find("BlurPanel");
+        blankimage = GameObject.Find("BlankImage");
+
+        blurpanel?.SetActive(false);
+        blankimage?.SetActive(true);
+
     }
 
     void Update()
@@ -59,6 +65,16 @@ public class DialogueManager : MonoBehaviour
         nameText.text = nextDialogue.name;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(nextDialogue.sentences));
+
+        if (nextDialogue.name == "Jirna")
+        {
+            blurpanel?.SetActive(false);
+            blankimage?.SetActive(false);
+        }
+        if (nextDialogue.name == "Tulisan misterius")
+        {
+            blurpanel?.SetActive(true);
+        }
     }
 
     IEnumerator TypeSentence(string sentence)
