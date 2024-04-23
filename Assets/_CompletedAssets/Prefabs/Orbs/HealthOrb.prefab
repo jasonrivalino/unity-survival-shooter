@@ -28,6 +28,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthOrb
       objectReference: {fileID: 0}
+    - target: {fileID: 5345597895348434106, guid: 9967396f6f8ffef4a93595add324305b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 954e657d2bb5db041a5e02b8b86032d5, type: 2}
     - target: {fileID: 5594074631645841710, guid: 9967396f6f8ffef4a93595add324305b,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -98,6 +103,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6107659337990305390, guid: 9967396f6f8ffef4a93595add324305b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 954e657d2bb5db041a5e02b8b86032d5, type: 2}
     - target: {fileID: 6195347933963732560, guid: 9967396f6f8ffef4a93595add324305b,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -121,12 +131,12 @@ PrefabInstance:
     - target: {fileID: 7312386555209376083, guid: 9967396f6f8ffef4a93595add324305b,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7312386555209376083, guid: 9967396f6f8ffef4a93595add324305b,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.45490196
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7540553607453460447, guid: 9967396f6f8ffef4a93595add324305b,
         type: 3}
@@ -151,12 +161,12 @@ PrefabInstance:
     - target: {fileID: 7548261739616927490, guid: 9967396f6f8ffef4a93595add324305b,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548261739616927490, guid: 9967396f6f8ffef4a93595add324305b,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.45490196
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8093920708218412076, guid: 9967396f6f8ffef4a93595add324305b,
         type: 3}
