@@ -4,17 +4,14 @@ using UnityEngine;
 
 namespace CompleteProject
 {
-    public class DamageOrbDropped : MonoBehaviour
+    public class DamageOrbDropped : Orb
     {
-        UnityEngine.GameObject player; // Reference to the player GameObject.
         PlayerShooting playerShooting;
-        float timer;
-        void Awake()
+        new void Awake()
         {
             // Setting up the references
-            player = UnityEngine.GameObject.FindGameObjectWithTag("Player");
+            base.Awake();
             playerShooting = player.GetComponentInChildren<PlayerShooting>();
-            timer = 0f;
         }
 
         void OnCollisionEnter(UnityEngine.Collision collision)
@@ -25,25 +22,11 @@ namespace CompleteProject
                 // If player is not pick damageOrb 15 times or more
                 if (playerShooting.powerUp < 1.5f)
                 {
+                    Debug.Log("Damage Orb Picked");
                     playerShooting.PowerUp();
                     GetComponent<Renderer>().enabled = false;
                     Destroy(gameObject, 1f);
                 }
-            }
-        }
-
-
-        // Update is called once per frame
-        void Update()
-        {
-            timer += Time.deltaTime;
-
-            // If orb was dropped more than 5 seconds, orb will disappear
-            if (timer > 5f)
-            {
-                GetComponent<Renderer>().enabled = false;
-                Destroy(gameObject, 1f);
-
             }
         }
     }
