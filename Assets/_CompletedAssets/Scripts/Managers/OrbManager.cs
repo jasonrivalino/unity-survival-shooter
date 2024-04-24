@@ -23,7 +23,7 @@ namespace CompleteProject
 
             // Generate Random Point for Spawn
             Vector3 spawnPoint = Vector3.zero;
-            spawnPoint.y = 0.11f;
+            spawnPoint.y = spawnCollisionCheckRadius+0.01f;
            
             // Get random point
             spawnPoint.x = playerTransform.position.x + (2 * Random.value - 1) * spawnRadius;

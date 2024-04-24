@@ -4,17 +4,14 @@ using UnityEngine;
 
 namespace CompleteProject
 {
-    public class SpeedOrbDropped : MonoBehaviour
+    public class SpeedOrbDropped : Orb
     {
-        UnityEngine.GameObject player; // Reference to the player GameObject.
         PlayerMovement playerMovement;
-        float timer;
-        void Awake()
+        new void Awake()
         {
             // Setting up the references
-            player = UnityEngine.GameObject.FindGameObjectWithTag("Player");
+            base.Awake();
             playerMovement = player.GetComponentInChildren<PlayerMovement>();
-            timer = 0f;
         }
 
         void OnCollisionEnter(UnityEngine.Collision collision)
@@ -22,25 +19,10 @@ namespace CompleteProject
             // If the entering collider is the player 
             if (collision.gameObject == player)
             {
-                Debug.Log("Nyentuh speed orb");
+                Debug.Log("Speed orb Picked");
                 // Set speedup for player
                 playerMovement.SpeedUp();
-                GetComponent<Renderer>().enabled = false;
-                Destroy(gameObject, 1f);
-            }
-        }
-
-
-        // Update is called once per frame
-        void Update()
-        {
-            timer += Time.deltaTime;
-
-            // If orb was dropped more than 5 seconds, orb will disappear
-            if (timer > 5f)
-            {
-                GetComponent<Renderer>().enabled = false;
-                Destroy(gameObject, 1f);
+                base.Dissapear();
             }
         }
     }
