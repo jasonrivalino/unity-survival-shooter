@@ -20,7 +20,7 @@ namespace CompleteProject
         Animator anim;                                              // Reference to the Animator component.
         AudioSource playerAudio;                                    // Reference to the AudioSource component.
         PlayerMovement playerMovement;                              // Reference to the player's movement.
-        PlayerShooting playerShooting;                              // Reference to the PlayerShooting script.
+        Riffle riffle;                              // Reference to the PlayerShooting script.
         bool isDead;                                                // Whether the player is dead.
         bool damaged;                                               // True when the player gets damaged.
 
@@ -30,7 +30,7 @@ namespace CompleteProject
             anim = GetComponent <Animator> ();
             playerAudio = GetComponent <AudioSource> ();
             playerMovement = GetComponent <PlayerMovement> ();
-            playerShooting = GetComponentInChildren <PlayerShooting> ();
+            riffle = GetComponentInChildren <Riffle> ();
 
             // Set the initial health of the player.
             currentHealth = startingHealth;
@@ -97,7 +97,7 @@ namespace CompleteProject
             isDead = true;
 
             // Turn off any remaining shooting effects.
-            playerShooting.DisableEffects ();
+            riffle.DisableEffects ();
 
             // Tell the animator that the player is dead.
             anim.SetTrigger ("Die");
@@ -108,7 +108,7 @@ namespace CompleteProject
 
             // Turn off the movement and shooting scripts.
             playerMovement.enabled = false;
-            playerShooting.enabled = false;
+            riffle.enabled = false;
         }
 
 

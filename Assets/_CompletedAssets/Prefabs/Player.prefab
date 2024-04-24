@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 13700002}
   m_Layer: 0
   m_Name: Gun
-  m_TagString: Untagged
+  m_TagString: Riffle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 19800000}
   - component: {fileID: 8200000}
   - component: {fileID: 12000000}
-  - component: {fileID: 11400000}
+  - component: {fileID: 6711780760367370857}
   - component: {fileID: 10800000}
   m_Layer: 0
   m_Name: GunBarrelEnd
@@ -5288,7 +5288,7 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 0
---- !u!114 &11400000
+--- !u!114 &6711780760367370857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5300,11 +5300,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c83720df9acb89488dbf2c0dbd3ad78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerShot: 20
-  timeBetweenBullets: 0.12
-  range: 100
   powerUp: 0
-  faceLight: {fileID: 10800002}
+  isUsed: 1
+  damagePerShot: 20
+  timeBetweenBullets: 0.15
+  range: 100
+  faceLight: {fileID: 0}
 --- !u!108 &10800000
 Light:
   m_ObjectHideFlags: 0
@@ -5380,6 +5381,7 @@ GameObject:
   - component: {fileID: 11400004}
   - component: {fileID: 5400000}
   - component: {fileID: 11400002}
+  - component: {fileID: 399669218063535372}
   - component: {fileID: 13600000}
   - component: {fileID: 8200002}
   m_Layer: 0
@@ -5491,6 +5493,24 @@ MonoBehaviour:
   speed: 6
   speedUp: 1
   speedUpTime: 0
+--- !u!114 &399669218063535372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1893cf7ad31804c4fb999a34a4c10e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlotUsed: 1
+  powerUp: 0
+  weapons:
+  - {fileID: 6711780760367370857}
+  - {fileID: 6711780760367370857}
+  - {fileID: 6711780760367370857}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5697,7 +5717,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0.5
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -5719,31 +5739,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6261143
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.29137608
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.12176657
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.41710627
+      value: 0.5975331
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5753819
+      value: -0.08425515
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.43252727
+      value: -0.06333649
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.55486774
+      value: -0.794886
       objectReference: {fileID: 0}
     - target: {fileID: 435414, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
