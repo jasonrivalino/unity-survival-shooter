@@ -5300,10 +5300,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c83720df9acb89488dbf2c0dbd3ad78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerAttack: 20
+  timeBetweenAttack: 0.15
   powerUp: 0
   isUsed: 1
-  damagePerShot: 20
-  timeBetweenBullets: 0.15
   range: 100
   faceLight: {fileID: 0}
 --- !u!108 &10800000
@@ -5509,8 +5509,8 @@ MonoBehaviour:
   powerUp: 0
   weapons:
   - {fileID: 6711780760367370857}
-  - {fileID: 6711780760367370857}
-  - {fileID: 6711780760367370857}
+  - {fileID: 0}
+  - {fileID: 4966930388160821361}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5777,10 +5777,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2099415594207807766, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099415594207807766, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 147172, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4966930388160821361}
   m_SourcePrefab: {fileID: 100100000, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
 --- !u!4 &2250282586610429586 stripped
 Transform:
@@ -5788,3 +5802,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2250282586610846276}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2250282586610726048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 147172, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2250282586610846276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4966930388160821361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2250282586610726048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73cc125bb78dc8478c1bca71a5a175f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerAttack: 30
+  timeBetweenAttack: 0.1
+  powerUp: 0
+  isUsed: 0

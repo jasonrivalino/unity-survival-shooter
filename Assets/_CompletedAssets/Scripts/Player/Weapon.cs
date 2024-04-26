@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public int damagePerAttack;
+    public float timeBetweenAttack;
     public float powerUp = 0f;
     public bool isUsed = false;
     protected float timer;  // A timer to determine when to attack
@@ -21,7 +23,7 @@ public class Weapon : MonoBehaviour
         weapon.GetComponent<Renderer>().enabled = true;
     }
 
-    public void UnUsedWeapon()
+    public void UnUseWeapon()
     {
         isUsed = false;
         weapon.GetComponent<Renderer>().enabled = false;

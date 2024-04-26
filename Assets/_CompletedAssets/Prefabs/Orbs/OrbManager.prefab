@@ -51,4 +51,4 @@ MonoBehaviour:
   - {fileID: 7566295241149851337, guid: b8da98c25b874e34f96ce9871549c270, type: 3}
   - {fileID: 13510893613580237, guid: dc92d9cb314fff247bec9c44a5c59017, type: 3}
   spawnRadius: 10
-  spawnCollisionCheckRadius: 0.5
+  spawnCollisionCheckRadius: 0.2

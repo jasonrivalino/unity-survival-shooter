@@ -5,8 +5,6 @@ namespace CompleteProject
 {
     public class Riffle : Weapon
     {
-        public int damagePerShot = 20;                  // The damage inflicted by each bullet.
-        public float timeBetweenBullets = 0.15f;        // The time between each shot.
         public float range = 100f;                      // The distance the gun can fire.
 
         Ray shootRay = new Ray();                       // A ray from the gun end forwards.
@@ -18,7 +16,7 @@ namespace CompleteProject
         Light gunLight;                                 // Reference to the light component.
         public Light faceLight;								// Duh
         float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
-
+        
         void Awake ()
         {
             // Create a layer mask for the Shootable layer.
@@ -43,7 +41,7 @@ namespace CompleteProject
             
                 #if !MOBILE_INPUT
                             // If the Fire1 button is being press and it's time to fire...
-			                if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
+			                if(Input.GetButton ("Fire1") && timer >= timeBetweenAttack && Time.timeScale != 0)
                             {
                                 // ... shoot the gun.
                                 Shoot ();
@@ -60,7 +58,7 @@ namespace CompleteProject
             }
 
             // If the timer has exceeded the proportion of timeBetweenBullets that the effects should be displayed for...
-            if(timer >= timeBetweenBullets * effectsDisplayTime)
+            if(timer >= timeBetweenAttack * effectsDisplayTime)
             {
                 // ... disable the effects.
                 DisableEffects ();
@@ -78,7 +76,7 @@ namespace CompleteProject
         
         void Shoot ()
         {
-            Debug.Log("Damage: "+(damagePerShot*(1f + powerUp)));
+            Debug.Log("Damage: "+(damagePerAttack*(1f + powerUp)));
             // Reset the timer.
             timer = 0f;
 
@@ -111,7 +109,7 @@ namespace CompleteProject
                 if(enemyHealth != null)
                 {
                     // ... the enemy should take damage.
-                    enemyHealth.TakeDamage (damagePerShot*(1f+powerUp), shootHit.point);
+                    enemyHealth.TakeDamage (damagePerAttack*(1f+powerUp), shootHit.point);
                 }
 
                 // Set the second position of the line renderer to the point the raycast hit.
