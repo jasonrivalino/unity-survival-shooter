@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour
         if(playerHealth.currentHealth <= 0f)
         {
             return;
-        }
+        } 
 
         int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 
