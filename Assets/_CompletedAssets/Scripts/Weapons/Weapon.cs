@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     public bool isUsed = false;
     protected float timer;  // A timer to determine when to attack
     protected GameObject weapon; // Weapon 3D physics
+    protected GameObject weapon2; // for weapon rendered by more than 1 gameObject
 
     public void PowerUp()
     {
@@ -21,12 +22,20 @@ public class Weapon : MonoBehaviour
     {
         isUsed = true;
         weapon.GetComponent<Renderer>().enabled = true;
+        if ( weapon2 != null )
+        {
+            weapon2.GetComponent<Renderer>().enabled = true;
+        }
     }
 
     public void UnUseWeapon()
     {
         isUsed = false;
         weapon.GetComponent<Renderer>().enabled = false;
+        if ( weapon2 != null )
+        {
+            weapon2.GetComponent<Renderer>().enabled = false;
+        }
     }
 
     // Update is called once per frame

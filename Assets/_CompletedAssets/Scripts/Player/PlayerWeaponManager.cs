@@ -14,8 +14,8 @@ namespace CompleteProject
         public void PowerUp() {
             powerUp += 0.1f;
             weapons[0].PowerUp();
-            weapons[1].PowerUp();
-            // weapons[2].PowerUp();
+            // weapons[1].PowerUp();
+            weapons[2].PowerUp();
         }
 
         // Update is called once per frame
@@ -28,7 +28,7 @@ namespace CompleteProject
                 {
                     weaponSlotUsed = 1;
                     weapons[0].UseWeapon();
-                    // weapons[1].UnUseWeapon();
+                    weapons[1].UnUseWeapon();
                     weapons[2].UnUseWeapon();
                 }
             }
@@ -38,7 +38,7 @@ namespace CompleteProject
                 {
                     weaponSlotUsed = 2;
                     weapons[0].UnUseWeapon();
-                    // weapons[1].UseWeapon();
+                    weapons[1].UseWeapon();
                     weapons[2].UnUseWeapon();
                 }
             }
@@ -48,7 +48,7 @@ namespace CompleteProject
                 {
                     weaponSlotUsed = 3;
                     weapons[0].UnUseWeapon();
-                    // weapons[1].UnUseWeapon();
+                    weapons[1].UnUseWeapon();
                     weapons[2].UseWeapon();
                 }
             }
