@@ -649,6 +649,37 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!1 &625026857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 625026858}
+  m_Layer: 0
+  m_Name: HellephantSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &625026858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625026857}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: 0, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768093246
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +780,7 @@ GameObject:
   - component: {fileID: 863289749}
   - component: {fileID: 863289748}
   - component: {fileID: 863289750}
+  - component: {fileID: 863289751}
   m_Layer: 0
   m_Name: EnemyManager
   m_TagString: Untagged
@@ -769,7 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1030673044}
-  enemy: {fileID: 2205957421492426801, guid: 5cebd80f7aa52804095accc49c252892, type: 3}
+  enemy: {fileID: 3875457313305475475, guid: 25235b53f856f634880958656f0f0223, type: 3}
   spawnTime: 2
   spawnPoints:
   - {fileID: 1844657416}
@@ -795,16 +827,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863289747}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1030673044}
-  enemy: {fileID: 2205957421492426801, guid: 5cebd80f7aa52804095accc49c252892, type: 3}
+  enemy: {fileID: 4795060569972924578, guid: c1e77e1171edd39478301739c687a8cf, type: 3}
   spawnTime: 2
   spawnPoints:
   - {fileID: 1320469176}
+--- !u!114 &863289751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863289747}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1030673044}
+  enemy: {fileID: 4089604486440164585, guid: bd1276975f455af41903f24b10325008, type: 3}
+  spawnTime: 10
+  spawnPoints:
+  - {fileID: 625026858}
 --- !u!1 &870231626
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +995,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a94a070cf9fb804fb78f301ac857973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothing: 5
+  mouseSensitivity: 2
+  upDownRange: 90
+  distanceBehind: 3
+  cameraHeight: 2
 --- !u!114 &1030673044 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8727426617953989238, guid: bfa8354fca8467d4ca6c5cf54b199a70,
@@ -1360,7 +1412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844657416}
   m_Layer: 0
-  m_Name: ZombunnySpawnPoint
+  m_Name: ZomBearSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1618,3 +1670,4 @@ SceneRoots:
   - {fileID: 863289749}
   - {fileID: 1844657416}
   - {fileID: 1320469176}
+  - {fileID: 625026858}
