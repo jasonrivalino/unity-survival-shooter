@@ -153,14 +153,28 @@ namespace CompleteProject
                 if (Physics.Raycast(shootRay, out shootHit, range, shootableMask))
                 {
                     // Try and find an EnemyHealth script on the gameobject hit.
-                    
-                    // If the EnemyHealth component exist...
-                    if (shootHit.collider.TryGetComponent<EnemyHealth>(out var enemyHealth))
+                    if (isPlayerOwner)
                     {
-                        // ... the enemy should take damage.
-                        float bulletDamage = countBulletDamage(shootHit.point);
-                        Debug.Log("Peluru ke-"+ i.ToString() + " damage: " + bulletDamage );
-                        enemyHealth.TakeDamage(bulletDamage, shootHit.point);
+                        // If the EnemyHealth component exist...
+                        if (shootHit.collider.TryGetComponent<EnemyHealth>(out var enemyHealth))
+                        {
+                            // ... the enemy should take damage.
+                            float bulletDamage = countBulletDamage(shootHit.point);
+                            Debug.Log("Peluru ke-" + i.ToString() + " damage: " + bulletDamage);
+                            enemyHealth.TakeDamage(bulletDamage, shootHit.point);
+                        }
+
+                    }
+                    else // If the user is enemy
+                    { 
+                        // If the EnemyHealth component exist...
+                        if (shootHit.collider.TryGetComponent<PlayerHealth>(out var playerHealth))
+                        {
+                            // ... the enemy should take damage.
+                            float bulletDamage = countBulletDamage(shootHit.point);
+                            Debug.Log("Peluru ke-" + i.ToString() + " damage: " + bulletDamage);
+                            playerHealth.TakeDamage(bulletDamage);
+                        }
                     }
 
                     // Set the the line renderer to the point the raycast hit.
