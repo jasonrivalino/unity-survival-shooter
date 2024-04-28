@@ -70,6 +70,7 @@ namespace CompleteProject
 
         public void TakeDamage (float amount)
         {
+
             // Set the damaged flag so the screen will flash.
             damaged = true;
 

@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 0
@@ -5510,7 +5510,7 @@ MonoBehaviour:
   powerUp: 0
   weapons:
   - {fileID: 6711780760367370857}
-  - {fileID: 0}
+  - {fileID: 8380436874639752770}
   - {fileID: 4966930388160821361}
 --- !u!136 &13600000
 CapsuleCollider:
@@ -5739,7 +5739,7 @@ GameObject:
   - component: {fileID: 6264612098367149506}
   - component: {fileID: 6513785861355723125}
   - component: {fileID: 7911001087832369709}
-  - component: {fileID: 5693931901176859137}
+  - component: {fileID: 8380436874639752770}
   - component: {fileID: 6426000681067241432}
   m_Layer: 0
   m_Name: ShotgunBarrelEnd
@@ -10844,7 +10844,7 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 0
---- !u!114 &5693931901176859137
+--- !u!114 &8380436874639752770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10853,14 +10853,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4866102639934723474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c83720df9acb89488dbf2c0dbd3ad78, type: 3}
+  m_Script: {fileID: 11500000, guid: 2582eee1114a90c47970cb5fe7e99161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerAttack: 20
-  timeBetweenAttack: 0.15
+  timeBetweenAttack: 0.5
   powerUp: 0
-  isUsed: 1
-  range: 100
+  isUsed: 0
+  range: 7
+  bulletsPerShoot: 7
+  inaccuracyDistance: 0.15
+  shotgunLine: {fileID: 9209258724073731464, guid: 07e75b0a3b8805745be9f33b14959e91,
+    type: 3}
   faceLight: {fileID: 0}
 --- !u!108 &6426000681067241432
 Light:
@@ -11026,9 +11030,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 400006}
     m_Modifications:
+    - target: {fileID: 1021076032002798, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
+      propertyPath: m_TagString
+      value: Shotgun
+      objectReference: {fileID: 0}
     - target: {fileID: 1025902973095274, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1304552910494454, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
+      propertyPath: m_TagString
+      value: Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 1652954791862484, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
       propertyPath: m_Name
@@ -11037,6 +11049,10 @@ PrefabInstance:
     - target: {fileID: 1652954791862484, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652954791862484, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
+      propertyPath: m_TagString
+      value: Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 4781552677805482, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
       propertyPath: m_LocalScale.x
@@ -11218,6 +11234,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerAttack: 30
-  timeBetweenAttack: 0.1
+  timeBetweenAttack: 0.3
   powerUp: 0
   isUsed: 0

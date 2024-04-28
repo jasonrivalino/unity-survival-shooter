@@ -14,7 +14,7 @@ namespace CompleteProject
         public void PowerUp() {
             powerUp += 0.1f;
             weapons[0].PowerUp();
-            // weapons[1].PowerUp();
+            weapons[1].PowerUp();
             weapons[2].PowerUp();
         }
 

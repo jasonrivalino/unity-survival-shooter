@@ -6,13 +6,16 @@ namespace CompleteProject
 {
     public class Shotgun : Weapon
     {
-        public float range = 100f;                      // The distance the gun can fire.
+        public float range = 10f;                      // The distance the gun can fire.
+        public int bulletsPerShoot = 7;
+        public float inaccuracyDistance = 2f;
+        public GameObject shotgunLine;
 
+        float maxShotgunLineLength;
         Ray shootRay = new Ray();                       // A ray from the gun end forwards.
         RaycastHit shootHit;                            // A raycast hit to get information about what was hit.
         int shootableMask;                              // A layer mask so the raycast only hits things on the shootable layer.
         ParticleSystem gunParticles;                    // Reference to the particle system.
-        LineRenderer gunLine;                           // Reference to the line renderer.
         AudioSource gunAudio;                           // Reference to the audio source.
         Light gunLight;                                 // Reference to the light component.
         public Light faceLight;								// Duh
@@ -25,15 +28,19 @@ namespace CompleteProject
 
             // Set up the references.
             gunParticles = GetComponent<ParticleSystem>();
-            gunLine = GetComponent<LineRenderer>();
             gunAudio = GetComponent<AudioSource>();
             gunLight = GetComponent<Light>();
+            faceLight = GetComponentInChildren<Light>();
 
+            // Setup the physical 3D reference
             weapon= UnityEngine.GameObject.FindGameObjectsWithTag("Shotgun")[0];
             weapon2 = UnityEngine.GameObject.FindGameObjectsWithTag("Shotgun")[1];
 
+            // UnUse weapon at init state of game
             UnUseWeapon();
-            faceLight = GetComponentInChildren<Light>();
+
+            // Count maxShotgunLineLength for damage Count
+            maxShotgunLineLength = Mathf.Sqrt(Mathf.Pow(range+inaccuracyDistance, 2) + Mathf.Pow(inaccuracyDistance, 2) + Mathf.Pow(inaccuracyDistance, 2));
         }
 
 
@@ -70,18 +77,57 @@ namespace CompleteProject
             }
         }
 
+        Vector3 getShootingDirection() { 
+            Vector3 targetPosition = shootRay.origin + transform.forward;
+            targetPosition = new Vector3(
+                    targetPosition.x  + Random.Range(-inaccuracyDistance, inaccuracyDistance),
+                    targetPosition.y + Random.Range(-inaccuracyDistance, inaccuracyDistance),
+                    targetPosition.z + Random.Range(-inaccuracyDistance, inaccuracyDistance)
+                );
+            Vector3 direction = targetPosition - shootRay.origin;
+
+            return direction.normalized;
+        }
+        IEnumerator DestroyLine(GameObject shootLineObject) { 
+            float timeDisplay = timeBetweenAttack* effectsDisplayTime;
+
+            while (timeDisplay > 0) { 
+                timeDisplay-= Time.deltaTime;
+                yield return null;
+            }
+            shootLineObject.GetComponent<LineRenderer>().enabled = false;
+            Destroy(shootLineObject);
+        }
+
+        void CreateShootLine(Vector3 endLine) {
+            GameObject shootLineObject = Instantiate(shotgunLine);
+            LineRenderer shootLine = shootLineObject.GetComponent<LineRenderer>();
+            shootLine.SetPositions(new Vector3[2] { transform.position, endLine });
+            StartCoroutine(DestroyLine(shootLineObject));
+        }
+
+        float countBulletDamage(Vector3 shootHitPoint) {
+            // Count basic damage
+            float damage = damagePerAttack * (1f + powerUp);
+
+            // Count shotgunLineLength
+            float shotgunLineLength = (shootHitPoint - transform.position).magnitude;
+
+            // Count final damage using distance function
+            damage = ( 1 - ((bulletsPerShoot - 1) / (float) bulletsPerShoot) * (shotgunLineLength / maxShotgunLineLength)) * damage;
+            return damage; 
+        }
 
         public void DisableEffects()
         {
-            // Disable the line renderer and the light.
-            gunLine.enabled = false;
+            // Disable the the light.
             faceLight.enabled = false;
             gunLight.enabled = false;
         }
 
         void Shoot()
         {
-            Debug.Log("Damage: " + (damagePerAttack * (1f + powerUp)));
+            Debug.Log("Damage Peluru Shotgun: " + (damagePerAttack * (1f + powerUp)));
             // Reset the timer.
             timer = 0f;
 
@@ -96,36 +142,38 @@ namespace CompleteProject
             gunParticles.Stop();
             gunParticles.Play();
 
-            // Enable the line renderer and set it's first position to be the end of the gun.
-            gunLine.enabled = true;
-            gunLine.SetPosition(0, transform.position);
 
-            // Set the shootRay so that it starts at the end of the gun and points forward from the barrel.
-            shootRay.origin = transform.position;
-            shootRay.direction = transform.forward;
-
-            // Perform the raycast against gameobjects on the shootable layer and if it hits something...
-            if (Physics.Raycast(shootRay, out shootHit, range, shootableMask))
+            for (int i = 0; i< bulletsPerShoot; i++)
             {
-                // Try and find an EnemyHealth script on the gameobject hit.
-                EnemyHealth enemyHealth = shootHit.collider.GetComponent<EnemyHealth>();
+                // Set the shootRay so that it starts at the end of the gun and points forward from the barrel.
+                shootRay.origin = transform.position;
+                shootRay.direction = getShootingDirection();
 
-                // If the EnemyHealth component exist...
-                if (enemyHealth != null)
+                // Perform the raycast against gameobjects on the shootable layer and if it hits something...
+                if (Physics.Raycast(shootRay, out shootHit, range, shootableMask))
                 {
-                    // ... the enemy should take damage.
-                    enemyHealth.TakeDamage(damagePerAttack * (1f + powerUp), shootHit.point);
-                }
+                    // Try and find an EnemyHealth script on the gameobject hit.
+                    
+                    // If the EnemyHealth component exist...
+                    if (shootHit.collider.TryGetComponent<EnemyHealth>(out var enemyHealth))
+                    {
+                        // ... the enemy should take damage.
+                        float bulletDamage = countBulletDamage(shootHit.point);
+                        Debug.Log("Peluru ke-"+ i.ToString() + " damage: " + bulletDamage );
+                        enemyHealth.TakeDamage(bulletDamage, shootHit.point);
+                    }
 
-                // Set the second position of the line renderer to the point the raycast hit.
-                gunLine.SetPosition(1, shootHit.point);
+                    // Set the the line renderer to the point the raycast hit.
+                    CreateShootLine(shootHit.point);
+                }
+                // If the raycast didn't hit anything on the shootable layer...
+                else
+                {
+                    // ... set the  the line renderer to the fullest extent of the gun's range.
+                    CreateShootLine(shootRay.origin + shootRay.direction * range);
+                }
             }
-            // If the raycast didn't hit anything on the shootable layer...
-            else
-            {
-                // ... set the second position of the line renderer to the fullest extent of the gun's range.
-                gunLine.SetPosition(1, shootRay.origin + shootRay.direction * range);
-            }
+
         }
     }
 }
