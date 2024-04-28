@@ -102,14 +102,26 @@ namespace CompleteProject
             // Perform the raycast against gameobjects on the shootable layer and if it hits something...
             if(Physics.Raycast (shootRay, out shootHit, range, shootableMask))
             {
-                // Try and find an EnemyHealth script on the gameobject hit.
-                EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
-
-                // If the EnemyHealth component exist...
-                if(enemyHealth != null)
+                if (isPlayerOwner)
                 {
-                    // ... the enemy should take damage.
-                    enemyHealth.TakeDamage (damagePerAttack*(1f+powerUp), shootHit.point);
+                    // Try and find an EnemyHealth script on the gameobject hit.
+                    EnemyHealth enemyHealth = shootHit.collider.GetComponent<EnemyHealth>();
+
+                    // If the EnemyHealth component exist...
+                    if (enemyHealth != null)
+                    {
+                        // ... the enemy should take damage.
+                        enemyHealth.TakeDamage(damagePerAttack * (1f + powerUp), shootHit.point);
+                    }
+                }
+                else // If the user is enemy
+                { 
+                    PlayerHealth playerHealth = shootHit.collider.GetComponent<PlayerHealth>();
+                    if (playerHealth != null)
+                    {
+                        // .. the player should take damage
+                        playerHealth.TakeDamage(damagePerAttack * (1f + powerUp));
+                    }
                 }
 
                 // Set the second position of the line renderer to the point the raycast hit.
