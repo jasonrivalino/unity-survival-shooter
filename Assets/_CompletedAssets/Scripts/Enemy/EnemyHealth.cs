@@ -46,6 +46,7 @@ namespace CompleteProject
 
         public void TakeDamage (float amount, Vector3 hitPoint)
         {
+
             // If the enemy is dead...
             if(isDead)
                 // ... no need to take damage so exit the function.
