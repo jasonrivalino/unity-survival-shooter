@@ -60,12 +60,27 @@ namespace CompleteProject
             {
                 /// Try and find an EnemyHealth script on the gameobject hit.
 
-                // If the EnemyHealth component exist...
-                if (other.gameObject.TryGetComponent<EnemyHealth>(out var enemyHealth))
+                if (isPlayerOwner)
                 {
-                    Debug.Log("Damage Katana: " + (damagePerAttack * (1f + powerUp)));
-                    // ... the enemy should take damage.
-                    enemyHealth.TakeDamage(damagePerAttack * (1f + powerUp), other.transform.position);
+                    // If the EnemyHealth component exist...
+                    if (other.gameObject.TryGetComponent<EnemyHealth>(out var enemyHealth))
+                    {
+                        Debug.Log("Damage Katana: " + (damagePerAttack * (1f + powerUp)));
+                        // ... the enemy should take damage.
+                        enemyHealth.TakeDamage(damagePerAttack * (1f + powerUp), other.transform.position);
+
+                    }
+                }
+                else // If the user is enemy
+                {
+                    // If the PlayerHealth component exist...
+                    if (other.gameObject.TryGetComponent<PlayerHealth>(out var playerHealth))
+                    {
+                        Debug.Log("Damage Katana: " + (damagePerAttack * (1f + powerUp)));
+                        // ... the player should take damage.
+                        playerHealth.TakeDamage(damagePerAttack * (1f + powerUp));
+
+                    }
                 }
             }
         }

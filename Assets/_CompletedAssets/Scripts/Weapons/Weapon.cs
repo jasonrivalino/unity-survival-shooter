@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     public float timeBetweenAttack;
     public float powerUp = 0f;
     public bool isUsed = false;
+    public bool isPlayerOwner = true;
     protected float timer;  // A timer to determine when to attack
     protected GameObject weapon; // Weapon 3D physics
     protected GameObject weapon2; // for weapon rendered by more than 1 gameObject
