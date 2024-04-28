@@ -7,7 +7,7 @@ namespace CompleteProject
 
     public class PlayerWeaponManager : MonoBehaviour
     {
-        public int weaponSlotUsed = 1;
+        public int weaponSlotUsed = 0;
         public float powerUp = 0f;
         public Weapon[] weapons;
 
@@ -18,39 +18,54 @@ namespace CompleteProject
             weapons[2].PowerUp();
         }
 
+        void ChangeWeapon(int weaponSlot) {
+            weaponSlotUsed = weaponSlot;
+            for (int i = 0; i <= 2; i++) {
+                if (i == weaponSlot)
+                {
+                    weapons[i].UseWeapon();
+                }
+                else {
+                    weapons[i].UnUseWeapon();
+                }
+            }
+        
+        }
+
         // Update is called once per frame
         void Update()
         {
-            // If the 1, 2, or 3 button is being press, change the weapon
 #if !MOBILE_INPUT
+            // If the 1, 2, or 3 button is being press, change the weapon
             if (Input.GetKeyDown(KeyCode.Alpha1)) {
-                if (weaponSlotUsed != 1)
+                if (weaponSlotUsed != 0)
                 {
-                    weaponSlotUsed = 1;
-                    weapons[0].UseWeapon();
-                    weapons[1].UnUseWeapon();
-                    weapons[2].UnUseWeapon();
+                    ChangeWeapon(0);
                 }
             }
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                if(weaponSlotUsed != 2)
+                if(weaponSlotUsed != 1)
                 {
-                    weaponSlotUsed = 2;
-                    weapons[0].UnUseWeapon();
-                    weapons[1].UseWeapon();
-                    weapons[2].UnUseWeapon();
+                    ChangeWeapon(1);
                 }
             }
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                if (weaponSlotUsed != 3)
+                if (weaponSlotUsed != 2)
                 {
-                    weaponSlotUsed = 3;
-                    weapons[0].UnUseWeapon();
-                    weapons[1].UnUseWeapon();
-                    weapons[2].UseWeapon();
+                    ChangeWeapon(2);
                 }
+            }
+
+            // If mousewheel scrolled, change the weapon
+            if (Input.GetAxisRaw("Mouse ScrollWheel") > 0f)
+            {
+                ChangeWeapon((weaponSlotUsed - 1 + weapons.Length) % weapons.Length);
+
+            } else if (Input.GetAxisRaw("Mouse ScrollWheel") < 0f)
+            {
+                ChangeWeapon((weaponSlotUsed + 1 + weapons.Length) % weapons.Length);
             }
         }
     }

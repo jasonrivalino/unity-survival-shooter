@@ -10,11 +10,14 @@ namespace CompleteProject
     {
         float timeAttacking = 0.1f;
         bool isSlashing = false;
+        AudioSource slashAudio;
 
         void Awake()
         {
+            // set up the references
             weapon = gameObject;
             UnUseWeapon();
+            slashAudio = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -73,7 +76,7 @@ namespace CompleteProject
             isSlashing = true;
             
             // Play the katana slash audioclip
-            // TODO: find the audioclip
+            slashAudio.Play();
 
 
             // Katana Animation
