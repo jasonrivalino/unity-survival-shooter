@@ -22,7 +22,8 @@ namespace CompleteProject
                 // If player is not pick damageOrb 15 times or more
                 if (weaponManager.powerUp < 1.5f)
                 {
-                    Debug.Log("Damage Orb Picked");
+                    Debug.Log(orbPickedAudio);
+                    orbPickedAudio.Play();
                     weaponManager.PowerUp();
                     Dissapear();
                 }

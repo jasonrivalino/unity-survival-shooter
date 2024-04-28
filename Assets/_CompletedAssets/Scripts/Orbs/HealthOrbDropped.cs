@@ -22,7 +22,8 @@ namespace CompleteProject
 
                 // Picked only if current health is < startinghealth
                 if (playerHealth.currentHealth < playerHealth.startingHealth) {
-                    Debug.Log("Health orb Picked");
+                    Debug.Log(orbPickedAudio);
+                    orbPickedAudio.Play();
                     playerHealth.Heal();
                     base.Dissapear();
                 }

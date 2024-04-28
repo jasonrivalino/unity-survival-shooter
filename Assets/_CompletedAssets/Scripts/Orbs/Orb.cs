@@ -9,12 +9,16 @@ namespace CompleteProject
         protected UnityEngine.GameObject player; // Reference to the player GameObject.
         float timer; // Timer for orb lifetime
 
+        protected AudioSource orbPickedAudio;
+
         // Start is called before the first frame update
         protected void Awake()
         {
             // Setting up the references
             player = UnityEngine.GameObject.FindGameObjectWithTag("Player");
             timer = 0f;
+            orbPickedAudio = GetComponentInChildren<AudioSource>();
+            orbPickedAudio.enabled = true;
         }
 
         // Update is called once per frame

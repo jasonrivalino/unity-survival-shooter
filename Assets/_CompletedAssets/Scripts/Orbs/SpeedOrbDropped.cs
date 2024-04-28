@@ -19,7 +19,8 @@ namespace CompleteProject
             // If the entering collider is the player 
             if (collision.gameObject == player)
             {
-                Debug.Log("Speed orb Picked");
+                Debug.Log(orbPickedAudio);
+                orbPickedAudio.Play();
                 // Set speedup for player
                 playerMovement.SpeedUp();
                 base.Dissapear();
