@@ -53,7 +53,7 @@ namespace CompleteProject
 
         void Move(float h, float v)
         {
-            Debug.Log("speed total: " + (speed * speedUp));
+            // Debug.Log("speed total: " + (speed * speedUp));
             // Set the movement vector based on the axis input.
             movement.Set(h, 0f, v);
 
@@ -135,7 +135,7 @@ namespace CompleteProject
                 speedUpTime -= Time.deltaTime;
 
                 // Update UI
-                speedUpTimeText.text = "Speed Up: " + ((int)speedUpTime+1) + " s";
+                speedUpTimeText.text = "Speed Up: " + ((int)speedUpTime + 1) + " s";
 
                 // If speedUpTime over, set speedUp back to 1
                 if (speedUpTime <= 0)
