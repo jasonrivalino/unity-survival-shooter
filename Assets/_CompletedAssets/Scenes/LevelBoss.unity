@@ -3336,7 +3336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f43bf66218c874d871d02802b6a2db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreObjective: 300
+  scoreObjective: 500
   interactAction:
     m_PersistentCalls:
       m_Calls:
@@ -3502,7 +3502,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Objective: reach 300 points'
+  m_Text: 'Objective: reach 500 points'
 --- !u!222 &1438989903
 CanvasRenderer:
   m_ObjectHideFlags: 0
