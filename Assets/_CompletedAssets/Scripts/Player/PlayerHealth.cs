@@ -78,24 +78,27 @@ namespace CompleteProject
 
         public void TakeDamage (float amount)
         {
+            // if NoDamage cheat is not activated, take the damage
+            if (!PlayerPrefs.HasKey("NoDamage"))
+            { 
+                // Set the damaged flag so the screen will flash.
+                damaged = true;
 
-            // Set the damaged flag so the screen will flash.
-            damaged = true;
+                // Reduce the current health by the damage amount.
+                currentHealth -= amount;
 
-            // Reduce the current health by the damage amount.
-            currentHealth -= amount;
+                // Set the health bar's value to the current health.
+                healthSlider.value = currentHealth;
 
-            // Set the health bar's value to the current health.
-            healthSlider.value = currentHealth;
+                // Play the hurt sound effect.
+                playerAudio.Play ();
 
-            // Play the hurt sound effect.
-            playerAudio.Play ();
-
-            // If the player has lost all it's health and the death flag hasn't been set yet...
-            if(currentHealth <= 0 && !isDead)
-            {
-                // ... it should die.
-                Death ();
+                // If the player has lost all it's health and the death flag hasn't been set yet...
+                if(currentHealth <= 0 && !isDead)
+                {
+                    // ... it should die.
+                    Death ();
+                }  
             }
         }
 
