@@ -94,16 +94,19 @@ namespace CompleteProject
             bool isCheatActivated = false;
 
             // Activate Cheat if exist
-            
+
             // Cheat no damage
             if (cheatInput == "DEMIGOD")
             {
-                isCheatActivated = ProcessCheat("NoDamage");  
+                isCheatActivated = ProcessCheat("NoDamage");
             }
-            else 
+            else if (cheatInput == "ONEHITMAN")
+            {
+                isCheatActivated = ProcessCheat("OneHitKill");
+            }
+            else
             {
                 isCheatExisted = false;
-            
             }
 
             if (isCheatExisted)
@@ -115,7 +118,6 @@ namespace CompleteProject
                 else
                 {
                     cheatStatusText.text = "Cheat Deactivated";
-                   
                 }
                 // Set the cheat input field to empty 
                 cheatInputField.text = "";
