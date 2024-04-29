@@ -8,6 +8,9 @@ namespace CompleteProject
     {
         protected UnityEngine.GameObject player; // Reference to the player GameObject.
         float timer; // Timer for orb lifetime
+        protected bool isPicked = false;
+
+        protected AudioSource orbPickedAudio;
 
         // Start is called before the first frame update
         protected void Awake()
@@ -15,6 +18,7 @@ namespace CompleteProject
             // Setting up the references
             player = UnityEngine.GameObject.FindGameObjectWithTag("Player");
             timer = 0f;
+            orbPickedAudio = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -31,8 +35,12 @@ namespace CompleteProject
 
         protected void Dissapear()
         {
-            GetComponent<Renderer>().enabled = false;
-            Destroy(gameObject, 0f);
+            Renderer[] renderers = GetComponentsInChildren<Renderer>();
+            Debug.Log(renderers.Length);
+            foreach(Renderer renderer in renderers) { 
+                renderer.enabled = false;
+            }
+            Destroy(gameObject, 1f);
         }
     }
 }

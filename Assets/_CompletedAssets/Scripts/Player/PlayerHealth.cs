@@ -10,12 +10,12 @@ namespace CompleteProject
         public float startingHealth = 100f;                            // The amount of health the player starts the game with.
         public float currentHealth;                                   // The current health the player has.
         public Slider healthSlider;                                 // Reference to the UI's health bar.
-        public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
+        public Image effectImage;                                   // Reference to an image to flash on the screen on being hurt.
         public AudioClip deathClip;                                 // The audio clip to play when the player dies.
-        public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
-        public Color healFlashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
-        public Color damageFlashColour = new Color(0.455f, 1f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
-
+        public float flashSpeed = 5f;                               // The speed the effectImage will fade at.
+        
+        Color healFlashColour = new(0f, 0.455f, 0f, 0.1f);     // The colour the heal effectImage is set to, to flash.
+        Color damageFlashColour = new(0.455f, 0f, 0f, 0.1f);     // The colour the damaged effectImage is set to, to flash.
 
         Animator anim;                                              // Reference to the Animator component.
         AudioSource playerAudio;                                    // Reference to the AudioSource component.
@@ -23,6 +23,7 @@ namespace CompleteProject
         Riffle riffle;                              // Reference to the PlayerShooting script.
         bool isDead;                                                // Whether the player is dead.
         bool damaged;                                               // True when the player gets damaged.
+        bool healed;                                                // True when the player gets healed.
 
         void Awake ()
         {
@@ -40,23 +41,34 @@ namespace CompleteProject
         void Update ()
         {
             // If the player has just been damaged...
-            if(damaged)
+            if (damaged)
             {
-                // ... set the colour of the damageImage to the flash colour.
-                damageImage.color = damageFlashColour;
+                // ... set the colour of the effectImage to the damaged flash colour.
+                Debug.Log("color damage before: " + damageFlashColour.ToString());
+                effectImage.color = damageFlashColour;
+                // Reset the damaged flag.
+                Debug.Log("color damage: " + effectImage.color.ToString());
+                damaged = false;
+            }
+            else if (healed)
+            {
+                // ... set the colour of the effectImage to the healed flash colour.
+                Debug.Log("color heal before: " + healFlashColour.ToString());
+                effectImage.color = healFlashColour;
+                Debug.Log("color heal: " + effectImage.color.ToString());
+                // Reset the healed flag.
+                healed = false;
             }
             // Otherwise...
             else
             {
                 // ... transition the colour back to clear.
-                damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+                effectImage.color = Color.Lerp(effectImage.color, Color.clear, flashSpeed * Time.deltaTime);
             }
-
-            // Reset the damaged flag.
-            damaged = false;
         }
 
         public void Heal() {
+            healed = true;
             if ((currentHealth / startingHealth) > 0.8f)
             {
                 currentHealth = startingHealth;
