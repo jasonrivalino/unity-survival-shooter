@@ -10,6 +10,7 @@ namespace CompleteProject
     {
         public TMP_InputField cheatInputField;
         public Text cheatStatusText;
+        public OrbManager orbManager;
 
         float cheatStatusTextShowTime = 0;
         // Start is called before the first frame update
@@ -88,25 +89,53 @@ namespace CompleteProject
             return activateCheat;
         }
 
-        public void ReadCheatInput(string cheatInput) 
+        public void ReadCheatInput(string cheatInput)
         {
             bool isCheatExisted = true;
             bool isCheatActivated = false;
 
             // Activate Cheat if exist
 
-            // Cheat no damage
+            // Cheat No Damage
             if (cheatInput == "IMMORTAL")
             {
                 isCheatActivated = ProcessCheat("NoDamage");
             }
+            // Cheat One Hit Kill
             else if (cheatInput == "ONE HIT MAN")
             {
                 isCheatActivated = ProcessCheat("OneHitKill");
             }
+            // Cheat 2x Speed
             else if (cheatInput == "KAMINARI NO KOKYU")
             {
                 isCheatActivated = ProcessCheat("2xSpeedUp");
+            }
+            // Cheat Random Orb Power Up
+            else if (cheatInput == "ORB")
+            {
+                // Randomly select orb type to spawn
+                int orbTypeIdx = Random.Range(0, 3);
+                orbManager.CheatSpawn(orbTypeIdx);
+                isCheatActivated = true;
+            }
+            // Cheat Damage Orb
+            else if (cheatInput == "CHIKARA")
+            {
+                orbManager.CheatSpawn(0);
+                isCheatActivated = true;
+            }
+            // Cheat Heal Orb
+            else if (cheatInput == "HIIRU")
+            {
+                orbManager.CheatSpawn(1);
+                isCheatActivated = true;
+            }
+            // Cheat Speed Up Orb
+            else if (cheatInput == "SUPEEDO")
+            {
+                orbManager.CheatSpawn(2);
+                isCheatActivated = true;
             }
             else
             {
