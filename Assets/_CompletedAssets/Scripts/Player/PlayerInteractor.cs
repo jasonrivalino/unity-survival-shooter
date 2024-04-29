@@ -11,12 +11,16 @@ public class PlayerInteractor : MonoBehaviour
     public KeyCode interactKey;
     public UnityEvent interactAction;
     public GameObject visualUI;
+    public GameObject errorUI;
     public TextMeshProUGUI hintName;
+    public TextMeshProUGUI errorName;
     public String visualObjectAction;
+    private bool triggerExitEnabled = true;
     // Start is called before the first frame update
     void Start()
     {
         visualUI.SetActive(false);
+        errorUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,9 +28,21 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (isInRange)
         {
+            isInRange = true;
+            Debug.Log("Player is in range");
             if (Input.GetKeyDown(interactKey))
             {
+
                 interactAction.Invoke();
+            }
+        }
+        else
+        {
+            Debug.Log("Player is not in range");
+
+            if (Input.GetKeyDown(interactKey))
+            {
+                StartCoroutine(ShowErrorMessage());
             }
         }
     }
@@ -38,19 +54,35 @@ public class PlayerInteractor : MonoBehaviour
             visualUI.SetActive(true);
             hintName.text = "Tekan E untuk " + visualObjectAction + "!";
             isInRange = true;
-            Debug.Log("Player is in range");
+            triggerExitEnabled = false;
         }
     }
 
+
+
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.gameObject.CompareTag("Player"))
+        if (triggerExitEnabled)
         {
             visualUI.SetActive(false);
             isInRange = false;
-            Debug.Log("Player is not in range");
+        }
+        else
+        {
+            triggerExitEnabled = true;
         }
     }
+
+    IEnumerator ShowErrorMessage()
+    {
+        yield return new WaitForSeconds((float)0.5);
+        errorUI.SetActive(true);
+        errorName.text = "Tidak bisa interaksi dengan apa-apa!";
+        yield return new WaitForSeconds(2);
+        errorUI.SetActive(false);
+    }
+
+
 
 
 }
