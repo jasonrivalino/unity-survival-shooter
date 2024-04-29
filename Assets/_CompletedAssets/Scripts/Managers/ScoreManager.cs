@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Events;
 
 namespace CompleteProject
 {
@@ -9,6 +10,8 @@ namespace CompleteProject
         public static int score;        // The player's score.
 
         public int scoreObjective;
+
+        public UnityEvent interactAction;
 
 
         Text text;                      // Reference to the Text component.
@@ -30,7 +33,7 @@ namespace CompleteProject
             text.text = "Score: " + score;
             if (score == scoreObjective)
             {
-                Debug.Log("Objective reached");
+                interactAction.Invoke();
             }
         }
     }

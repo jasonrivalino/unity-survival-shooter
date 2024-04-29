@@ -5,5 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_CompletedAssets/Scenes/Level 01 5.x.unity
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/_CompletedAssets/Scenes/Level1.unity
+    guid: b5a500172fd72ea458f8de96cfb25cc2
+  - enabled: 1
+    path: Assets/_CompletedAssets/Scenes/AfterMath-Quest.unity
+    guid: 27fed2fb65ce952408bbf23f374105e1
+  - enabled: 1
+    path: Assets/_CompletedAssets/Scenes/Town.unity
+    guid: e16245b87ffd67a4783e75a90c0ff216
+  - enabled: 1
+    path: Assets/_CompletedAssets/Scenes/Level2.unity
+    guid: 1ee99e92d3f9f9a448440624f87680fa
+  m_configObjects: {}
