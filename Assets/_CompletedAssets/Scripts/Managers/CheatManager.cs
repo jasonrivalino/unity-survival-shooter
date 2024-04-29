@@ -96,13 +96,17 @@ namespace CompleteProject
             // Activate Cheat if exist
 
             // Cheat no damage
-            if (cheatInput == "DEMIGOD")
+            if (cheatInput == "IMMORTAL")
             {
                 isCheatActivated = ProcessCheat("NoDamage");
             }
-            else if (cheatInput == "ONEHITMAN")
+            else if (cheatInput == "ONE HIT MAN")
             {
                 isCheatActivated = ProcessCheat("OneHitKill");
+            }
+            else if (cheatInput == "KAMINARI NO KOKYU")
+            {
+                isCheatActivated = ProcessCheat("2xSpeedUp");
             }
             else
             {
