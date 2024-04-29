@@ -13,7 +13,7 @@ namespace CompleteProject
         public Image effectImage;                                   // Reference to an image to flash on the screen on being hurt.
         public AudioClip deathClip;                                 // The audio clip to play when the player dies.
         public float flashSpeed = 5f;                               // The speed the effectImage will fade at.
-        
+
         Color healFlashColour = new(0f, 0.455f, 0f, 0.1f);     // The colour the heal effectImage is set to, to flash.
         Color damageFlashColour = new(0.455f, 0f, 0f, 0.1f);     // The colour the damaged effectImage is set to, to flash.
 
@@ -25,20 +25,20 @@ namespace CompleteProject
         bool damaged;                                               // True when the player gets damaged.
         bool healed;                                                // True when the player gets healed.
 
-        void Awake ()
+        void Awake()
         {
             // Setting up the references.
-            anim = GetComponent <Animator> ();
-            playerAudio = GetComponent <AudioSource> ();
-            playerMovement = GetComponent <PlayerMovement> ();
-            riffle = GetComponentInChildren <Riffle> ();
+            anim = GetComponent<Animator>();
+            playerAudio = GetComponent<AudioSource>();
+            playerMovement = GetComponent<PlayerMovement>();
+            riffle = GetComponentInChildren<Riffle>();
 
             // Set the initial health of the player.
             currentHealth = startingHealth;
         }
 
 
-        void Update ()
+        void Update()
         {
             // If the player has just been damaged...
             if (damaged)
@@ -59,11 +59,12 @@ namespace CompleteProject
             else
             {
                 // ... transition the colour back to clear.
-                effectImage.color = Color.Lerp(effectImage.color, Color.clear, flashSpeed * Time.deltaTime);
+                // effectImage.color = Color.Lerp(effectImage.color, Color.clear, flashSpeed * Time.deltaTime);
             }
         }
 
-        public void Heal() {
+        public void Heal()
+        {
             healed = true;
             if ((currentHealth / startingHealth) > 0.8f)
             {
@@ -76,7 +77,7 @@ namespace CompleteProject
             healthSlider.value = currentHealth;
         }
 
-        public void TakeDamage (float amount)
+        public void TakeDamage(float amount)
         {
             // if NoDamage cheat is not activated, take the damage
             if (!PlayerPrefs.HasKey("NoDamage"))
@@ -93,30 +94,41 @@ namespace CompleteProject
                 // Play the hurt sound effect.
                 playerAudio.Play ();
 
+<<<<<<< 9a8ebe7dbc5e397edf533416bc3588fba9cf095c
                 // If the player has lost all it's health and the death flag hasn't been set yet...
                 if(currentHealth <= 0 && !isDead)
                 {
                     // ... it should die.
                     Death ();
                 }  
+=======
+            // Play the hurt sound effect.
+            playerAudio.Play();
+
+            // If the player has lost all it's health and the death flag hasn't been set yet...
+            if (currentHealth <= 0 && !isDead)
+            {
+                // ... it should die.
+                Death();
+>>>>>>> 2629953d4e5749e4dd93af450f0a4a92a89c4073
             }
         }
 
 
-        void Death ()
+        void Death()
         {
             // Set the death flag so this function won't be called again.
             isDead = true;
 
             // Turn off any remaining shooting effects.
-            riffle.DisableEffects ();
+            riffle.DisableEffects();
 
             // Tell the animator that the player is dead.
-            anim.SetTrigger ("Die");
+            anim.SetTrigger("Die");
 
             // Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
             playerAudio.clip = deathClip;
-            playerAudio.Play ();
+            playerAudio.Play();
 
             // Turn off the movement and shooting scripts.
             playerMovement.enabled = false;
@@ -124,10 +136,10 @@ namespace CompleteProject
         }
 
 
-        public void RestartLevel ()
+        public void RestartLevel()
         {
             // Reload the level that is currently loaded.
-            SceneManager.LoadScene (0);
+            SceneManager.LoadScene(0);
         }
     }
 }

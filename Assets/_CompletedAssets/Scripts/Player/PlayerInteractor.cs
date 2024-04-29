@@ -15,7 +15,6 @@ public class PlayerInteractor : MonoBehaviour
     public TextMeshProUGUI hintName;
     public TextMeshProUGUI errorName;
     public String visualObjectAction;
-    private bool triggerExitEnabled = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +53,6 @@ public class PlayerInteractor : MonoBehaviour
             visualUI.SetActive(true);
             hintName.text = "Tekan E untuk " + visualObjectAction + "!";
             isInRange = true;
-            triggerExitEnabled = false;
         }
     }
 
@@ -62,15 +60,8 @@ public class PlayerInteractor : MonoBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        if (triggerExitEnabled)
-        {
-            visualUI.SetActive(false);
-            isInRange = false;
-        }
-        else
-        {
-            triggerExitEnabled = true;
-        }
+        visualUI.SetActive(false);
+        isInRange = false;
     }
 
     IEnumerator ShowErrorMessage()
