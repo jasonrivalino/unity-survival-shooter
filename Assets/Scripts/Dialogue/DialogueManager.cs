@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -17,6 +18,8 @@ public class DialogueManager : MonoBehaviour
     GameObject blurpanel;
 
     GameObject blankimage;
+
+    public UnityEvent interactAction;
 
     [Header("Audio")]
     [SerializeField] private AudioClip dialogueTypingSoundClip;
@@ -90,6 +93,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        interactAction.Invoke();
         animator.SetBool("IsOpen", false);
     }
 }
