@@ -5447,7 +5447,7 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   healthSlider: {fileID: 0}
-  damageImage: {fileID: 0}
+  effectImage: {fileID: 0}
   deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
   flashSpeed: 5
   healFlashColour: {r: 1, g: 0, b: 0, a: 0.1}
@@ -5494,6 +5494,8 @@ MonoBehaviour:
   speed: 6
   speedUp: 1
   speedUpTime: 0
+  speedUpTimeText: {fileID: 0}
+  speedUpText: {fileID: 0}
 --- !u!114 &399669218063535372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5508,6 +5510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSlotUsed: 0
   powerUp: 0
+  powerUpText: {fileID: 0}
   weapons:
   - {fileID: 6711780760367370857}
   - {fileID: 8380436874639752770}
