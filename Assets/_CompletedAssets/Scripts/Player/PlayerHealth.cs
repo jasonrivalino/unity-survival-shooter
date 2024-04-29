@@ -44,18 +44,14 @@ namespace CompleteProject
             if (damaged)
             {
                 // ... set the colour of the effectImage to the damaged flash colour.
-                Debug.Log("color damage before: " + damageFlashColour.ToString());
                 effectImage.color = damageFlashColour;
                 // Reset the damaged flag.
-                Debug.Log("color damage: " + effectImage.color.ToString());
                 damaged = false;
             }
             else if (healed)
             {
                 // ... set the colour of the effectImage to the healed flash colour.
-                Debug.Log("color heal before: " + healFlashColour.ToString());
                 effectImage.color = healFlashColour;
-                Debug.Log("color heal: " + effectImage.color.ToString());
                 // Reset the healed flag.
                 healed = false;
             }
