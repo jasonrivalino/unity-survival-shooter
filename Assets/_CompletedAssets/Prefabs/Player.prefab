@@ -5304,6 +5304,7 @@ MonoBehaviour:
   timeBetweenAttack: 0.15
   powerUp: 0
   isUsed: 1
+  isPlayerOwner: 1
   range: 100
   faceLight: {fileID: 0}
 --- !u!108 &10800000
@@ -5450,8 +5451,6 @@ MonoBehaviour:
   effectImage: {fileID: 0}
   deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
   flashSpeed: 5
-  healFlashColour: {r: 1, g: 0, b: 0, a: 0.1}
-  damageFlashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11520,6 +11519,7 @@ MonoBehaviour:
   timeBetweenAttack: 0.35
   powerUp: 0
   isUsed: 0
+  isPlayerOwner: 1
   range: 7
   bulletsPerShoot: 7
   inaccuracyDistance: 0.15
@@ -11901,6 +11901,7 @@ MonoBehaviour:
   timeBetweenAttack: 0.3
   powerUp: 0
   isUsed: 0
+  isPlayerOwner: 1
 --- !u!82 &1136507754601220610
 AudioSource:
   m_ObjectHideFlags: 0

@@ -44,18 +44,14 @@ namespace CompleteProject
             if (damaged)
             {
                 // ... set the colour of the effectImage to the damaged flash colour.
-                Debug.Log("color damage before: " + damageFlashColour.ToString());
                 effectImage.color = damageFlashColour;
                 // Reset the damaged flag.
-                Debug.Log("color damage: " + effectImage.color.ToString());
                 damaged = false;
             }
             else if (healed)
             {
                 // ... set the colour of the effectImage to the healed flash colour.
-                Debug.Log("color heal before: " + healFlashColour.ToString());
                 effectImage.color = healFlashColour;
-                Debug.Log("color heal: " + effectImage.color.ToString());
                 // Reset the healed flag.
                 healed = false;
             }
@@ -83,16 +79,29 @@ namespace CompleteProject
 
         public void TakeDamage(float amount)
         {
+            // if NoDamage cheat is not activated, take the damage
+            if (!PlayerPrefs.HasKey("NoDamage"))
+            { 
+                // Set the damaged flag so the screen will flash.
+                damaged = true;
 
-            // Set the damaged flag so the screen will flash.
-            damaged = true;
+                // Reduce the current health by the damage amount.
+                currentHealth -= amount;
 
-            // Reduce the current health by the damage amount.
-            currentHealth -= amount;
+                // Set the health bar's value to the current health.
+                healthSlider.value = currentHealth;
 
-            // Set the health bar's value to the current health.
-            healthSlider.value = currentHealth;
+                // Play the hurt sound effect.
+                playerAudio.Play ();
 
+<<<<<<< 9a8ebe7dbc5e397edf533416bc3588fba9cf095c
+                // If the player has lost all it's health and the death flag hasn't been set yet...
+                if(currentHealth <= 0 && !isDead)
+                {
+                    // ... it should die.
+                    Death ();
+                }  
+=======
             // Play the hurt sound effect.
             playerAudio.Play();
 
@@ -101,6 +110,7 @@ namespace CompleteProject
             {
                 // ... it should die.
                 Death();
+>>>>>>> 2629953d4e5749e4dd93af450f0a4a92a89c4073
             }
         }
 

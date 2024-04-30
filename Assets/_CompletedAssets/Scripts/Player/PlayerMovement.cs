@@ -60,6 +60,13 @@ namespace CompleteProject
             // Normalise the movement vector and make it proportional to the speed per second.
             movement = movement.normalized * speed * speedUp * Time.deltaTime;
 
+            // If 2xSpeedUp cheat activated
+            if (PlayerPrefs.HasKey("2xSpeedUp"))
+            {
+                // Speedup two times
+                movement *= 2;
+            }
+
             // Move the player to it's current position plus the movement.
             playerRigidbody.MovePosition(transform.position + movement);
         }
