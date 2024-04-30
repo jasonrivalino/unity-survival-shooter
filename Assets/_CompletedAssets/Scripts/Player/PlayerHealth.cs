@@ -81,7 +81,7 @@ namespace CompleteProject
         {
             // if NoDamage cheat is not activated, take the damage
             if (!PlayerPrefs.HasKey("NoDamage"))
-            { 
+            {
                 // Set the damaged flag so the screen will flash.
                 damaged = true;
 
@@ -92,25 +92,17 @@ namespace CompleteProject
                 healthSlider.value = currentHealth;
 
                 // Play the hurt sound effect.
-                playerAudio.Play ();
+                playerAudio.Play();
 
-<<<<<<< 9a8ebe7dbc5e397edf533416bc3588fba9cf095c
+                // Play the hurt sound effect.
+                playerAudio.Play();
+
                 // If the player has lost all it's health and the death flag hasn't been set yet...
-                if(currentHealth <= 0 && !isDead)
+                if (currentHealth <= 0 && !isDead)
                 {
                     // ... it should die.
-                    Death ();
-                }  
-=======
-            // Play the hurt sound effect.
-            playerAudio.Play();
-
-            // If the player has lost all it's health and the death flag hasn't been set yet...
-            if (currentHealth <= 0 && !isDead)
-            {
-                // ... it should die.
-                Death();
->>>>>>> 2629953d4e5749e4dd93af450f0a4a92a89c4073
+                    Death();
+                }
             }
         }
 

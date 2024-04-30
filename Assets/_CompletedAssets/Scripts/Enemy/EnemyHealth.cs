@@ -48,26 +48,25 @@ namespace CompleteProject
 
         public void TakeDamage(float amount, Vector3 hitPoint)
         {
-<<<<<<< 9a8ebe7dbc5e397edf533416bc3588fba9cf095c
             // Death if OneHitKill Cheat activated
             if (PlayerPrefs.HasKey("OneHitKill"))
             {
                 currentHealth = 0;
                 Death();
             }
-            else 
-            { 
+            else
+            {
                 // If the enemy is dead...
-                if(isDead)
+                if (isDead)
                     // ... no need to take damage so exit the function.
                     return;
 
                 // Play the hurt sound effect.
-                enemyAudio.Play ();
+                enemyAudio.Play();
 
                 // Reduce the current health by the amount of damage sustained.
                 currentHealth -= amount;
-            
+
                 // Set the position of the particle system to where the hit was sustained.
                 hitParticles.transform.position = hitPoint;
 
@@ -75,36 +74,11 @@ namespace CompleteProject
                 hitParticles.Play();
 
                 // If the current health is less than or equal to zero...
-                if(currentHealth <= 0)
+                if (currentHealth <= 0)
                 {
                     // ... the enemy is dead.
-                    Death ();
+                    Death();
                 }
-=======
-
-            // If the enemy is dead...
-            if (isDead)
-                // ... no need to take damage so exit the function.
-                return;
-
-            // Play the hurt sound effect.
-            enemyAudio.Play();
-
-            // Reduce the current health by the amount of damage sustained.
-            currentHealth -= amount;
-
-            // Set the position of the particle system to where the hit was sustained.
-            hitParticles.transform.position = hitPoint;
-
-            // And play the particles.
-            hitParticles.Play();
-
-            // If the current health is less than or equal to zero...
-            if (currentHealth <= 0)
-            {
-                // ... the enemy is dead.
-                Death();
->>>>>>> 2629953d4e5749e4dd93af450f0a4a92a89c4073
             }
         }
 
