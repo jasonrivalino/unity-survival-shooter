@@ -600,8 +600,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 4795060569972924578}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
-  m_Speed: 3.5
+  m_Radius: 0.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -637,10 +637,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b9d14572410594cb85d40eedfb150c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 250
+  startingHealth: 200
   currentHealth: 0
   sinkSpeed: 2.5
-  scoreValue: 10
+  scoreValue: 100
   deathClip: {fileID: 0}
 --- !u!114 &5957382078462156261
 MonoBehaviour:
@@ -654,8 +654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e15099f5ee559584089d5851df572def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 1
+  timeBetweenAttacks: 1
+  attackDamage: 15
 --- !u!114 &1797216851857141977
 MonoBehaviour:
   m_ObjectHideFlags: 0

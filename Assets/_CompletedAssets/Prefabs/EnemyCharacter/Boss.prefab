@@ -22238,7 +22238,7 @@ MonoBehaviour:
   startingHealth: 500
   currentHealth: 0
   sinkSpeed: 2.5
-  scoreValue: 1000
+  scoreValue: 500
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
 --- !u!114 &3775431241456799153
 MonoBehaviour:
@@ -22252,7 +22252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc28e8f7dbbe7494a8d67b6f5f3636bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 3
+  timeBetweenAttacks: 4
   attackDamage: 25
 --- !u!114 &5928808456736738642
 MonoBehaviour:
