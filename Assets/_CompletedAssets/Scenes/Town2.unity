@@ -2677,6 +2677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 1785674440}
+  interactHint: {fileID: 231392596}
 --- !u!4 &1002110427
 Transform:
   m_ObjectHideFlags: 0

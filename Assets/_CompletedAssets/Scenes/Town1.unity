@@ -3653,6 +3653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 1785674440}
+  interactHint: {fileID: 231392596}
 --- !u!1 &1591794898
 GameObject:
   m_ObjectHideFlags: 0
@@ -4685,7 +4686,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b161f0de816ba049b3afcc9a913e3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shop: {fileID: 1785674440}
 --- !u!1 &1837071935
 GameObject:
   m_ObjectHideFlags: 0
