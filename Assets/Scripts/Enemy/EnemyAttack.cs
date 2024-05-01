@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class EnemyAttack : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class EnemyAttack : MonoBehaviour
     Animator anim;
     GameObject player;
     PlayerHealth playerHealth;
-    //EnemyHealth enemyHealth;
+    EnemyHealth enemyHealth;
     bool playerInRange;
     float timer;
 
@@ -19,7 +20,7 @@ public class EnemyAttack : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag ("Player");
         playerHealth = player.GetComponent <PlayerHealth> ();
-        //enemyHealth = GetComponent<EnemyHealth>();
+        enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent <Animator> ();
     }
 
@@ -46,10 +47,12 @@ public class EnemyAttack : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer >= timeBetweenAttacks && playerInRange/* && enemyHealth.currentHealth > 0*/)
+        if(timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
         {
             Attack ();
         }
+
+        Console.WriteLine("Player health: " + playerHealth.currentHealth);
 
         if(playerHealth.currentHealth <= 0)
         {
