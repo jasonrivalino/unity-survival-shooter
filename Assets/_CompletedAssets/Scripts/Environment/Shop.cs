@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class Shop : MonoBehaviour
 {
     Canvas canvas;
-
+    GameObject shop;
     void Start()
     {
         GameObject shopCanvas = GameObject.Find("ShopCanvas");
+        shop = GameObject.Find("shop");
         canvas = shopCanvas.GetComponent<Canvas>();
     }
     public void Interact()
@@ -21,6 +22,7 @@ public class Shop : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
+        // if (Input.GetKeyDown(KeyCode.Escape) || (shop != null && !shop.activeSelf))
         {
             canvas.enabled = false;
         }

@@ -8,7 +8,7 @@ public class ShopManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(DisappearShop());
+        // StartCoroutine(DisappearShop());
     }
 
     IEnumerator DisappearShop()
