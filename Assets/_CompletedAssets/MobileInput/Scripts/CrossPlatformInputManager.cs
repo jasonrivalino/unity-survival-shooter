@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnitySampleAssets.CrossPlatformInput.PlatformSpecific;
 
+
 namespace UnitySampleAssets.CrossPlatformInput
 {
     public static class CrossPlatformInputManager

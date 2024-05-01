@@ -59,7 +59,7 @@ namespace CompleteProject
             else
             {
                 // ... transition the colour back to clear.
-                // effectImage.color = Color.Lerp(effectImage.color, Color.clear, flashSpeed * Time.deltaTime);
+                effectImage.color = Color.Lerp(effectImage.color, Color.clear, flashSpeed * Time.deltaTime);
             }
         }
 
