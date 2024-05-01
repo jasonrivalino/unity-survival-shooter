@@ -67,7 +67,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: b77f122f451a2394898a24191c26107c, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 2cd6bf77cac24414c8e134b0c0e7aed3, type: 2}
+      objectReference: {fileID: 9100000, guid: cbb504a50c7413342bc315c7284e1ae3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b9d14572410594cb85d40eedfb150c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 150
   currentHealth: 0
   sinkSpeed: 2.5
   scoreValue: 10

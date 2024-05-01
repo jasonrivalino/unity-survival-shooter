@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_Name
-      value: devil@fly
+      value: Devils
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_Layer
@@ -362,7 +362,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 2cd6bf77cac24414c8e134b0c0e7aed3, type: 2}
+      objectReference: {fileID: 9100000, guid: cbb504a50c7413342bc315c7284e1ae3, type: 2}
     - target: {fileID: 9500000, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
@@ -493,7 +493,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.8
+  m_Radius: 5
   m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!82 &7370607616242185167
 AudioSource:
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b9d14572410594cb85d40eedfb150c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 250
   currentHealth: 0
   sinkSpeed: 2.5
   scoreValue: 10
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.5
-  attackDamage: 10
+  attackDamage: 1
 --- !u!114 &1797216851857141977
 MonoBehaviour:
   m_ObjectHideFlags: 0
