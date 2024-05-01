@@ -5,9 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Shop : MonoBehaviour
 {
+    Canvas canvas;
+
+    void Start()
+    {
+        GameObject shopCanvas = GameObject.Find("ShopCanvas");
+        canvas = shopCanvas.GetComponent<Canvas>();
+    }
     public void Interact()
     {
-        SceneManager.LoadScene("Shop");
+        canvas.enabled = true;
         Debug.Log("Interact shop");
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            canvas.enabled = false;
+        }
     }
 }

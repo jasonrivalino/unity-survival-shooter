@@ -11,15 +11,12 @@ public class PlayerInteractor : MonoBehaviour
     public KeyCode interactKey;
     public UnityEvent interactAction;
     public GameObject visualUI;
-    public GameObject errorUI;
     public TextMeshProUGUI hintName;
-    public TextMeshProUGUI errorName;
     public String visualObjectAction;
     // Start is called before the first frame update
     void Start()
     {
         visualUI.SetActive(false);
-        errorUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,15 +30,6 @@ public class PlayerInteractor : MonoBehaviour
             {
 
                 interactAction.Invoke();
-            }
-        }
-        else
-        {
-            // Debug.Log("Player is not in range");
-
-            if (Input.GetKeyDown(interactKey))
-            {
-                StartCoroutine(ShowErrorMessage());
             }
         }
     }
@@ -64,14 +52,7 @@ public class PlayerInteractor : MonoBehaviour
         isInRange = false;
     }
 
-    IEnumerator ShowErrorMessage()
-    {
-        yield return new WaitForSeconds((float)0.5);
-        errorUI.SetActive(true);
-        errorName.text = "Tidak bisa interaksi dengan apa-apa!";
-        yield return new WaitForSeconds(2);
-        errorUI.SetActive(false);
-    }
+
 
 
 

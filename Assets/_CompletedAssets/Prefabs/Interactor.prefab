@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -9100004010101041015}
   m_Layer: 0
   m_Name: Interactor
-  m_TagString: Untagged
+  m_TagString: Interactor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,6 +50,9 @@ MonoBehaviour:
   interactAction:
     m_PersistentCalls:
       m_Calls: []
+  visualUI: {fileID: 0}
+  hintName: {fileID: 0}
+  visualObjectAction: 
 --- !u!65 &-9100004010101041015
 BoxCollider:
   m_ObjectHideFlags: 0
