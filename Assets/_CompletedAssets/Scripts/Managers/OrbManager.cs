@@ -8,9 +8,26 @@ namespace CompleteProject
     {
         public PlayerHealth playerHealth;       // Reference to the player's heatlh.
         public Transform playerTransform;
-        public UnityEngine.GameObject[] orbs;                // The orb prefabs to be spawn.
+        public UnityEngine.GameObject[] orbs;   // The orb prefabs to be spawn. orbs[0]: Damage Orb, orbs[1]: Health Orb, orbs[2]: SpeedUp Orb
         public float spawnRadius = 5f;
         public float spawnCollisionCheckRadius = 0.5f;
+        public float spawnTransformationX;
+
+        public void CheatSpawn(int orbTypeIdx)
+        {
+            // If the player has no health left...
+            if (playerHealth.currentHealth <= 0f)
+            {
+                // ... exit the function.
+                return;
+            }
+
+            Vector3 spawnPoint = playerTransform.position;
+            spawnPoint.x += spawnTransformationX;
+
+            // Create an instance of the orb prefab at the randomly selected spawn point's position and rotation.
+            Instantiate(orbs[orbTypeIdx], spawnPoint, playerTransform.rotation);
+        }
 
         public void Spawn()
         {

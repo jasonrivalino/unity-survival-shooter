@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnitySampleAssets.CrossPlatformInput;
 
 namespace CompleteProject
@@ -8,6 +9,9 @@ namespace CompleteProject
         public float speed = 6f;            // The speed that the player will move at.
         public float speedUp = 1f;
         public float speedUpTime = 0f;
+        public Text speedUpTimeText;
+        public Text speedUpText;
+
 
         Vector3 movement;                   // The vector to store the direction of the player's movement.
         Animator anim;                      // Reference to the animator component.
@@ -49,12 +53,19 @@ namespace CompleteProject
 
         void Move(float h, float v)
         {
-            Debug.Log("speed total: " + (speed * speedUp));
+            // Debug.Log("speed total: " + (speed * speedUp));
             // Set the movement vector based on the axis input.
             movement.Set(h, 0f, v);
 
             // Normalise the movement vector and make it proportional to the speed per second.
             movement = movement.normalized * speed * speedUp * Time.deltaTime;
+
+            // If 2xSpeedUp cheat activated
+            if (PlayerPrefs.HasKey("2xSpeedUp"))
+            {
+                // Speedup two times
+                movement *= 2;
+            }
 
             // Move the player to it's current position plus the movement.
             playerRigidbody.MovePosition(transform.position + movement);
@@ -120,6 +131,7 @@ namespace CompleteProject
         {
             speedUp = 1.2f;
             speedUpTime = 15f;
+            speedUpText.text = "x 1.2";
         }
 
         private void Update()
@@ -129,11 +141,18 @@ namespace CompleteProject
             {
                 speedUpTime -= Time.deltaTime;
 
+                // Update UI
+                speedUpTimeText.text = "Speed Up: " + ((int)speedUpTime + 1) + " s";
+
                 // If speedUpTime over, set speedUp back to 1
                 if (speedUpTime <= 0)
                 {
                     speedUpTime = 0;
                     speedUp = 1f;
+
+                    // Update UI
+                    speedUpTimeText.text = "";
+                    speedUpText.text = "x1.0";
                 }
             }
 

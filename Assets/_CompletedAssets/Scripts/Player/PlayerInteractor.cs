@@ -24,8 +24,11 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (isInRange)
         {
+            isInRange = true;
+            // Debug.Log("Player is in range");
             if (Input.GetKeyDown(interactKey))
             {
+
                 interactAction.Invoke();
             }
         }
@@ -38,19 +41,20 @@ public class PlayerInteractor : MonoBehaviour
             visualUI.SetActive(true);
             hintName.text = "Tekan E untuk " + visualObjectAction + "!";
             isInRange = true;
-            Debug.Log("Player is in range");
         }
     }
 
+
+
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.gameObject.CompareTag("Player"))
-        {
-            visualUI.SetActive(false);
-            isInRange = false;
-            Debug.Log("Player is not in range");
-        }
+        visualUI.SetActive(false);
+        isInRange = false;
     }
+
+
+
+
 
 
 }
