@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CompleteProject
 {
@@ -9,13 +10,22 @@ namespace CompleteProject
     {
         public int weaponSlotUsed = 0;
         public float powerUp = 0f;
+        public Text powerUpText;
+        
         public Weapon[] weapons;
+
+        private void Awake()
+        {
+            powerUpText.text = "x 1.0";
+        }
 
         public void PowerUp() {
             powerUp += 0.1f;
             weapons[0].PowerUp();
             weapons[1].PowerUp();
             weapons[2].PowerUp();
+
+            powerUpText.text = "x " + (1 + powerUp);
         }
 
         void ChangeWeapon(int weaponSlot) {

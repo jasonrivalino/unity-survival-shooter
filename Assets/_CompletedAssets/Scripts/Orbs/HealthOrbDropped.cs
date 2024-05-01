@@ -16,15 +16,19 @@ namespace CompleteProject
 
         void OnCollisionEnter(UnityEngine.Collision collision)
         {
-            // If the entering collider is the player 
-            if (collision.gameObject == player)
-            {
 
-                // Picked only if current health is < startinghealth
-                if (playerHealth.currentHealth < playerHealth.startingHealth) {
-                    Debug.Log("Health orb Picked");
-                    playerHealth.Heal();
-                    base.Dissapear();
+            if (!isPicked) { 
+                // If the entering collider is the player 
+                if (collision.gameObject == player)
+                {
+
+                    // Picked only if current health is < startinghealth
+                    if (playerHealth.currentHealth < playerHealth.startingHealth) {
+                        isPicked = true;
+                        orbPickedAudio.Play();
+                        playerHealth.Heal();
+                        base.Dissapear();
+                    }
                 }
             }
         }

@@ -16,13 +16,16 @@ namespace CompleteProject
 
         void OnCollisionEnter(UnityEngine.Collision collision)
         {
-            // If the entering collider is the player 
-            if (collision.gameObject == player)
-            {
-                Debug.Log("Speed orb Picked");
-                // Set speedup for player
-                playerMovement.SpeedUp();
-                base.Dissapear();
+            if (!isPicked) {    
+                // If the entering collider is the player 
+                if (collision.gameObject == player)
+                {
+                    isPicked = true;
+                    orbPickedAudio.Play();
+                    // Set speedup for player
+                    playerMovement.SpeedUp();
+                    base.Dissapear();
+                }
             }
         }
     }
