@@ -67,6 +67,9 @@ namespace CompleteProject
                 // Reduce the current health by the amount of damage sustained.
                 currentHealth -= amount;
 
+                // Show current health in the console
+                Debug.Log("Current Health: " + currentHealth);
+
                 // Set the position of the particle system to where the hit was sustained.
                 hitParticles.transform.position = hitPoint;
 

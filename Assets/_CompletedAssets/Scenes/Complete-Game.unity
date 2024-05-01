@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 14871711}
   - component: {fileID: 14871710}
   - component: {fileID: 14871709}
+  - component: {fileID: 14871713}
+  - component: {fileID: 14871714}
   m_Layer: 0
   m_Name: EnemyManager
   m_TagString: Untagged
@@ -151,14 +153,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14871708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bf862ffeb7e74943a1729f1cff11eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 153412, guid: 548c56f4bcf4db24b8aa057e9846a005, type: 3}
-  spawnTime: 15
+  enemy: {fileID: 4795060569972924578, guid: db2b73e90c38b0d4a8d5c8c5b99fad1c, type: 3}
+  spawnTime: 12
   spawnPoints:
   - {fileID: 933997770}
 --- !u!114 &14871710
@@ -174,8 +176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 100000, guid: ea3c2728ef33e3a4d99527a86cda6465, type: 3}
-  spawnTime: 3
+  enemy: {fileID: 4089604486440164585, guid: 2a35f043e94a50444a270b4670bfb66b, type: 3}
+  spawnTime: 7
   spawnPoints:
   - {fileID: 1725468539}
 --- !u!114 &14871711
@@ -185,13 +187,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14871708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bf862ffeb7e74943a1729f1cff11eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 100002, guid: e5171f72421770240bd7c3989fe351e3, type: 3}
+  enemy: {fileID: 3875457313305475475, guid: c404faf04981f284896deb98cfdf1b9f, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 345275349}
@@ -210,6 +212,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14871713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14871708}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf862ffeb7e74943a1729f1cff11eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 2023876516}
+  enemy: {fileID: 3875457313305475475, guid: c404faf04981f284896deb98cfdf1b9f, type: 3}
+  spawnTime: 15
+  spawnPoints:
+  - {fileID: 0}
+--- !u!114 &14871714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14871708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf862ffeb7e74943a1729f1cff11eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 2023876516}
+  enemy: {fileID: 3875457313305475475, guid: c404faf04981f284896deb98cfdf1b9f, type: 3}
+  spawnTime: 25
+  spawnPoints:
+  - {fileID: 4089604486440124617, guid: 2a35f043e94a50444a270b4670bfb66b, type: 3}
 --- !u!1 &28357257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 345275349}
   m_Layer: 0
-  m_Name: ZomBunnySpawnPoint
+  m_Name: ZomBearSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1028,6 +1064,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &368981626
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5517420019139876544, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.8240361
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517420019139876544, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000019073486
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517420019139876544, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.890953
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517420019139876544, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517420019139876544, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517420019139876544, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517420019139876544, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517420019139876544, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517420019139876544, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517420019139876544, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737744647241426422, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720034317796430075, guid: fa096fe83dc78fb45b22e1c97189691e,
+        type: 3}
+      propertyPath: m_Radius
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa096fe83dc78fb45b22e1c97189691e, type: 3}
 --- !u!1 &385205435
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,7 +2317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 933997770}
   m_Layer: 0
-  m_Name: HellephantSpawnPoint
+  m_Name: DevilSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2590,6 +2699,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &1574405281 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 7749733755518837234, guid: 4e5a0d387dc27394b81600988ad0216f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1641232233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1591794898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +2812,11 @@ PrefabInstance:
       propertyPath: powerUpText
       value: 
       objectReference: {fileID: 2017397091}
+    - target: {fileID: 8380436874639752770, guid: 4e5a0d387dc27394b81600988ad0216f,
+        type: 3}
+      propertyPath: faceLight
+      value: 
+      objectReference: {fileID: 1574405281}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2832,7 +2952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725468539}
   m_Layer: 0
-  m_Name: ZomBearSpawnPoint
+  m_Name: HellephantSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3594,8 +3714,8 @@ SceneRoots:
   - {fileID: 14871712}
   - {fileID: 345275349}
   - {fileID: 1725468539}
-  - {fileID: 1641232233}
   - {fileID: 933997770}
+  - {fileID: 1641232233}
   - {fileID: 7493469947867686654}
   - {fileID: 636207316}
   - {fileID: 461218465}
@@ -3603,3 +3723,4 @@ SceneRoots:
   - {fileID: 1591794899}
   - {fileID: 32243209}
   - {fileID: 4705870134690996183}
+  - {fileID: 368981626}
