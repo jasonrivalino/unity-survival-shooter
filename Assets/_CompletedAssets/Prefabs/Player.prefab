@@ -5300,13 +5300,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c83720df9acb89488dbf2c0dbd3ad78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerAttack: 20
-  timeBetweenAttack: 0.15
-  powerUp: 0
-  isUsed: 1
-  isPlayerOwner: 1
+  damagePerShot: 20
+  timeBetweenBullets: 0.15
   range: 100
-  faceLight: {fileID: 0}
+  faceLight: {fileID: 10800002}
 --- !u!108 &10800000
 Light:
   m_ObjectHideFlags: 0
@@ -5511,7 +5508,7 @@ MonoBehaviour:
   powerUp: 0
   powerUpText: {fileID: 0}
   weapons:
-  - {fileID: 6711780760367370857}
+  - {fileID: 0}
   - {fileID: 8380436874639752770}
   - {fileID: 4966930388160821361}
 --- !u!136 &13600000
