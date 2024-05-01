@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - OrbManager
-  - Riffle
-  - Shotgun
-  - Toilet
-  - Shop
-  - Door
-  - Interactor
+  tags: []
   layers:
   - Default
   - TransparentFX
