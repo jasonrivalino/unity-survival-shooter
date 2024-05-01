@@ -28,7 +28,7 @@ public class PlayerInteractor : MonoBehaviour
         if (isInRange)
         {
             isInRange = true;
-            Debug.Log("Player is in range");
+            // Debug.Log("Player is in range");
             if (Input.GetKeyDown(interactKey))
             {
 
@@ -37,7 +37,7 @@ public class PlayerInteractor : MonoBehaviour
         }
         else
         {
-            Debug.Log("Player is not in range");
+            // Debug.Log("Player is not in range");
 
             if (Input.GetKeyDown(interactKey))
             {

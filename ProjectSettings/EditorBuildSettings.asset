@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_CompletedAssets/Scenes/Ending.unity
     guid: c2a19d220738de244a5c2e05e44584e1
+  - enabled: 1
+    path: Assets/_CompletedAssets/Scenes/Shop.unity
+    guid: ec9728fadae6dfc42931bb7c761ea95c
   m_configObjects: {}
