@@ -167,6 +167,7 @@ namespace CompleteProject
                     }
                     else // If the user is enemy
                     { 
+                        Debug.Log("Enemy Shoot");
                         // If the EnemyHealth component exist...
                         if (shootHit.collider.TryGetComponent<PlayerHealth>(out var playerHealth))
                         {
