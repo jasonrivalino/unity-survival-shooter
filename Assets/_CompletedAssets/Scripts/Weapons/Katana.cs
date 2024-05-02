@@ -36,13 +36,18 @@ namespace CompleteProject
                 }
                 #else
                             // If there is input on the shoot direction stick and it's time to fire...
-                            if ((CrossPlatformInputManager.GetAxisRaw("Mouse X") != 0 || CrossPlatformInputManager.GetAxisRaw("Mouse Y") != 0) && timer >= timeBetweenBullets)
-                            {
-                                // ... shoot the gun
-                                Shoot();
-                            }
+                            // if ((CrossPlatformInputManager.GetAxisRaw("Mouse X") != 0 || CrossPlatformInputManager.GetAxisRaw("Mouse Y") != 0) && timer >= timeBetweenBullets)
+                            // {
+                            //     // ... shoot the gun
+                            //     Shoot();
+                            // }
                 #endif
 
+            } else if (!isPlayerOwner) {
+                if (timer >= timeBetweenAttack && Time.timeScale != 0)
+                {
+                    Slash();
+                }
             }
 
             if (isSlashing) 
@@ -62,6 +67,7 @@ namespace CompleteProject
 
                 if (isPlayerOwner)
                 {
+                    Debug.Log("player tusuk enemy");
                     // If the EnemyHealth component exist...
                     if (other.gameObject.TryGetComponent<EnemyHealth>(out var enemyHealth))
                     {
@@ -74,6 +80,7 @@ namespace CompleteProject
                 else // If the user is enemy
                 {
                     // If the PlayerHealth component exist...
+                    Debug.Log("player kena tusuk");
                     if (other.gameObject.TryGetComponent<PlayerHealth>(out var playerHealth))
                     {
                         Debug.Log("Damage Katana: " + (damagePerAttack * (1f + powerUp)));
@@ -92,7 +99,6 @@ namespace CompleteProject
             
             // Play the katana slash audioclip
             slashAudio.Play();
-
 
             // Katana Animation
             // TODO: design the animation 

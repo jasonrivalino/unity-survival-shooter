@@ -509,7 +509,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 5
+  m_Radius: 3
   m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!82 &7370607616242185167
 AudioSource:
@@ -739,7 +739,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 147172, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1578548745786269977}
   m_SourcePrefab: {fileID: 100100000, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
 --- !u!4 &5717759181098333541 stripped
 Transform:
@@ -747,3 +751,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5717759181098750387}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5717759181098626903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 147172, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5717759181098750387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1578548745786269977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717759181098626903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73cc125bb78dc8478c1bca71a5a175f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerAttack: 10
+  timeBetweenAttack: 1.5
+  powerUp: 0
+  isUsed: 1
+  isPlayerOwner: 0

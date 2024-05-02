@@ -5100,7 +5100,7 @@ Transform:
   m_GameObject: {fileID: 139125950079957379}
   serializedVersion: 2
   m_LocalRotation: {x: -0.003474605, y: -0.7070983, z: 0.003474605, w: -0.7070983}
-  m_LocalPosition: {x: 0.58800006, y: -0.2347342, z: -0.28062505}
+  m_LocalPosition: {x: 0.7, y: 0, z: 0}
   m_LocalScale: {x: 0.24999991, y: 0.25001207, z: 0.49995157}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10857,13 +10857,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerAttack: 25
-  timeBetweenAttack: 0.35
+  timeBetweenAttack: 4
   powerUp: 0
-  isUsed: 0
-  isPlayerOwner: 1
+  isUsed: 1
+  isPlayerOwner: 0
   range: 7
-  bulletsPerShoot: 7
-  inaccuracyDistance: 0.15
+  bulletsPerShoot: 20
+  inaccuracyDistance: 0.5
   shotgunLine: {fileID: 9209258724073731464, guid: 07e75b0a3b8805745be9f33b14959e91,
     type: 3}
   faceLight: {fileID: 0}
@@ -28058,7 +28058,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 4
+  m_Radius: 8
   m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!82 &7093514728229588382
 AudioSource:

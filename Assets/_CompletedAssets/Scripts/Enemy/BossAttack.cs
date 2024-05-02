@@ -6,12 +6,14 @@ namespace CompleteProject
     {
         public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
         public int attackDamage = 10;               // The amount of health taken away per attack.
+        private float defaultSpeed;
+
 
         Animator anim;                              // Reference to the animator component.
         GameObject player;                          // Reference to the player GameObject.
         PlayerHealth playerHealth;                  // Reference to the player's health.
         EnemyHealth enemyHealth;                    // Reference to this enemy's health.
-        Riffle weapon;                              // Reference to the Weapon script.
+        Weapon weapon;                              // Reference to the Weapon script.
         PlayerMovement speedPlayer;                 // Reference to the speed variable in PlayerMovement.cs
         bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
         float timer;                                // Timer for counting up to the next attack.
@@ -24,8 +26,9 @@ namespace CompleteProject
             playerHealth = player.GetComponent<PlayerHealth>();
             enemyHealth = GetComponent<EnemyHealth>();
             anim = GetComponent<Animator>();
-            weapon = GetComponent<Riffle>();
+            weapon = GetComponent<Weapon>();
             speedPlayer = player.GetComponent<PlayerMovement>();
+            defaultSpeed = speedPlayer.speed;
         }
 
 
@@ -36,6 +39,26 @@ namespace CompleteProject
             {
                 // ... the player is in range.
                 playerInRange = true;
+
+                // If the player is in range, the player's speed will be decreased.
+                speedPlayer.speed = 4f;
+                // Debug.Log("speedPlayer: " + speedPlayer.speed);
+
+                // If the player is in range, the player's weapon damage will be decreased
+                if (weapon != null)
+                {
+                    if (weapon.isUsed)
+                    {
+                        weapon.damagePerAttack /= 2;
+                    }
+                    else if (weapon.isUsed == false)
+                    {
+                        weapon.damagePerAttack = 0;
+                    }
+                } else if (weapon == null)
+                {
+                    Debug.Log("Weapon is null");
+                }
             }
         }
 
@@ -47,6 +70,7 @@ namespace CompleteProject
             {
                 // ... the player is no longer in range.
                 playerInRange = false;
+                speedPlayer.speed = defaultSpeed;
             }
         }
 
@@ -82,18 +106,6 @@ namespace CompleteProject
             {
                 // ... damage the player.
                 playerHealth.TakeDamage(attackDamage);
-
-                // Speed is decreased by 3
-                speedPlayer.speed = 4;
-                Debug.Log("speedPlayer: " + speedPlayer.speed);
-
-                // Decrease the damage per attack in the Weapon script by 10.
-                if (weapon != null)
-                {
-                    weapon.damagePerAttack -= 10;
-                } else {
-                    Debug.Log("Weapon script not found.");
-                }
             }
         }
     }
