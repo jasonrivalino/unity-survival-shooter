@@ -419,6 +419,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 138224435}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &138224437 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2436758297850607484, guid: 0006ca619d3835645b96330d70d736c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 138224435}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &177326011
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,6 +3099,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 130, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1132054067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132054069}
+  - component: {fileID: 1132054068}
+  m_Layer: 0
+  m_Name: MoneyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1132054068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132054067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d87a634bf89f5d42b1bb419d690517b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyPanel: {fileID: 138224437}
+--- !u!4 &1132054069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132054067}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1032.3802, y: 486.0338, z: 25.664062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1139190131
 GameObject:
   m_ObjectHideFlags: 0
@@ -5650,3 +5707,4 @@ SceneRoots:
   - {fileID: 244922607}
   - {fileID: 1591794899}
   - {fileID: 1002110427}
+  - {fileID: 1132054069}
