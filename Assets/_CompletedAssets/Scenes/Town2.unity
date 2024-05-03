@@ -2144,6 +2144,76 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1132054068}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PayPet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoneyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1132054068}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PayPet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoneyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4140251867493745055, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2249,11 +2319,58 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1002110426}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShopManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad6501a7addac7b479f3d301565fe189, type: 3}
+--- !u!114 &697539912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7978034288645223063, guid: ad6501a7addac7b479f3d301565fe189,
+    type: 3}
+  m_PrefabInstance: {fileID: 697539911}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &768239535
 GameObject:
   m_ObjectHideFlags: 0
@@ -3252,6 +3369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyPanel: {fileID: 138224437}
+  moneyText: {fileID: 697539912}
 --- !u!4 &1132054069
 Transform:
   m_ObjectHideFlags: 0
@@ -4186,6 +4304,11 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1837071937}
+    - target: {fileID: 399669218063535372, guid: 4e5a0d387dc27394b81600988ad0216f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2012340464657457815, guid: 4e5a0d387dc27394b81600988ad0216f,
         type: 3}
       propertyPath: InteractRange

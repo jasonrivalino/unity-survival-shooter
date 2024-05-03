@@ -9,6 +9,7 @@ public class MoneyManager : MonoBehaviour
 {
     public static int money;
     public TMP_Text moneyPanel;
+    public TMP_Text moneyText;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +32,11 @@ public class MoneyManager : MonoBehaviour
     void Update()
     {
         moneyPanel.text = money.ToString();
+        moneyText.text = money.ToString();
+    }
+
+    public void PayPet()
+    {
+        money -= 100;
     }
 }

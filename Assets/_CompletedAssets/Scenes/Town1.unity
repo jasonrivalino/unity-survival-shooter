@@ -449,6 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyPanel: {fileID: 104510389}
+  moneyText: {fileID: 490814448}
 --- !u!4 &237059672
 Transform:
   m_ObjectHideFlags: 0
@@ -1332,6 +1333,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435515921}
   m_CullTransparentMesh: 0
+--- !u!114 &490814448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7978034288645223063, guid: ad6501a7addac7b479f3d301565fe189,
+    type: 3}
+  m_PrefabInstance: {fileID: 1751379943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &506286814
 GameObject:
   m_ObjectHideFlags: 0
@@ -3810,6 +3823,11 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1837071937}
+    - target: {fileID: 399669218063535372, guid: 4e5a0d387dc27394b81600988ad0216f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2012340464657457815, guid: 4e5a0d387dc27394b81600988ad0216f,
         type: 3}
       propertyPath: InteractRange
@@ -4372,6 +4390,76 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 237059671}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PayPet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoneyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511880022832829922, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 237059671}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PayPet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoneyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468276302170009336, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4140251867493745055, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4476,6 +4564,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1541411870}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShopManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068081231600660840, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
