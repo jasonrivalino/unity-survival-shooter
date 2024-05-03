@@ -12,6 +12,8 @@ public class MoneyManager : MonoBehaviour
     public TMP_Text moneyPanel;
     public TMP_Text moneyText;
     public GameObject errorCanvas;
+    public AudioClip MoneySoundClip;
+    AudioSource MoneyAudio;
     Canvas canvas;
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,11 @@ public class MoneyManager : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        MoneyAudio = this.gameObject.AddComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -48,6 +55,7 @@ public class MoneyManager : MonoBehaviour
         }
         else
         {
+            MoneyAudio.PlayOneShot(MoneySoundClip);
             money -= petPrice;
         }
     }

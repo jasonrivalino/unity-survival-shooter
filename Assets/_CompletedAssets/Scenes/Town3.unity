@@ -6192,6 +6192,7 @@ MonoBehaviour:
   moneyPanel: {fileID: 845397170}
   moneyText: {fileID: 29212605}
   errorCanvas: {fileID: 762231182}
+  MoneySoundClip: {fileID: 8300000, guid: 956263fbe99ad204a85e2c89b6e8186c, type: 3}
 --- !u!4 &1859644144
 Transform:
   m_ObjectHideFlags: 0
