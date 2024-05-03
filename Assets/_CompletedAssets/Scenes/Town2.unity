@@ -4158,7 +4158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyPanel: {fileID: 138224437}
-  moneyText: {fileID: 2007756100}
+  moneyText: {fileID: 1221477858}
   errorCanvas: {fileID: 960005318}
   MoneySoundClip: {fileID: 8300000, guid: 956263fbe99ad204a85e2c89b6e8186c, type: 3}
 --- !u!4 &1132054069
@@ -4347,6 +4347,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1221477858 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2670032400172956536, guid: ad6501a7addac7b479f3d301565fe189,
+    type: 3}
+  m_PrefabInstance: {fileID: 148454040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1240205758
 GameObject:
   m_ObjectHideFlags: 0
@@ -6670,18 +6682,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979757893}
   m_CullTransparentMesh: 0
---- !u!114 &2007756100 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6062309731629291097, guid: ad6501a7addac7b479f3d301565fe189,
-    type: 3}
-  m_PrefabInstance: {fileID: 148454040}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2023876510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: 4e5a0d387dc27394b81600988ad0216f,

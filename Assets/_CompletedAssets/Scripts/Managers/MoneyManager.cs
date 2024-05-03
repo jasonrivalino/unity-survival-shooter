@@ -57,6 +57,7 @@ public class MoneyManager : MonoBehaviour
         }
         else
         {
+            canvas.enabled = false;
             CanPay = true;
             MoneyAudio.PlayOneShot(MoneySoundClip);
             money -= petPrice;

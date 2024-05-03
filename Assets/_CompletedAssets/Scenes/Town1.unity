@@ -903,18 +903,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad6501a7addac7b479f3d301565fe189, type: 3}
---- !u!114 &100624827 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6062309731629291097, guid: ad6501a7addac7b479f3d301565fe189,
-    type: 3}
-  m_PrefabInstance: {fileID: 100624826}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &100624828 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 179204565899594963, guid: ad6501a7addac7b479f3d301565fe189,
@@ -1237,7 +1225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyPanel: {fileID: 104510389}
-  moneyText: {fileID: 100624827}
+  moneyText: {fileID: 367786698}
   errorCanvas: {fileID: 206883267}
   MoneySoundClip: {fileID: 8300000, guid: 956263fbe99ad204a85e2c89b6e8186c, type: 3}
 --- !u!4 &237059672
@@ -1794,6 +1782,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &367786698 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2670032400172956536, guid: ad6501a7addac7b479f3d301565fe189,
+    type: 3}
+  m_PrefabInstance: {fileID: 100624826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &372562483
 PrefabInstance:
   m_ObjectHideFlags: 0
