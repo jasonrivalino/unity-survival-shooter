@@ -11,6 +11,12 @@ public class MoneyManager : MonoBehaviour
     public static int money;
     public TMP_Text moneyPanel;
     public TMP_Text moneyText;
+    public TMP_Text rabbitText;
+    public TMP_Text mushroomText;
+    public TMP_Text ghostText;
+    public TMP_Text dogText;
+    public TMP_Text cactusText;
+    public TMP_Text bombText;
     public GameObject errorCanvas;
     public AudioClip MoneySoundClip;
     AudioSource MoneyAudio;
@@ -45,6 +51,12 @@ public class MoneyManager : MonoBehaviour
     {
         moneyPanel.text = money.ToString();
         moneyText.text = money.ToString();
+        rabbitText.text = PlayerPrefs.GetInt("rabbit").ToString();
+        mushroomText.text = PlayerPrefs.GetInt("mushroom").ToString();
+        ghostText.text = PlayerPrefs.GetInt("ghost").ToString();
+        dogText.text = PlayerPrefs.GetInt("dog").ToString();
+        cactusText.text = PlayerPrefs.GetInt("cactus").ToString();
+        bombText.text = PlayerPrefs.GetInt("bomb").ToString();
     }
 
     public void PayPet(TMP_Text moneyText)
