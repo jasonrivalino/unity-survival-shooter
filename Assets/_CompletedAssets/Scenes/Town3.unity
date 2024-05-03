@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
@@ -240,7 +240,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1859644143}
+    - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1859644143}
     - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
@@ -250,12 +260,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PayPet
       objectReference: {fileID: 0}
     - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: AddPet
+      objectReference: {fileID: 0}
+    - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoneyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: MoneyManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
@@ -265,8 +290,18 @@ PrefabInstance:
       objectReference: {fileID: 29212607}
     - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: cactus
+      objectReference: {fileID: 0}
+    - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TMP_Text, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 549810667336030039, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1118555798797094067, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
@@ -276,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
@@ -285,7 +320,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1859644143}
+    - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1859644143}
     - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
@@ -295,12 +340,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PayPet
       objectReference: {fileID: 0}
     - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: AddPet
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoneyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: MoneyManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
@@ -310,8 +370,18 @@ PrefabInstance:
       objectReference: {fileID: 29212610}
     - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: mushroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TMP_Text, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418551812698942182, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4212367341942634158, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
@@ -351,7 +421,7 @@ PrefabInstance:
     - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
@@ -360,7 +430,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1859644143}
+    - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1859644143}
     - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
@@ -370,12 +450,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PayPet
       objectReference: {fileID: 0}
     - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: AddPet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoneyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: MoneyManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
@@ -385,8 +480,18 @@ PrefabInstance:
       objectReference: {fileID: 29212606}
     - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TMP_Text, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956573076945269463, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6025932587805428139, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
@@ -491,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
@@ -500,7 +605,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1859644143}
+    - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1859644143}
     - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
@@ -510,12 +625,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PayPet
       objectReference: {fileID: 0}
     - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: AddPet
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoneyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: MoneyManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
@@ -525,8 +655,18 @@ PrefabInstance:
       objectReference: {fileID: 29212609}
     - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: rabbit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TMP_Text, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7462954153202054605, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7583434083282456295, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
@@ -536,7 +676,7 @@ PrefabInstance:
     - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
@@ -545,7 +685,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1859644143}
+    - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1859644143}
     - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
@@ -555,12 +705,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PayPet
       objectReference: {fileID: 0}
     - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: AddPet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoneyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: MoneyManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
@@ -570,13 +735,23 @@ PrefabInstance:
       objectReference: {fileID: 29212611}
     - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TMP_Text, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286305702645298859, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
@@ -585,7 +760,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1859644143}
+    - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1859644143}
     - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
@@ -595,12 +780,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PayPet
       objectReference: {fileID: 0}
     - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: AddPet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoneyManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: MoneyManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
@@ -610,8 +810,18 @@ PrefabInstance:
       objectReference: {fileID: 29212608}
     - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: dog
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TMP_Text, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957324513513200387, guid: ad6501a7addac7b479f3d301565fe189,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -14,6 +14,7 @@ public class MoneyManager : MonoBehaviour
     public GameObject errorCanvas;
     public AudioClip MoneySoundClip;
     AudioSource MoneyAudio;
+    bool CanPay = true;
     Canvas canvas;
     // Start is called before the first frame update
     void Start()
@@ -52,11 +53,30 @@ public class MoneyManager : MonoBehaviour
         if (money < petPrice)
         {
             canvas.enabled = true;
+            CanPay = false;
         }
         else
         {
+            CanPay = true;
             MoneyAudio.PlayOneShot(MoneySoundClip);
             money -= petPrice;
+        }
+    }
+
+    public void AddPet(string petName)
+    {
+        if (CanPay)
+        {
+            if (PlayerPrefs.HasKey(petName))
+            {
+                PlayerPrefs.SetInt(petName, PlayerPrefs.GetInt(petName) + 1);
+                Debug.Log(petName + PlayerPrefs.GetInt(petName));
+            }
+            else
+            {
+                PlayerPrefs.SetInt(petName, 1);
+                Debug.Log(petName + PlayerPrefs.GetInt(petName));
+            }
         }
     }
 
