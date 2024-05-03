@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,9 +11,12 @@ public class MoneyManager : MonoBehaviour
     public static int money;
     public TMP_Text moneyPanel;
     public TMP_Text moneyText;
+    public GameObject errorCanvas;
+    Canvas canvas;
     // Start is called before the first frame update
     void Start()
     {
+        canvas = errorCanvas.GetComponent<Canvas>();
         if (SceneManager.GetActiveScene().name == "Town1")
         {
             money = 0;
@@ -35,8 +39,21 @@ public class MoneyManager : MonoBehaviour
         moneyText.text = money.ToString();
     }
 
-    public void PayPet()
+    public void PayPet(TMP_Text moneyText)
     {
-        money -= 100;
+        int petPrice = Int32.Parse(moneyText.text);
+        if (money < petPrice)
+        {
+            canvas.enabled = true;
+        }
+        else
+        {
+            money -= petPrice;
+        }
+    }
+
+    public void CloseErrorCanvas()
+    {
+        canvas.enabled = false;
     }
 }
