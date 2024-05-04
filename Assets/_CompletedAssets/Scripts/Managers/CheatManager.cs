@@ -11,6 +11,7 @@ namespace CompleteProject
         public TMP_InputField cheatInputField;
         public Text cheatStatusText;
         public OrbManager orbManager;
+        public LevelLoader levelLoader;
 
         float cheatStatusTextShowTime = 0;
         // Start is called before the first frame update
@@ -144,8 +145,7 @@ namespace CompleteProject
             }
             else if (cheatInput == "SUKIPPU")
             {
-                LevelLoader loader = new();
-                loader.LoadNextLevel();
+                levelLoader.LoadNextLevel();
             }
             else
             {
