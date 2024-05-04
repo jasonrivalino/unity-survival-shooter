@@ -16,7 +16,11 @@ namespace CompleteProject
         {
             // set up the references
             weapon = gameObject;
-            UnUseWeapon();
+            if (isPlayerOwner){
+                UnUseWeapon();
+            } else {
+                UseWeapon();
+            }
             slashAudio = GetComponent<AudioSource>();
         }
 
