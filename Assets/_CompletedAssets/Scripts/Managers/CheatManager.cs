@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace CompleteProject
-{ 
+{
     public class CheatManager : MonoBehaviour
     {
         public TMP_InputField cheatInputField;
@@ -24,43 +24,44 @@ namespace CompleteProject
         // Update is called once per frame
         void Update()
         {
-            #if !MOBILE_INPUT
+#if !MOBILE_INPUT
             // If the C is pressed Change visibility of cheat input field
             if (Input.GetKeyDown(KeyCode.C))
             {
-                if (cheatInputField.interactable) 
+                if (cheatInputField.interactable)
                 {
                     // Make cheat input field disappear, if it appears
                     HideCheatInputField();
-                } else
+                }
+                else
                 {
                     // Make cheat input field appear, if it disappears
                     ShowCheatInputField();
                 }
             }
-            #else
+#else
                             // If there is input on the shoot direction stick and it's time to fire...
                             if ((CrossPlatformInputManager.GetAxisRaw("Mouse X") != 0 || CrossPlatformInputManager.GetAxisRaw("Mouse Y") != 0) && timer >= timeBetweenBullets)
                             {
                                 // ... shoot the gun
                                 Shoot();
                             }
-            #endif
+#endif
 
             // Manage cheat status text visibility
-            if (cheatStatusTextShowTime > 0 )
+            if (cheatStatusTextShowTime > 0)
             {
                 cheatStatusTextShowTime -= Time.deltaTime;
 
                 if (cheatStatusTextShowTime < 0)
                 {
                     cheatStatusTextShowTime = 0;
-                } 
+                }
                 cheatStatusText.color = new Color(1, 1, 1, cheatStatusTextShowTime);
             }
         }
 
-        void ShowCheatInputField() 
+        void ShowCheatInputField()
         {
             cheatInputField.interactable = true;
             cheatInputField.GetComponent<CanvasGroup>().alpha = 1;
@@ -137,6 +138,15 @@ namespace CompleteProject
                 orbManager.CheatSpawn(2);
                 isCheatActivated = true;
             }
+            else if (cheatInput == "RITCHI")
+            {
+                isCheatActivated = ProcessCheat("Motherlode");
+            }
+            else if (cheatInput == "SUKIPPU")
+            {
+                LevelLoader loader = new();
+                loader.LoadNextLevel();
+            }
             else
             {
                 isCheatExisted = false;
@@ -157,7 +167,8 @@ namespace CompleteProject
 
                 // Hide the cheat input field
                 HideCheatInputField();
-            } else 
+            }
+            else
             {
                 cheatStatusText.text = "Cheat is Not Exist";
             }
