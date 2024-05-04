@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 153412, guid: 548c56f4bcf4db24b8aa057e9846a005, type: 3}
+  enemy: {fileID: 4795060569972924578, guid: db2b73e90c38b0d4a8d5c8c5b99fad1c, type: 3}
   spawnTime: 15
   spawnPoints:
   - {fileID: 933997770}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 100000, guid: ea3c2728ef33e3a4d99527a86cda6465, type: 3}
+  enemy: {fileID: 4089604486440164585, guid: 2a35f043e94a50444a270b4670bfb66b, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 1725468539}
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 100002, guid: e5171f72421770240bd7c3989fe351e3, type: 3}
+  enemy: {fileID: 3875457313305475475, guid: c404faf04981f284896deb98cfdf1b9f, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 345275349}
@@ -2592,6 +2592,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2091259106047686214, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3505870070799784637, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2754,6 +2759,11 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 1415853692}
+    - target: {fileID: 9207442082530403052, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: transitionTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
