@@ -219,16 +219,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14871708}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bf862ffeb7e74943a1729f1cff11eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 3875457313305475475, guid: c404faf04981f284896deb98cfdf1b9f, type: 3}
+  enemy: {fileID: 7737744647241426422, guid: fa096fe83dc78fb45b22e1c97189691e, type: 3}
   spawnTime: 15
   spawnPoints:
-  - {fileID: 0}
+  - {fileID: 933997770}
 --- !u!114 &14871714
 MonoBehaviour:
   m_ObjectHideFlags: 0

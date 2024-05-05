@@ -16,9 +16,7 @@ namespace CompleteProject
         GameObject player;                          // Reference to the player GameObject.\
         PlayerHealth playerHealth;                  // Reference to the player's health.
         EnemyHealth enemyHealth;                    // Reference to this enemy's health.
-        Riffle riffle;                              // Reference to the PlayerShooting script.
-        Shotgun shotgun;                            // Reference to the shotgun script.
-        Katana katana;                              // Reference to the katana script.
+        PlayerWeaponManager playerWeaponManager;                              // Reference to the PlayerWeaponManager
         PlayerMovement speedPlayer;                 // Reference to the speed variable in PlayerMovement.cs
         bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
         float timer;                                // Timer for counting up to the next attack.
@@ -31,11 +29,8 @@ namespace CompleteProject
             playerHealth = player.GetComponent<PlayerHealth>();
             enemyHealth = GetComponent<EnemyHealth>();
             anim = GetComponent<Animator>();
-            shotgun = player.GetComponentInChildren<Shotgun>();
-            katana = player.GetComponentInChildren<Katana>();
-            riffle = player.GetComponentInChildren<Riffle>();
+            playerWeaponManager = player.GetComponent<PlayerWeaponManager>();
             speedPlayer = player.GetComponent<PlayerMovement>();
-            defaultSpeed = speedPlayer.speed;
         }
 
 
@@ -48,19 +43,11 @@ namespace CompleteProject
                 playerInRange = true;
 
                 // If the player is in range, the player's speed will be decreased.
-                speedPlayer.speed = 4f;
+                speedPlayer.ApplyBossEffect();
                 // Debug.Log("speedPlayer: " + speedPlayer.speed);
 
                 // Decreasing weapon's damage
-                defaultRiffleDamage = riffle.damagePerAttack;
-                defaultShotgunDamage = shotgun.damagePerAttack;
-                defaultKatanaDamage = katana.damagePerAttack;
-                riffle.damagePerAttack = 0;
-                shotgun.damagePerAttack = 0;
-                katana.damagePerAttack = 0;
-                Debug.Log("Riffle Damage: " + riffle.damagePerAttack);
-                Debug.Log("Shotgun Damage: " + shotgun.damagePerAttack);
-                Debug.Log("Katana Damage: " + katana.damagePerAttack);
+                playerWeaponManager.ApplyBossEffect();
             }
         }
 
@@ -72,15 +59,10 @@ namespace CompleteProject
             {
                 // ... the player is no longer in range.
                 playerInRange = false;
-                speedPlayer.speed = defaultSpeed;
+                speedPlayer.UnApplyBossEffect();
 
                 // Resetting weapon's damage
-                riffle.damagePerAttack = defaultRiffleDamage;
-                shotgun.damagePerAttack = defaultShotgunDamage;
-                katana.damagePerAttack = defaultKatanaDamage;
-                Debug.Log("Riffle Damage: " + riffle.damagePerAttack);
-                Debug.Log("Shotgun Damage: " + shotgun.damagePerAttack);
-                Debug.Log("Katana Damage: " + katana.damagePerAttack);
+                playerWeaponManager.UnApplyBossEffect();
             }
         }
 

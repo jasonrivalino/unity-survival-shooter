@@ -170,18 +170,13 @@ namespace CompleteProject
                     }
                     else // If the user is enemy
                     { 
-                        Debug.Log("Enemy Shoot");
                         // If the PlayerHealth component exist...
                         if (shootHit.collider.TryGetComponent<PlayerHealth>(out var playerHealth))
                         {
                             // ... the player should take damage
-                            Debug.Log("anjer player kena tembak");
                             float bulletDamage = countBulletDamage(shootHit.point);
-                            Debug.Log("Peluru ke-" + i.ToString() + " damage: " + bulletDamage);
                             playerHealth.TakeDamage(bulletDamage);
-                        } else { 
-                            Debug.Log("Gakena tembak");
-                        }
+                        } 
                     }
 
                     // Set the the line renderer to the point the raycast hit.
