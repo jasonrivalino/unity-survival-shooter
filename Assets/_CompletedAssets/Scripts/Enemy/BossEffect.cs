@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace CompleteProject
 {
-    public class BossAttack : MonoBehaviour
+    public class BossEffect : MonoBehaviour
     {
         public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
         public int attackDamage = 10;               // The amount of health taken away per attack.
