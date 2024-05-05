@@ -46,7 +46,6 @@ public class PlayerCollider : MonoBehaviour
 
     IEnumerator ShowErrorMessage()
     {
-        yield return new WaitForSeconds((float)0.5);
         errorUI.SetActive(true);
         errorName.text = "Tidak bisa interaksi dengan apa-apa!";
         yield return new WaitForSeconds(2);

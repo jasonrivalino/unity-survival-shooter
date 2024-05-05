@@ -24,4 +24,9 @@ public class ShopManager : MonoBehaviour
         canvas.enabled = false;
         interactHint.SetActive(false);
     }
+
+    public void CloseCanvas()
+    {
+        canvas.enabled = false;
+    }
 }
