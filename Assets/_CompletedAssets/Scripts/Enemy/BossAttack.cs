@@ -7,14 +7,18 @@ namespace CompleteProject
         public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
         public int attackDamage = 10;               // The amount of health taken away per attack.
         private float defaultSpeed;
-        private int defaultDamage;
+        private int defaultShotgunDamage;
+        private int defaultKatanaDamage;
+        private int defaultRiffleDamage;
 
 
         Animator anim;                              // Reference to the animator component.
-        GameObject player;                          // Reference to the player GameObject.
+        GameObject player;                          // Reference to the player GameObject.\
         PlayerHealth playerHealth;                  // Reference to the player's health.
         EnemyHealth enemyHealth;                    // Reference to this enemy's health.
-        Weapon weapon;                              // Reference to the Weapon script.
+        Riffle riffle;                              // Reference to the PlayerShooting script.
+        Shotgun shotgun;                            // Reference to the shotgun script.
+        Katana katana;                              // Reference to the katana script.
         PlayerMovement speedPlayer;                 // Reference to the speed variable in PlayerMovement.cs
         bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
         float timer;                                // Timer for counting up to the next attack.
@@ -27,7 +31,9 @@ namespace CompleteProject
             playerHealth = player.GetComponent<PlayerHealth>();
             enemyHealth = GetComponent<EnemyHealth>();
             anim = GetComponent<Animator>();
-            weapon = player.GetComponent<Weapon>();
+            shotgun = player.GetComponentInChildren<Shotgun>();
+            katana = player.GetComponentInChildren<Katana>();
+            riffle = player.GetComponentInChildren<Riffle>();
             speedPlayer = player.GetComponent<PlayerMovement>();
             defaultSpeed = speedPlayer.speed;
         }
@@ -46,21 +52,15 @@ namespace CompleteProject
                 // Debug.Log("speedPlayer: " + speedPlayer.speed);
 
                 // Decreasing weapon's damage
-                if (weapon != null)
-                {
-                    Debug.Log("Weapon dipake");
-                    if (weapon.isUsed)
-                    {
-                        weapon.damagePerAttack /= 2;
-                    }
-                    else if (weapon.isUsed == false)
-                    {
-                        weapon.damagePerAttack = 0;
-                    }
-                } else
-                {
-                    Debug.Log("Weapon tidak dipake");
-                }
+                defaultRiffleDamage = riffle.damagePerAttack;
+                defaultShotgunDamage = shotgun.damagePerAttack;
+                defaultKatanaDamage = katana.damagePerAttack;
+                riffle.damagePerAttack = 0;
+                shotgun.damagePerAttack = 0;
+                katana.damagePerAttack = 0;
+                Debug.Log("Riffle Damage: " + riffle.damagePerAttack);
+                Debug.Log("Shotgun Damage: " + shotgun.damagePerAttack);
+                Debug.Log("Katana Damage: " + katana.damagePerAttack);
             }
         }
 
@@ -73,6 +73,14 @@ namespace CompleteProject
                 // ... the player is no longer in range.
                 playerInRange = false;
                 speedPlayer.speed = defaultSpeed;
+
+                // Resetting weapon's damage
+                riffle.damagePerAttack = defaultRiffleDamage;
+                shotgun.damagePerAttack = defaultShotgunDamage;
+                katana.damagePerAttack = defaultKatanaDamage;
+                Debug.Log("Riffle Damage: " + riffle.damagePerAttack);
+                Debug.Log("Shotgun Damage: " + shotgun.damagePerAttack);
+                Debug.Log("Katana Damage: " + katana.damagePerAttack);
             }
         }
 
