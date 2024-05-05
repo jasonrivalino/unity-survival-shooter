@@ -111,6 +111,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: c9a851438855582499831507f0b6db3e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -756,6 +760,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3715534172595772857}
+    - targetCorrespondingSourceObject: {fileID: 147172, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1249383929320650022}
   m_SourcePrefab: {fileID: 100100000, guid: 4c0fd8ec01100a94d9d1827a19a50eb1, type: 3}
 --- !u!4 &8027011620340951851 stripped
 Transform:
@@ -866,3 +874,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1249383929320650022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8027011620341182745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b73cc125bb78dc8478c1bca71a5a175f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerAttack: 10
+  timeBetweenAttack: 2
+  powerUp: 0
+  isUsed: 1
+  isPlayerOwner: 0

@@ -7,6 +7,7 @@ namespace CompleteProject
         public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
         public int attackDamage = 10;               // The amount of health taken away per attack.
         private float defaultSpeed;
+        private int defaultDamage;
 
 
         Animator anim;                              // Reference to the animator component.
@@ -26,7 +27,7 @@ namespace CompleteProject
             playerHealth = player.GetComponent<PlayerHealth>();
             enemyHealth = GetComponent<EnemyHealth>();
             anim = GetComponent<Animator>();
-            weapon = GetComponent<Weapon>();
+            weapon = player.GetComponent<Weapon>();
             speedPlayer = player.GetComponent<PlayerMovement>();
             defaultSpeed = speedPlayer.speed;
         }
@@ -44,9 +45,10 @@ namespace CompleteProject
                 speedPlayer.speed = 4f;
                 // Debug.Log("speedPlayer: " + speedPlayer.speed);
 
-                // If the player is in range, the player's weapon damage will be decreased
+                // Decreasing weapon's damage
                 if (weapon != null)
                 {
+                    Debug.Log("Weapon dipake");
                     if (weapon.isUsed)
                     {
                         weapon.damagePerAttack /= 2;
@@ -55,9 +57,9 @@ namespace CompleteProject
                     {
                         weapon.damagePerAttack = 0;
                     }
-                } else if (weapon == null)
+                } else
                 {
-                    Debug.Log("Weapon is null");
+                    Debug.Log("Weapon tidak dipake");
                 }
             }
         }

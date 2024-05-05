@@ -10856,7 +10856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2582eee1114a90c47970cb5fe7e99161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerAttack: 25
+  damagePerAttack: 5
   timeBetweenAttack: 4
   powerUp: 0
   isUsed: 1
@@ -27941,7 +27941,7 @@ GameObject:
   - component: {fileID: -3405679117534585862}
   m_Layer: 9
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -28,7 +28,7 @@ namespace CompleteProject
         new void Update()
         {
             base.Update();
-            if (isUsed)
+            if (isUsed && isPlayerOwner)
             {
 
                 #if !MOBILE_INPUT
