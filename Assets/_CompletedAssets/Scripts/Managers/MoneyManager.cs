@@ -49,31 +49,50 @@ public class MoneyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moneyPanel.text = money.ToString();
-        moneyText.text = money.ToString();
+        if (PlayerPrefs.HasKey("Motherlode"))
+        {
+            moneyPanel.text = "infinite";
+            moneyText.text = "infinite";
+        }
+        else
+        {
+            moneyPanel.text = money.ToString();
+            moneyText.text = money.ToString();
+        }
         rabbitText.text = PlayerPrefs.GetInt("rabbit").ToString();
         mushroomText.text = PlayerPrefs.GetInt("mushroom").ToString();
         ghostText.text = PlayerPrefs.GetInt("ghost").ToString();
         dogText.text = PlayerPrefs.GetInt("dog").ToString();
         cactusText.text = PlayerPrefs.GetInt("cactus").ToString();
         bombText.text = PlayerPrefs.GetInt("bomb").ToString();
+
     }
 
-    public void PayPet(TMP_Text moneyText)
+    public void PayPet(TMP_Text price)
     {
-        int petPrice = Int32.Parse(moneyText.text);
-        if (money < petPrice)
+        int petPrice = Int32.Parse(price.text);
+        if (PlayerPrefs.HasKey("Motherlode"))
         {
-            canvas.enabled = true;
-            CanPay = false;
+            moneyPanel.text = "infinite";
+            CanPay = true;
+            MoneyAudio.PlayOneShot(MoneySoundClip);
         }
         else
         {
-            canvas.enabled = false;
-            CanPay = true;
-            MoneyAudio.PlayOneShot(MoneySoundClip);
-            money -= petPrice;
+            if (money < petPrice)
+            {
+                canvas.enabled = true;
+                CanPay = false;
+            }
+            else
+            {
+                canvas.enabled = false;
+                CanPay = true;
+                MoneyAudio.PlayOneShot(MoneySoundClip);
+                money -= petPrice;
+            }
         }
+
     }
 
     public void AddPet(string petName)
