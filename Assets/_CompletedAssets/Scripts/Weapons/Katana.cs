@@ -8,9 +8,12 @@ namespace CompleteProject
 { 
     public class Katana : Weapon
     {
+        public Animator anim;
         float timeAttacking = 0.1f;
         bool isSlashing = false;
         AudioSource slashAudio;
+        ParticleSystem slashParticles;
+
 
         void Awake()
         {
@@ -18,6 +21,7 @@ namespace CompleteProject
             weapon = gameObject;
             UnUseWeapon();
             slashAudio = GetComponent<AudioSource>();
+            slashParticles = GetComponentInChildren<ParticleSystem>();
         }
 
         // Update is called once per frame
@@ -49,6 +53,7 @@ namespace CompleteProject
             {
                 if (timer > timeAttacking) { 
                     isSlashing = false;
+                    anim.SetBool("IsSlashing", false);
                 }
             }
         }
@@ -89,13 +94,18 @@ namespace CompleteProject
             // Reset the timer.
             timer = 0f;
             isSlashing = true;
+            anim.SetBool("IsSlashing", true);
             
             // Play the katana slash audioclip
             slashAudio.Play();
 
 
             // Katana Animation
-            // TODO: design the animation 
+
+            // Stop the particles from playing if they were, then start the particles.
+            slashParticles.Stop();
+            slashParticles.Play();
+
 
         }
     }
