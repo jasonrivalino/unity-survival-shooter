@@ -63,12 +63,11 @@ namespace CompleteProject
         }
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Trigger with katana");
+            // Debug.Log("Trigger with katana");
 
             if (isSlashing)
             {
                 /// Try and find an EnemyHealth script on the gameobject hit.
-
                 if (isPlayerOwner)
                 {
                     Debug.Log("player tusuk enemy");
@@ -87,7 +86,7 @@ namespace CompleteProject
                     Debug.Log("player kena tusuk");
                     if (other.gameObject.TryGetComponent<PlayerHealth>(out var playerHealth))
                     {
-                        Debug.Log("Damage Katana: " + (damagePerAttack * (1f + powerUp)));
+                        Debug.Log("Damage Katana ke player: " + (damagePerAttack * (1f + powerUp)));
                         // ... the player should take damage.
                         playerHealth.TakeDamage(damagePerAttack * (1f + powerUp));
 
@@ -103,6 +102,9 @@ namespace CompleteProject
             
             // Play the katana slash audioclip
             slashAudio.Play();
+            // Debug.Log("Slash");
+
+            // print(isSlashing);
 
             // Katana Animation
             // TODO: design the animation 

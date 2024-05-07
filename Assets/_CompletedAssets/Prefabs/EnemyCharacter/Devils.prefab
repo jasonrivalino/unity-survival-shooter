@@ -752,6 +752,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2099415594207807766, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099415594207807766, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -886,7 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73cc125bb78dc8478c1bca71a5a175f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerAttack: 10
+  damagePerAttack: 100
   timeBetweenAttack: 2
   powerUp: 0
   isUsed: 1
