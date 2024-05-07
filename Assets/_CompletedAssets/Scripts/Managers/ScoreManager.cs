@@ -13,6 +13,12 @@ namespace CompleteProject
 
         public UnityEvent interactAction;
 
+        public GameObject missionAccomplishedText;
+
+        public GameObject player;
+
+        public GameObject enemyManager;
+
 
         Text text;                      // Reference to the Text component.
 
@@ -33,8 +39,20 @@ namespace CompleteProject
             text.text = "Score: " + score;
             if (score >= scoreObjective)
             {
-                interactAction.Invoke();
+                missionAccomplishedText.SetActive(true);
+                PlayerMovement playerMovement = player.GetComponentInChildren<PlayerMovement>();
+                EnemyManager enemy = enemyManager.GetComponentInChildren<EnemyManager>();
+                enemy.DisableEnemy();
+                playerMovement.Stop();
+                StartCoroutine(ActivateFunction());
             }
+        }
+
+        IEnumerator ActivateFunction()
+        {
+            yield return new WaitForSeconds(3);
+            interactAction.Invoke();
+
         }
     }
 }

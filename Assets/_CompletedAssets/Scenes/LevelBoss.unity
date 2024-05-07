@@ -1128,6 +1128,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &369745775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2107674136162243670, guid: 420d052720d6dee47abc3b3b63b1264c,
+    type: 3}
+  m_PrefabInstance: {fileID: 433861354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &385205435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,9 +1354,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1641232234}
+    - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 14871708}
+    - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
       propertyPath: scoreObjective
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: missionAccomplishedText
+      value: 
+      objectReference: {fileID: 369745775}
     - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.size
@@ -3019,6 +3040,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+--- !u!1 &1641232234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 4e5a0d387dc27394b81600988ad0216f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1641232233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1695883712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,7 +3659,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1641232233}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1641232234}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
