@@ -8,8 +8,8 @@ namespace CompleteProject
 { 
     public class Katana : Weapon
     {
-        public Animator anim;
-        float timeAttacking = 0.1f;
+        public Transform ownerTransform;
+
         bool isSlashing = false;
         AudioSource slashAudio;
         ParticleSystem slashParticles;
@@ -33,7 +33,7 @@ namespace CompleteProject
 
                 #if !MOBILE_INPUT
                 // If the Fire1 button is being press and it's time to slash...
-                if (Input.GetButton("Fire1") && timer >= timeBetweenAttack && Time.timeScale != 0)
+                if (Input.GetButton("Fire1") && timer >= base.timeBetweenAttack && Time.timeScale != 0)
                 {
                     // ... slash the katana.
                     Slash();
@@ -51,9 +51,16 @@ namespace CompleteProject
 
             if (isSlashing) 
             {
-                if (timer > timeAttacking) { 
+                // Rotate the owner body
+                float yRotationDegree;
+                if (timer > timeBetweenAttack) {
                     isSlashing = false;
-                    anim.SetBool("IsSlashing", false);
+                    yRotationDegree = ((Time.deltaTime - (timer - timeBetweenAttack)) / timeBetweenAttack) * (-180f);
+                    ownerTransform.Rotate(0, yRotationDegree, 0);
+                    ownerTransform.Rotate(0, 90, 0);
+                } else { 
+                    yRotationDegree = (Time.deltaTime/timeBetweenAttack) * (-180f);
+                    ownerTransform.Rotate(0, yRotationDegree, 0);
                 }
             }
         }
@@ -94,13 +101,15 @@ namespace CompleteProject
             // Reset the timer.
             timer = 0f;
             isSlashing = true;
-            anim.SetBool("IsSlashing", true);
             
             // Play the katana slash audioclip
             slashAudio.Play();
 
 
             // Katana Animation
+
+            // Rotate Owner Body to Slashing Position
+            ownerTransform.Rotate(0, 90, 0);
 
             // Stop the particles from playing if they were, then start the particles.
             slashParticles.Stop();

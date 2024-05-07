@@ -11932,6 +11932,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3776862976211185392, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
         type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776862976211185392, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
+        type: 3}
       propertyPath: simulationSpeed
       value: 0.7
       objectReference: {fileID: 0}
@@ -11973,10 +11978,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerAttack: 30
-  timeBetweenAttack: 0.3
+  timeBetweenAttack: 0.5
   powerUp: 0
   isUsed: 0
   isPlayerOwner: 1
+  ownerTransform: {fileID: 400006}
 --- !u!82 &1136507754601220610
 AudioSource:
   m_ObjectHideFlags: 0
