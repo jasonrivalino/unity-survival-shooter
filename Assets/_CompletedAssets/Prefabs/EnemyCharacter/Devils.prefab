@@ -337,15 +337,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8719606
+      value: 0.09811759
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.00000035762787
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.06665945
+      value: 2.4626682
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -755,7 +755,7 @@ PrefabInstance:
     - target: {fileID: 2099415594207807766, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
         type: 3}
       propertyPath: m_Radius
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2099415594207807766, guid: 4c0fd8ec01100a94d9d1827a19a50eb1,
         type: 3}
@@ -896,8 +896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73cc125bb78dc8478c1bca71a5a175f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerAttack: 100
+  damagePerAttack: 10
   timeBetweenAttack: 2
   powerUp: 0
   isUsed: 1
   isPlayerOwner: 0
+  ownerTransform: {fileID: 4795060569972440194}
