@@ -86,7 +86,7 @@ namespace CompleteProject
                     // If the EnemyHealth component exist...
                     if (other.gameObject.TryGetComponent<EnemyHealth>(out var enemyHealth))
                     {
-                        Debug.Log("Damage Katana: " + (damagePerAttack * (1f + powerUp)));
+                        Debug.Log("Damage Katana ke musuh: " + (damagePerAttack * (1f + powerUp)));
                         // ... the enemy should take damage.
                         enemyHealth.TakeDamage(damagePerAttack * (1f + powerUp), other.transform.position);
 
