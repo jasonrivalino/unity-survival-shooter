@@ -28,6 +28,25 @@ namespace CompleteProject
             powerUpText.text = "x " + (1 + powerUp);
         }
 
+        public void ApplyBossEffect()
+        {
+            weapons[0].ApplyBossEffect();
+            weapons[1].ApplyBossEffect();
+            weapons[2].ApplyBossEffect();
+
+            powerUpText.text = "x " + (1 + powerUp - 0.3);
+        }
+
+        public void UnApplyBossEffect()
+        {
+            weapons[0].UnApplyBossEffect();
+            weapons[1].UnApplyBossEffect();
+            weapons[2].UnApplyBossEffect();
+
+            powerUpText.text = "x " + (1 + powerUp);
+        }
+
+
         void ChangeWeapon(int weaponSlot) {
             weaponSlotUsed = weaponSlot;
             for (int i = 0; i <= 2; i++) {

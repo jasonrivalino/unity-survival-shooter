@@ -19,6 +19,16 @@ public class Weapon : MonoBehaviour
         powerUp += 0.1f;
     }
 
+    public void ApplyBossEffect()
+    {
+        powerUp -= 0.3f;
+    }
+
+    public void UnApplyBossEffect()
+    {
+        powerUp += 0.3f;
+    }
+
     public void UseWeapon()
     {
         isUsed = true;
