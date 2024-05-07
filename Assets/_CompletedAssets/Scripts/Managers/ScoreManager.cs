@@ -19,6 +19,9 @@ namespace CompleteProject
 
         public GameObject enemyManager;
 
+        public AudioClip scoreSoundClip;
+        AudioSource scoreAudio;
+
 
         Text text;                      // Reference to the Text component.
 
@@ -30,6 +33,7 @@ namespace CompleteProject
 
             // Reset the score.
             score = 0;
+            scoreAudio = this.gameObject.AddComponent<AudioSource>();
         }
 
 
@@ -40,6 +44,8 @@ namespace CompleteProject
             if (score >= scoreObjective)
             {
                 missionAccomplishedText.SetActive(true);
+                scoreAudio.volume = 0.15f;
+                scoreAudio.PlayOneShot(scoreSoundClip);
                 PlayerMovement playerMovement = player.GetComponentInChildren<PlayerMovement>();
                 EnemyManager enemy = enemyManager.GetComponentInChildren<EnemyManager>();
                 enemy.DisableEnemy();

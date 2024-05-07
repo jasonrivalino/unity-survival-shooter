@@ -2742,6 +2742,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
+      propertyPath: scoreSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 31111d33d7d648f4aa3860816ca24eb2, type: 3}
+    - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
       propertyPath: missionAccomplishedText
       value: 
       objectReference: {fileID: 906033236}
