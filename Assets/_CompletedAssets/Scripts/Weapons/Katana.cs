@@ -8,9 +8,12 @@ namespace CompleteProject
 { 
     public class Katana : Weapon
     {
-        float timeAttacking = 0.1f;
+        public Transform ownerTransform;
+
         bool isSlashing = false;
         AudioSource slashAudio;
+        ParticleSystem slashParticles;
+
 
         void Awake()
         {
@@ -18,6 +21,7 @@ namespace CompleteProject
             weapon = gameObject;
             UnUseWeapon();
             slashAudio = GetComponent<AudioSource>();
+            slashParticles = GetComponentInChildren<ParticleSystem>();
         }
 
         // Update is called once per frame
@@ -29,7 +33,7 @@ namespace CompleteProject
 
                 #if !MOBILE_INPUT
                 // If the Fire1 button is being press and it's time to slash...
-                if (Input.GetButton("Fire1") && timer >= timeBetweenAttack && Time.timeScale != 0)
+                if (Input.GetButton("Fire1") && timer >= base.timeBetweenAttack && Time.timeScale != 0)
                 {
                     // ... slash the katana.
                     Slash();
@@ -47,8 +51,16 @@ namespace CompleteProject
 
             if (isSlashing) 
             {
-                if (timer > timeAttacking) { 
+                // Rotate the owner body
+                float yRotationDegree;
+                if (timer > timeBetweenAttack) {
                     isSlashing = false;
+                    yRotationDegree = ((Time.deltaTime - (timer - timeBetweenAttack)) / timeBetweenAttack) * (-180f);
+                    ownerTransform.Rotate(0, yRotationDegree, 0);
+                    ownerTransform.Rotate(0, 90, 0);
+                } else { 
+                    yRotationDegree = (Time.deltaTime/timeBetweenAttack) * (-180f);
+                    ownerTransform.Rotate(0, yRotationDegree, 0);
                 }
             }
         }
@@ -95,7 +107,14 @@ namespace CompleteProject
 
 
             // Katana Animation
-            // TODO: design the animation 
+
+            // Rotate Owner Body to Slashing Position
+            ownerTransform.Rotate(0, 90, 0);
+
+            // Stop the particles from playing if they were, then start the particles.
+            slashParticles.Stop();
+            slashParticles.Play();
+
 
         }
     }
