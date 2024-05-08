@@ -11,6 +11,10 @@ TagManager:
   - Shop
   - Door
   - Interactor
+  - Enemy
+  - Undefined
+  - Pet
+  - PetEnemy
   layers:
   - Default
   - TransparentFX
