@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 namespace CompleteProject
 {
@@ -8,23 +13,49 @@ namespace CompleteProject
 
 
         Animator anim;                          // Reference to the animator component.
+        public Text pointsText;
+        public Text countdownText;
+
+        public GameObject gameOverScreen;
 
 
-        void Awake ()
+        void Awake()
         {
             // Set up the reference.
-            anim = GetComponent <Animator> ();
+            anim = GetComponent<Animator>();
         }
 
 
-        void Update ()
+        void Update()
         {
             // If the player has run out of health...
-            if(playerHealth.currentHealth <= 0)
+            if (playerHealth.currentHealth <= 0)
             {
+                StartCoroutine(SetupGameOver());
                 // ... tell the animator the game is over.
-                anim.SetTrigger ("GameOver");
+                this.enabled = false;
             }
+        }
+
+        IEnumerator SetupGameOver()
+        {
+            yield return new WaitForSeconds(2);
+            gameOverScreen.SetActive(true);
+            pointsText.text = "score: " + ScoreManager.score.ToString();
+            StopAllCoroutines();
+            StartCoroutine(GameOverCountdown());
+        }
+
+        IEnumerator GameOverCountdown()
+        {
+            int countdownTime = 11;
+            while (countdownTime > 0)
+            {
+                countdownText.text = "Returning to main menu in " + (countdownTime - 1).ToString();
+                yield return new WaitForSeconds(1f);
+                countdownTime--;
+            }
+            SceneManager.LoadScene(0);
         }
     }
 }

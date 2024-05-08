@@ -9,6 +9,7 @@ namespace CompleteProject
         PlayerHealth playerHealth;      // Reference to the player's health.
         EnemyHealth enemyHealth;        // Reference to this enemy's health.
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
+        public GameObject weapon;
 
 
         void Awake()
@@ -34,6 +35,7 @@ namespace CompleteProject
             {
                 // ... disable the nav mesh agent.
                 nav.enabled = false;
+                weapon.SetActive(false);
             }
         }
     }
