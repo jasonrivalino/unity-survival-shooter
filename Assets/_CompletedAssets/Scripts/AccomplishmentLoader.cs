@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class AccomplishmentLoader : MonoBehaviour
 {
     public float transitionTime = 0f;
+    public GameObject AccomplishmentLayer;
     public Image Image1;
     public Image Image2;
     public TMP_Text text;
@@ -15,7 +16,15 @@ public class AccomplishmentLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LoadAccomplishment());
+        if (!PlayerPrefs.HasKey("Motherlode"))
+        {
+            AccomplishmentLayer.SetActive(true);
+            StartCoroutine(LoadAccomplishment());
+        }
+        else
+        {
+            AccomplishmentLayer.SetActive(false);
+        }
     }
 
     void Awake()

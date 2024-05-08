@@ -2680,6 +2680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionTime: 2
+  AccomplishmentLayer: {fileID: 430921312}
   Image1: {fileID: 413901922}
   Image2: {fileID: 167588296}
   text: {fileID: 1277111142}

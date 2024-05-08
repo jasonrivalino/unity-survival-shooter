@@ -48,25 +48,29 @@ namespace CompleteProject
         {
             base.Update();
 
-            if (isUsed)
-            {
-
-#if !MOBILE_INPUT
-                // If the Fire1 button is being press and it's time to fire...
-                if (Input.GetButton("Fire1") && timer >= timeBetweenAttack && Time.timeScale != 0)
-                {
-                    // ... shoot the gun.
-                    Shoot();
-                }
-#else
+            if (isUsed && isPlayerOwner) { 
+            
+                #if !MOBILE_INPUT
+                            // If the Fire1 button is being press and it's time to fire...
+			                if(Input.GetButton ("Fire1") && timer >= timeBetweenAttack && Time.timeScale != 0)
+                            {
+                                // ... shoot the gun.
+                                Shoot ();
+                            }
+                #else
                             // If there is input on the shoot direction stick and it's time to fire...
                             if ((CrossPlatformInputManager.GetAxisRaw("Mouse X") != 0 || CrossPlatformInputManager.GetAxisRaw("Mouse Y") != 0) && timer >= timeBetweenBullets)
                             {
                                 // ... shoot the gun
                                 Shoot();
                             }
-#endif
-
+                #endif
+            
+            } else if (!isPlayerOwner) {
+                if (timer >= timeBetweenAttack && Time.timeScale != 0)
+                {
+                    Shoot();
+                }
             }
 
             // If the timer has exceeded the proportion of timeBetweenBullets that the effects should be displayed for...
@@ -127,7 +131,7 @@ namespace CompleteProject
 
         void Shoot()
         {
-            Debug.Log("Damage Peluru Shotgun: " + (damagePerAttack * (1f + powerUp)));
+            // Debug.Log("Damage Peluru Shotgun: " + (damagePerAttack * (1f + powerUp)));
             // Reset the timer.
             timer = 0f;
 
@@ -141,7 +145,6 @@ namespace CompleteProject
             // Stop the particles from playing if they were, then start the particles.
             gunParticles.Stop();
             gunParticles.Play();
-
 
             for (int i = 0; i< bulletsPerShoot; i++)
             {
@@ -167,15 +170,13 @@ namespace CompleteProject
                     }
                     else // If the user is enemy
                     { 
-                        Debug.Log("Enemy Shoot");
-                        // If the EnemyHealth component exist...
+                        // If the PlayerHealth component exist...
                         if (shootHit.collider.TryGetComponent<PlayerHealth>(out var playerHealth))
                         {
-                            // ... the enemy should take damage.
+                            // ... the player should take damage
                             float bulletDamage = countBulletDamage(shootHit.point);
-                            Debug.Log("Peluru ke-" + i.ToString() + " damage: " + bulletDamage);
                             playerHealth.TakeDamage(bulletDamage);
-                        }
+                        } 
                     }
 
                     // Set the the line renderer to the point the raycast hit.

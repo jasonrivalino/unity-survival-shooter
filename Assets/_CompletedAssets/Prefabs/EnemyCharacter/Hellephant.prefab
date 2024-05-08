@@ -374,7 +374,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.9764706, g: 0.9098039, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.09019608, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5787,11 +5787,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2582eee1114a90c47970cb5fe7e99161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerAttack: 25
-  timeBetweenAttack: 0.35
+  damagePerAttack: 2
+  timeBetweenAttack: 2
   powerUp: 0
-  isUsed: 0
-  isPlayerOwner: 1
+  isUsed: 1
+  isPlayerOwner: 0
   range: 7
   bulletsPerShoot: 7
   inaccuracyDistance: 0.15
@@ -5809,7 +5809,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.86795133, b: 0.31617647, a: 1}
+  m_Color: {r: 1, g: 0.09019608, b: 0, a: 1}
   m_Intensity: 3.526365
   m_Range: 10
   m_SpotAngle: 75
@@ -6053,6 +6053,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b77f122f451a2394898a24191c26107c, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 100040, guid: b77f122f451a2394898a24191c26107c, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -6071,15 +6075,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b77f122f451a2394898a24191c26107c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.1387336
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b77f122f451a2394898a24191c26107c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b77f122f451a2394898a24191c26107c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.1340494
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b77f122f451a2394898a24191c26107c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6149,10 +6153,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4327997964464790025}
-    - targetCorrespondingSourceObject: {fileID: 100004, guid: b77f122f451a2394898a24191c26107c,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -6015832504415716901}
     - targetCorrespondingSourceObject: {fileID: 100004, guid: b77f122f451a2394898a24191c26107c,
         type: 3}
       insertIndex: -1
@@ -6380,20 +6380,6 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 50
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
---- !u!114 &-6015832504415716901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4089604486440164585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc28e8f7dbbe7494a8d67b6f5f3636bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0
-  attackDamage: 0
 --- !u!114 &3372904241579948125
 MonoBehaviour:
   m_ObjectHideFlags: 0

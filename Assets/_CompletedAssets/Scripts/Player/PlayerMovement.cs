@@ -129,9 +129,21 @@ namespace CompleteProject
 
         public void SpeedUp()
         {
-            speedUp = 1.2f;
+            speedUp += 0.2f;
             speedUpTime = 15f;
-            speedUpText.text = "x 1.2";
+            speedUpText.text = "x " + speedUp;
+        }
+
+        public void ApplyBossEffect()
+        {
+            speedUp -= 0.3f;
+            speedUpText.text = "x " + speedUp;
+        }
+
+        public void UnApplyBossEffect()
+        {
+            speedUp += 0.3f;
+            speedUpText.text = "x " + speedUp;
         }
 
         private void Update()
@@ -148,11 +160,11 @@ namespace CompleteProject
                 if (speedUpTime <= 0)
                 {
                     speedUpTime = 0;
-                    speedUp = 1f;
+                    speedUp -= 0.2f;
 
                     // Update UI
                     speedUpTimeText.text = "";
-                    speedUpText.text = "x1.0";
+                    speedUpText.text = "x " + speedUp;
                 }
             }
 
