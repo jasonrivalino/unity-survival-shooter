@@ -63,16 +63,27 @@ namespace CompleteProject
             }
         }
 
-        public void Heal()
+        public void Heal(float amount = 0)
         {
             healed = true;
-            if ((currentHealth / startingHealth) > 0.8f)
+            if (amount > 0)
             {
-                currentHealth = startingHealth;
+                currentHealth += amount;
+                if (currentHealth > startingHealth)
+                {
+                    currentHealth = startingHealth;
+                }
             }
             else
             {
-                currentHealth += 0.2f * startingHealth;
+                if ((currentHealth / startingHealth) > 0.8f)
+                {
+                    currentHealth = startingHealth;
+                }
+                else
+                {
+                    currentHealth += 0.2f * startingHealth;
+                }
             }
             healthSlider.value = currentHealth;
         }

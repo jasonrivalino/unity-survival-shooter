@@ -102,16 +102,20 @@ namespace CompleteProject
             // Perform the raycast against gameobjects on the shootable layer and if it hits something...
             if(Physics.Raycast (shootRay, out shootHit, range, shootableMask))
             {
+                PetHealth petHealth = shootHit.collider.GetComponent<PetHealth>();
                 if (isPlayerOwner)
                 {
                     // Try and find an EnemyHealth script on the gameobject hit.
                     EnemyHealth enemyHealth = shootHit.collider.GetComponent<EnemyHealth>();
-
                     // If the EnemyHealth component exist...
                     if (enemyHealth != null)
                     {
                         // ... the enemy should take damage.
                         enemyHealth.TakeDamage(damagePerAttack * (1f + powerUp), shootHit.point);
+                    }
+                    if (petHealth != null && shootHit.collider.gameObject.tag == "PetEnemy")
+                    {
+                        petHealth.TakeDamage(damagePerAttack * (1f + powerUp));
                     }
                 }
                 else // If the user is enemy
@@ -121,6 +125,10 @@ namespace CompleteProject
                     {
                         // .. the player should take damage
                         playerHealth.TakeDamage(damagePerAttack * (1f + powerUp));
+                    }
+                    if (petHealth != null && shootHit.collider.gameObject.tag == "Pet")
+                    {
+                        petHealth.TakeDamage(damagePerAttack * (1f + powerUp));
                     }
                 }
 
