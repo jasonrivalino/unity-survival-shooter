@@ -1204,6 +1204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: 5b84db49d40ea449aa4f3e3bd229ab5b, type: 2}
+  sfxLvl: {fileID: 0}
+  musicLvl: {fileID: 0}
 --- !u!114 &206883269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,6 +1542,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: 5b84db49d40ea449aa4f3e3bd229ab5b, type: 2}
+  sfxLvl: {fileID: 269909663}
+  musicLvl: {fileID: 885988012}
 --- !u!1 &260284131
 GameObject:
   m_ObjectHideFlags: 0
