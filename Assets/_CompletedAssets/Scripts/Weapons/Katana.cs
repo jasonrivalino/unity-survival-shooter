@@ -91,6 +91,14 @@ namespace CompleteProject
                         enemyHealth.TakeDamage(damagePerAttack * (1f + powerUp), other.transform.position);
 
                     }
+                    else if (other.gameObject.TryGetComponent<PetHealth>(out var petHealth))
+                    {
+                        // ... the enemy should take damage.
+                        if (other.gameObject.tag == "PetEnemy")
+                        {
+                            petHealth.TakeDamage(damagePerAttack * (1f + powerUp));
+                        }
+                    }
                 }
                 else // If the user is enemy
                 {
@@ -102,6 +110,14 @@ namespace CompleteProject
                         // ... the player should take damage.
                         playerHealth.TakeDamage(damagePerAttack * (1f + powerUp));
 
+                    }
+                    else if (other.gameObject.TryGetComponent<PetHealth>(out var petHealth))
+                    {
+                        // ... the enemy should take damage.
+                        if (other.gameObject.tag == "Pet")
+                        {
+                            petHealth.TakeDamage(damagePerAttack * (1f + powerUp));
+                        }
                     }
                 }
             }

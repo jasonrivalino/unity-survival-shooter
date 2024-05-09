@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace CompleteProject
 {
@@ -146,6 +148,30 @@ namespace CompleteProject
             else if (cheatInput == "SUKIPPU")
             {
                 levelLoader.LoadNextLevel();
+            }
+            else if (cheatInput == "KILLPET")
+            {
+                isCheatActivated = true;
+                bool isNoDamagePet = false;
+                if (PlayerPrefs.HasKey("NoDamagePet"))
+                {
+                    isNoDamagePet = true;
+                    PlayerPrefs.DeleteKey("NoDamagePet");
+                }
+                PetHealth[] petHealths = FindObjectsOfType<PetHealth>();
+                foreach (PetHealth petHealth in petHealths)
+                {
+                    petHealth.kill();
+                }
+                if (isNoDamagePet)
+                {
+                    PlayerPrefs.SetInt("NoDamagePet", 1);
+                }
+
+            }
+            else if (cheatInput == "IMMORTALPET")
+            {
+                isCheatActivated = ProcessCheat("NoDamagePet");
             }
             else
             {

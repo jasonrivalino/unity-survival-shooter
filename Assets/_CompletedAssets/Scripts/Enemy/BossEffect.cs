@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 
 namespace CompleteProject
@@ -6,6 +7,8 @@ namespace CompleteProject
     {
         public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
         public int attackDamage = 10;               // The amount of health taken away per attack.
+
+        private int attackBuff;
         private float defaultSpeed;
         private int defaultShotgunDamage;
         private int defaultKatanaDamage;
@@ -21,7 +24,6 @@ namespace CompleteProject
         bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
         float timer;                                // Timer for counting up to the next attack.
 
-
         void Awake()
         {
             // Setting up the references.
@@ -31,6 +33,8 @@ namespace CompleteProject
             anim = GetComponent<Animator>();
             playerWeaponManager = player.GetComponent<PlayerWeaponManager>();
             speedPlayer = player.GetComponent<PlayerMovement>();
+            attackBuff = Mathf.RoundToInt(attackDamage * 0.2f);
+
         }
 
 
@@ -99,6 +103,16 @@ namespace CompleteProject
                 // ... damage the player.
                 playerHealth.TakeDamage(attackDamage);
             }
+        }
+
+        public void buffDamage()
+        {
+            attackDamage += attackBuff;
+        }
+
+        public void debuffDamage()
+        {
+            attackDamage -= attackBuff;
         }
     }
 }
