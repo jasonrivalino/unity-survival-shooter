@@ -146,6 +146,16 @@ namespace CompleteProject
             speedUpText.text = "x " + speedUp;
         }
 
+        public void Stop()
+        {
+            speed = 0f;
+        }
+
+        public void StartMove()
+        {
+            speed = 6f;
+        }
+
         private void Update()
         {
             // Reducing speedUpTime if any
