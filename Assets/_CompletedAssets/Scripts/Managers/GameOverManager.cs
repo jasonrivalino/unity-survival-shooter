@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -55,7 +55,7 @@ namespace CompleteProject
                 yield return new WaitForSeconds(1f);
                 countdownTime--;
             }
-            SceneManager.LoadScene(0);
+            // SceneManager.LoadScene(0);
         }
     }
 }

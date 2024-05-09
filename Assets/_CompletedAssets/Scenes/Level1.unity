@@ -4921,6 +4921,11 @@ PrefabInstance:
       propertyPath: countdownDisplay
       value: 
       objectReference: {fileID: 85803703}
+    - target: {fileID: 4951205654624635793, guid: 3f7c56ab0ead11746a1e61dd1320ba88,
+        type: 3}
+      propertyPath: countdownAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9aa913b01323c5642937f8c4c0d213f2, type: 3}
     - target: {fileID: 8583496686073717143, guid: 3f7c56ab0ead11746a1e61dd1320ba88,
         type: 3}
       propertyPath: m_LocalPosition.x

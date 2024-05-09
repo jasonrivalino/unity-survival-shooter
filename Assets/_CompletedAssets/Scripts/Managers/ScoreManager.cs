@@ -54,6 +54,11 @@ namespace CompleteProject
             }
         }
 
+        public bool IsScoreReached()
+        {
+            return score >= scoreObjective;
+        }
+
         IEnumerator ActivateFunction()
         {
             yield return new WaitForSeconds(3);

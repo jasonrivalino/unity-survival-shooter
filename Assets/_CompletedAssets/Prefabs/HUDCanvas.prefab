@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 5158076066006132266}
   m_Layer: 5
   m_Name: ScoreText
-  m_TagString: Untagged
+  m_TagString: ScoreText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1576,6 +1576,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
+  pointsText: {fileID: 0}
+  countdownText: {fileID: 0}
+  gameOverScreen: {fileID: 0}
 --- !u!1 &4045408131035970837
 GameObject:
   m_ObjectHideFlags: 0

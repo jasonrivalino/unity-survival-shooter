@@ -13,6 +13,8 @@ namespace CompleteProject
         public GameObject player;
         public Riffle riffle;
         PlayerMovement playerMovement;
+        AudioSource CountdownAudio;
+        public AudioClip countdownAudioClip;
         // Start is called before the first frame update
         void Start()
         {
@@ -22,17 +24,20 @@ namespace CompleteProject
         void Awake()
         {
             playerMovement = player.GetComponentInChildren<PlayerMovement>();
+            CountdownAudio = this.gameObject.AddComponent<AudioSource>();
         }
 
         IEnumerator CountdownToStart()
         {
+            CountdownAudio.volume = 4f;
+            CountdownAudio.PlayOneShot(countdownAudioClip);
 
             while (countdownTime > 0)
             {
                 riffle.enabled = false;
                 playerMovement.Stop();
                 countdownDisplay.text = countdownTime.ToString();
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(1.05f);
                 countdownTime--;
             }
             riffle.enabled = true;
