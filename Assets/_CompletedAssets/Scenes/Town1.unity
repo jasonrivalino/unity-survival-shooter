@@ -5572,6 +5572,9 @@ MonoBehaviour:
   player: {fileID: 0}
   enemyManager: {fileID: 0}
   scoreSoundClip: {fileID: 0}
+  shotgun: {fileID: 0}
+  gunbarrelEnd: {fileID: 0}
+  katana: {fileID: 0}
 --- !u!1 &1434239552
 GameObject:
   m_ObjectHideFlags: 0

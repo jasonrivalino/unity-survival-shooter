@@ -29,4 +29,7 @@ public class ShopManager : MonoBehaviour
     {
         canvas.enabled = false;
     }
+
+
 }
+
