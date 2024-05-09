@@ -4350,6 +4350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shop: {fileID: 1785674440}
+  interactHint: {fileID: 231392596}
 --- !u!4 &1002110427
 Transform:
   m_ObjectHideFlags: 0
@@ -4949,6 +4950,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
+  pointsText: {fileID: 0}
+  countdownText: {fileID: 0}
+  gameOverScreen: {fileID: 0}
 --- !u!95 &1139190137
 Animator:
   serializedVersion: 5
@@ -6105,6 +6109,13 @@ MonoBehaviour:
   interactAction:
     m_PersistentCalls:
       m_Calls: []
+  missionAccomplishedText: {fileID: 0}
+  player: {fileID: 0}
+  enemyManager: {fileID: 0}
+  scoreSoundClip: {fileID: 0}
+  shotgun: {fileID: 0}
+  gunbarrelEnd: {fileID: 0}
+  katana: {fileID: 0}
 --- !u!1 &1434239552
 GameObject:
   m_ObjectHideFlags: 0
