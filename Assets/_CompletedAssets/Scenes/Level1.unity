@@ -2827,6 +2827,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -14, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &903280805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 4e5a0d387dc27394b81600988ad0216f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1641232233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &906033236 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2107674136162243670, guid: 420d052720d6dee47abc3b3b63b1264c,
@@ -3593,14 +3599,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
+      propertyPath: katana
+      value: 
+      objectReference: {fileID: 1641232235}
+    - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1641232234}
     - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
+      propertyPath: shotgun
+      value: 
+      objectReference: {fileID: 1641232237}
+    - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 14871708}
+    - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: gunbarrelEnd
+      value: 
+      objectReference: {fileID: 903280805}
     - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
       propertyPath: scoreObjective
@@ -4112,6 +4133,18 @@ PrefabInstance:
 --- !u!1 &1641232234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 4e5a0d387dc27394b81600988ad0216f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1641232233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1641232235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2250282586610726048, guid: 4e5a0d387dc27394b81600988ad0216f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1641232233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1641232237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 603609426731043523, guid: 4e5a0d387dc27394b81600988ad0216f,
     type: 3}
   m_PrefabInstance: {fileID: 1641232233}
   m_PrefabAsset: {fileID: 0}
@@ -4869,7 +4902,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1641232233}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 903280805}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c83720df9acb89488dbf2c0dbd3ad78, type: 3}
@@ -4916,6 +4949,21 @@ PrefabInstance:
       propertyPath: riffle
       value: 
       objectReference: {fileID: 2006796489}
+    - target: {fileID: 4951205654624635793, guid: 3f7c56ab0ead11746a1e61dd1320ba88,
+        type: 3}
+      propertyPath: riffle1
+      value: 
+      objectReference: {fileID: 1641232237}
+    - target: {fileID: 4951205654624635793, guid: 3f7c56ab0ead11746a1e61dd1320ba88,
+        type: 3}
+      propertyPath: riffle2
+      value: 
+      objectReference: {fileID: 903280805}
+    - target: {fileID: 4951205654624635793, guid: 3f7c56ab0ead11746a1e61dd1320ba88,
+        type: 3}
+      propertyPath: riffle3
+      value: 
+      objectReference: {fileID: 1641232235}
     - target: {fileID: 4951205654624635793, guid: 3f7c56ab0ead11746a1e61dd1320ba88,
         type: 3}
       propertyPath: countdownDisplay

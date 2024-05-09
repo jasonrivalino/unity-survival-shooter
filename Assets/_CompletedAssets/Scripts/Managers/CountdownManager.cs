@@ -11,7 +11,9 @@ namespace CompleteProject
         public int countdownTime;
         public Text countdownDisplay;
         public GameObject player;
-        public Riffle riffle;
+        public GameObject riffle1;
+        public GameObject riffle2;
+        public GameObject riffle3;
         PlayerMovement playerMovement;
         AudioSource CountdownAudio;
         public AudioClip countdownAudioClip;
@@ -34,13 +36,17 @@ namespace CompleteProject
 
             while (countdownTime > 0)
             {
-                riffle.enabled = false;
+                riffle1.SetActive(false);
+                riffle2.SetActive(false);
+                riffle3.SetActive(false);
                 playerMovement.Stop();
                 countdownDisplay.text = countdownTime.ToString();
                 yield return new WaitForSeconds(1.05f);
                 countdownTime--;
             }
-            riffle.enabled = true;
+            riffle1.SetActive(true);
+            riffle2.SetActive(true);
+            riffle3.SetActive(true);
             countdownDisplay.text = "Go!";
             playerMovement.StartMove();
             yield return new WaitForSeconds(1f);
