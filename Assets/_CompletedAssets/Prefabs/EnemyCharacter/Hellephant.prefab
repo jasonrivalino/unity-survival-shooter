@@ -5962,6 +5962,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4089604486440124617}
     m_Modifications:
+    - target: {fileID: 1021076032002798, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
+      propertyPath: m_TagString
+      value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1304552910494454, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
+      propertyPath: m_TagString
+      value: Shotgun
+      objectReference: {fileID: 0}
     - target: {fileID: 1652954791862484, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
       propertyPath: m_Name
       value: Double-barrel_gun
