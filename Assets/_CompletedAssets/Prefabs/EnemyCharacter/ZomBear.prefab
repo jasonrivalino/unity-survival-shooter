@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73cc125bb78dc8478c1bca71a5a175f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerAttack: 5
+  damagePerAttack: 2
   timeBetweenAttack: 2
   powerUp: 0
   isUsed: 1
