@@ -16,4 +16,9 @@ public class ShopManager : MonoBehaviour
         yield return new WaitForSeconds(25);
         shop.SetActive(false);
     }
+
+    public void CloseCanvas()
+    {
+        canvas.enabled = false;
+    }
 }
