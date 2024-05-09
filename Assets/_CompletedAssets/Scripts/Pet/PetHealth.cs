@@ -10,6 +10,7 @@ namespace CompleteProject
         public float currentHealth;
         public float sinkSpeed = 2.5f;
         public AudioClip deathClip;
+        public AudioSource audioSource;
         Animator anim;
         bool isDead;
         bool isSinking;
@@ -48,6 +49,7 @@ namespace CompleteProject
         void Death()
         {
             isDead = true;
+            
             StartSinking();
         }
 

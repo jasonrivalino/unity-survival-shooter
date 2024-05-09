@@ -186,7 +186,17 @@ namespace CompleteProject
                             // ... the player should take damage
                             float bulletDamage = countBulletDamage(shootHit.point);
                             playerHealth.TakeDamage(bulletDamage);
-                        } 
+                        }
+                        if (shootHit.collider.TryGetComponent<PetHealth>(out var petHealth))
+                        {
+                            // ... the enemy should take damage.
+                            if (shootHit.collider.tag == "Pet")
+                            {
+                                float bulletDamage = countBulletDamage(shootHit.point);
+                                Debug.Log("Peluru ke-" + i.ToString() + " damage: " + bulletDamage);
+                                petHealth.TakeDamage(bulletDamage);
+                            }
+                        }
                     }
 
                     // Set the the line renderer to the point the raycast hit.

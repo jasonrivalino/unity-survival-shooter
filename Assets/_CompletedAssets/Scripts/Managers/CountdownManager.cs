@@ -51,7 +51,15 @@ namespace CompleteProject
             playerMovement.StartMove();
             yield return new WaitForSeconds(1f);
             countdownDisplay.gameObject.SetActive(false);
-
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Pet");
+            foreach (GameObject obj in enemies)
+            {
+                HealerMovement healerPetMovement = obj.GetComponent<HealerMovement>();
+                if (healerPetMovement != null)
+                {
+                    healerPetMovement.StartMove();
+                }
+            }
         }
     }
 }

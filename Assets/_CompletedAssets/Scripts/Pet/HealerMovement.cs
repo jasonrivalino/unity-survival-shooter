@@ -14,8 +14,8 @@ namespace CompleteProject
         PlayerHealth playerHealth;      // Reference to the player's health.
         PetHealth petHealth;        // Reference to this enemy's health.
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
-        public float speed = 5.0f;
         private Animator animator;
+        bool canMove = false;
         void Awake()
         {
             animator = this.GetComponent<Animator>();
@@ -27,12 +27,20 @@ namespace CompleteProject
 
         }
 
+        public void StartMove()
+        {
+            canMove = true;
+        }
+
         void Update()
         {
             if (playerHealth.currentHealth > 0 && petHealth.currentHealth > 0)
             {
-                Vector3 targetPosition = (player.position + pet.position) / 2f;
-                nav.SetDestination(targetPosition);
+                if (canMove)
+                {
+                    Vector3 targetPosition = (player.position + pet.position) / 2f;
+                    nav.SetDestination(targetPosition);
+                }
             }
             else
             {

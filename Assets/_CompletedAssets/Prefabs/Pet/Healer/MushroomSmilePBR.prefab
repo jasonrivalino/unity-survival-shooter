@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24fbae9580fab304196a7bc8bfef284e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healAudio: {fileID: 0}
 --- !u!114 &-4521361119162165085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137a031435f14704792bd74bc525b77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
 --- !u!114 &-4403744560476453840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +309,7 @@ MonoBehaviour:
   currentHealth: 0
   sinkSpeed: 2.5
   deathClip: {fileID: 8300000, guid: fd27dad5b50788d49834b1ba9c84b66a, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1 &2411188951558394283
 GameObject:
   m_ObjectHideFlags: 0

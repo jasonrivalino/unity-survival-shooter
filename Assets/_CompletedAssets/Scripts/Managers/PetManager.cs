@@ -28,7 +28,8 @@ namespace CompleteProject
         void Start()
         {
             // spawn attacker
-            PlayerPrefs.SetInt("dog", 2);
+            PlayerPrefs.SetInt("dog", 1);
+            PlayerPrefs.SetInt("mushroom", 1);
             if (PlayerPrefs.HasKey("dog"))
             {
                 for (int i = 0; i < PlayerPrefs.GetInt("dog"); i++)
@@ -36,14 +37,14 @@ namespace CompleteProject
                     Instantiate(dogPrefab, player.position, player.rotation);
                 }
             }
-            else if (PlayerPrefs.HasKey("bomb"))
+            if (PlayerPrefs.HasKey("bomb"))
             {
                 for (int i = 0; i < PlayerPrefs.GetInt("bomb"); i++)
                 {
                     Instantiate(bombPrefab, player.position, player.rotation);
                 }
             }
-            else if (PlayerPrefs.HasKey("cactus"))
+            if (PlayerPrefs.HasKey("cactus"))
             {
                 for (int i = 0; i < PlayerPrefs.GetInt("cactus"); i++)
                 {
@@ -52,21 +53,21 @@ namespace CompleteProject
             }
 
             // spawn healer
-            else if (PlayerPrefs.HasKey("mushroom"))
+            if (PlayerPrefs.HasKey("mushroom"))
             {
                 for (int i = 0; i < PlayerPrefs.GetInt("mushroom"); i++)
                 {
                     Instantiate(mushroomPrefab, player.position, player.rotation);
                 }
             }
-            else if (PlayerPrefs.HasKey("ghost"))
+            if (PlayerPrefs.HasKey("ghost"))
             {
                 for (int i = 0; i < PlayerPrefs.GetInt("ghost"); i++)
                 {
                     Instantiate(ghostPrefab, player.position, player.rotation);
                 }
             }
-            else if (PlayerPrefs.HasKey("rabbit"))
+            if (PlayerPrefs.HasKey("rabbit"))
             {
                 for (int i = 0; i < PlayerPrefs.GetInt("rabbit"); i++)
                 {

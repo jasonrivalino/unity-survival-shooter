@@ -35,7 +35,7 @@ namespace CompleteProject
                     
                     float distanceToTarget = Vector3.Distance(transform.position, target.position);
                     Debug.Log("Target Found, distance: " + distanceToTarget);
-                    if (enemyHealth.currentHealth > 0 && petHealth.currentHealth > 0 && distanceToTarget < 1.5f)
+                    if (enemyHealth.currentHealth > 0 && petHealth.currentHealth > 0 && distanceToTarget < 2.5f)
                     {
                         enemyHealth.TakeDamage(damage, transform.position);
                         Debug.Log("pet ngedamage musuh, sisa hp musuh: " + enemyHealth.currentHealth);
