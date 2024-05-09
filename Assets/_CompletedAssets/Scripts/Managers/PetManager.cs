@@ -28,8 +28,6 @@ namespace CompleteProject
         void Start()
         {
             // spawn attacker
-            PlayerPrefs.SetInt("dog", 1);
-            PlayerPrefs.SetInt("mushroom", 1);
             if (PlayerPrefs.HasKey("dog"))
             {
                 for (int i = 0; i < PlayerPrefs.GetInt("dog"); i++)
