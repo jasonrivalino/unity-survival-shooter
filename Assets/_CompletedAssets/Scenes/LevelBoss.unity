@@ -1622,7 +1622,7 @@ PrefabInstance:
     - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
       propertyPath: scoreObjective
-      value: 1000
+      value: 200000000
       objectReference: {fileID: 0}
     - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
@@ -1727,8 +1727,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1749167514}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2095222863341841961, guid: 420d052720d6dee47abc3b3b63b1264c, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3505870070799784637, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
