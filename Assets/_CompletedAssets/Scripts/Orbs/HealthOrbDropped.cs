@@ -27,6 +27,17 @@ namespace CompleteProject
                         isPicked = true;
                         orbPickedAudio.Play();
                         playerHealth.Heal();
+
+                        // Update statistics
+                        if (PlayerPrefs.HasKey("numHealthOrbPicked"))
+                        {
+                            PlayerPrefs.SetInt("numHealthOrbPicked", PlayerPrefs.GetInt("numHealthOrbPicked") + 1);
+                        }
+                        else
+                        {
+                            PlayerPrefs.SetInt("numHealthOrbPicked", 1);
+                        }
+
                         base.Dissapear();
                     }
                 }
