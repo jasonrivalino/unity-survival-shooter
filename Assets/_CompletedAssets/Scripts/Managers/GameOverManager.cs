@@ -28,6 +28,21 @@ namespace CompleteProject
 
         void Update()
         {
+            if (PlayerPrefs.HasKey("numSpeedOrbPicked"))
+            {
+                Debug.Log("Number of Speed Orb Picked:" + PlayerPrefs.GetInt("numSpeedOrbPicked").ToString());
+            }
+
+            if (PlayerPrefs.HasKey("numHealthOrbPicked"))
+            {
+                Debug.Log("Number of Health Orb Picked:" + PlayerPrefs.GetInt("numHealthOrbPicked").ToString());
+            }
+
+            if (PlayerPrefs.HasKey("numDamageOrbPicked"))
+            {
+                Debug.Log("Number of Damage Orb Picked:" + PlayerPrefs.GetInt("numDamageOrbPicked").ToString());
+            }
+
             // If the player has run out of health...
             if (playerHealth.currentHealth <= 0)
             {
