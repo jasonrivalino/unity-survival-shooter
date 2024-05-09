@@ -3581,6 +3581,68 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!1 &1427171792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1427171794}
+  - component: {fileID: 1427171793}
+  m_Layer: 0
+  m_Name: PetManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1427171793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427171792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e51a9b74dab3604b820b280cad05e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2023876523}
+  dogPrefab: {fileID: 8422892626600285392, guid: c909da6f901b5814c9ab4556ea120503,
+    type: 3}
+  cactusPrefab: {fileID: 662468794185850985, guid: e5ecb949da2e299468dbd302d8acb751,
+    type: 3}
+  bombPrefab: {fileID: 1818861082154570, guid: 10ee17f837299ba43a9339fb3e132f49, type: 3}
+  mushroomPrefab: {fileID: 1997902569578628670, guid: 2077cccf1f11afb4ab4fdb9561fd7e22,
+    type: 3}
+  rabbitPrefab: {fileID: 1000013767804016, guid: ab46b430bf1aa1347804d1a63e0bb800,
+    type: 3}
+  ghostPrefab: {fileID: 19588385245968726, guid: c9d780433221fa041a7f76437efde190,
+    type: 3}
+  turtlePrefab: {fileID: 1524411113276028, guid: ebeaa024d2f92ff41871aecba47aa453,
+    type: 3}
+  batPrefab: {fileID: 1000011593744314, guid: 10850c1352265044080aac39cfaa250c, type: 3}
+  slimePrefab: {fileID: 1931298151966786, guid: 4a823052078c2f941818e4f09ef6abf8,
+    type: 3}
+  enemyTag: Enemy
+--- !u!4 &1427171794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427171792}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1434239552
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,3 +5230,4 @@ SceneRoots:
   - {fileID: 601376167}
   - {fileID: 1367580834}
   - {fileID: 1841788131}
+  - {fileID: 1427171794}
