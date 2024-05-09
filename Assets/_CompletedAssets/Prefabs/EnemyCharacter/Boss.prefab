@@ -10862,7 +10862,7 @@ MonoBehaviour:
   isUsed: 1
   isPlayerOwner: 0
   range: 7
-  bulletsPerShoot: 20
+  bulletsPerShoot: 5
   inaccuracyDistance: 0.5
   shotgunLine: {fileID: 9209258724073731464, guid: 07e75b0a3b8805745be9f33b14959e91,
     type: 3}
