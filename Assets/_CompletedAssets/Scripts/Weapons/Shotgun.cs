@@ -164,6 +164,9 @@ namespace CompleteProject
                             // ... the enemy should take damage.
                             float bulletDamage = countBulletDamage(shootHit.point);
                             Debug.Log("Peluru ke-" + i.ToString() + " damage: " + bulletDamage);
+
+                            hitCount += 1;
+                            Debug.Log("Hit Count: " + hitCount);
                             enemyHealth.TakeDamage(bulletDamage, shootHit.point);
                         }
                         if (shootHit.collider.TryGetComponent<PetHealth>(out var petHealth))

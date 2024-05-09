@@ -18,8 +18,7 @@ namespace CompleteProject
         CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
         bool isDead;                                // Whether the enemy is dead.
         bool isSinking;                             // Whether the enemy has started sinking through the floor.
-
-
+        int deathCount = 0;                         // The amount of death count.
 
         void Awake()
         {
@@ -97,11 +96,12 @@ namespace CompleteProject
             // Tell the animator that the enemy is dead.
             anim.SetTrigger("Dead");
 
-            // Set text death into plus one.
-
             // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
             enemyAudio.clip = deathClip;
             enemyAudio.Play();
+
+            // Set text death into plus one.
+            deathCountIncrement();
         }
 
 
@@ -124,6 +124,12 @@ namespace CompleteProject
 
             // After 2 seconds destory the enemy.
             Destroy(gameObject, 2f);
+        }
+
+        public void deathCountIncrement()
+        {
+            deathCount++;
+            Debug.Log("Total enemy death: " + deathCount);
         }
     }
 }

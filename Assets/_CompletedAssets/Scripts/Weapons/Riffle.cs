@@ -15,8 +15,7 @@ namespace CompleteProject
         AudioSource gunAudio;                           // Reference to the audio source.
         Light gunLight;                                 // Reference to the light component.
         public Light faceLight;								// Duh
-        float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
-        
+        float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.        
         void Awake ()
         {
             // Create a layer mask for the Shootable layer.
@@ -112,6 +111,8 @@ namespace CompleteProject
                     {
                         // ... the enemy should take damage.
                         enemyHealth.TakeDamage(damagePerAttack * (1f + powerUp), shootHit.point);
+                        hitCount += 1;
+                        Debug.Log("Hit Count: " + hitCount);
                     }
                     if (petHealth != null && shootHit.collider.gameObject.tag == "PetEnemy")
                     {

@@ -11,6 +11,7 @@ namespace CompleteProject
         public float speedUpTime = 0f;
         public Text speedUpTimeText;
         public Text speedUpText;
+        int movementCount = 0; // Variable to count every movement the player does
 
 
         Vector3 movement;                   // The vector to store the direction of the player's movement.
@@ -42,6 +43,13 @@ namespace CompleteProject
 
             // Move the player around the scene.
             Move(h, v);
+
+            // Increment the movement count
+            if (h != 0 || v != 0)
+            {
+                movementCount++;
+                Debug.Log("Movement Count: " + movementCount);
+            }
 
             // Turn the player to face the mouse cursor.
             Turning();

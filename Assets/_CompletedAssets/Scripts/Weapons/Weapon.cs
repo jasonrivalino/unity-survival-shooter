@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     public bool isUsed = false;
     public bool isPlayerOwner = true;
     protected float timer;  // A timer to determine when to attack
+    protected static int hitCount = 0; // The amount of hit count.
     protected GameObject weapon; // Weapon 3D physics
     protected GameObject weapon2; // for weapon rendered by more than 1 gameObject
 
