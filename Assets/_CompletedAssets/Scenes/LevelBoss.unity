@@ -228,6 +228,12 @@ MonoBehaviour:
   spawnTime: 15
   spawnPoints:
   - {fileID: 1812440275}
+--- !u!1 &25265323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7737744647241426422, guid: fa096fe83dc78fb45b22e1c97189691e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1367580834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &28357257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1633,7 @@ PrefabInstance:
         type: 3}
       propertyPath: missionAccomplishedText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1164199169}
     - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.size
@@ -1680,6 +1686,11 @@ PrefabInstance:
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ReadCheatInput
       objectReference: {fileID: 0}
+    - target: {fileID: 6463190919345982353, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7137992207659941092, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
       propertyPath: pointsText
@@ -1705,8 +1716,19 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 433861355}
+    - target: {fileID: 9207442082530403052, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: countdownText
+      value: 
+      objectReference: {fileID: 652422295}
+    - target: {fileID: 9207442082530403052, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 1749167514}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2095222863341841961, guid: 420d052720d6dee47abc3b3b63b1264c, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3505870070799784637, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
@@ -3298,6 +3320,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125705760}
   m_CullTransparentMesh: 1
+--- !u!1 &1164199169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2107674136162243670, guid: 420d052720d6dee47abc3b3b63b1264c,
+    type: 3}
+  m_PrefabInstance: {fileID: 433861354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1187485193
 GameObject:
   m_ObjectHideFlags: 0
@@ -4544,6 +4572,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1841788130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841788131}
+  - component: {fileID: 1841788132}
+  m_Layer: 0
+  m_Name: BossManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1841788131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841788130}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1813.9165, y: 297.65756, z: 3.4674654}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1841788132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841788130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d67baa1593eb242b4021db06cb94e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 25265323}
+  interactAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 433861357}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  missionAccomplishedText: {fileID: 1164199169}
+  player: {fileID: 1641232234}
+  enemyManager: {fileID: 14871708}
+  shotgun: {fileID: 1641232238}
+  gunbarrelEnd: {fileID: 1641232237}
+  katana: {fileID: 1641232236}
+  scoreSoundClip: {fileID: 8300000, guid: 31111d33d7d648f4aa3860816ca24eb2, type: 3}
 --- !u!1 &1851598977
 GameObject:
   m_ObjectHideFlags: 0
@@ -5073,3 +5168,4 @@ SceneRoots:
   - {fileID: 211544670}
   - {fileID: 601376167}
   - {fileID: 1367580834}
+  - {fileID: 1841788131}
