@@ -12,10 +12,8 @@ TagManager:
   - Door
   - Interactor
   - Enemy
-<<<<<<< HEAD
-=======
   - ScoreText
->>>>>>> b8f1661405fd54dc3c5c4d012f0ba39d248c7f2d
+
   layers:
   - Default
   - TransparentFX
