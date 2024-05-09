@@ -49,7 +49,7 @@ namespace CompleteProject
         void Death()
         {
             isDead = true;
-            
+            anim.SetTrigger("die");
             StartSinking();
         }
 
@@ -66,9 +66,5 @@ namespace CompleteProject
             TakeDamage(999);
         }
 
-        public void heal()
-        {
-            currentHealth = startingHealth;
-        }
     }
 }

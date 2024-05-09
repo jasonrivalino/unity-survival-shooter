@@ -49,18 +49,21 @@ namespace CompleteProject
             }
             if(isBuffing)
             {
-                if ( petHealth.currentHealth <= 0 || ownerHealth.currentHealth <= 0)
+                if (owner != null)
                 {
-                    BossEffect bossEffect = ownerHealth.gameObject.GetComponent<BossEffect>();
-                    DevilEffect devilEffect = ownerHealth.gameObject.GetComponent<DevilEffect>();
-                    
-                    if (bossEffect != null)
+                    if ( petHealth.currentHealth <= 0 )
                     {
-                        bossEffect.debuffDamage();
-                    }
-                    if (devilEffect != null)
-                    {
-                        devilEffect.debuffDamage();
+                        BossEffect bossEffect = ownerHealth.gameObject.GetComponent<BossEffect>();
+                        DevilEffect devilEffect = ownerHealth.gameObject.GetComponent<DevilEffect>();
+                        
+                        if (bossEffect != null)
+                        {
+                            bossEffect.debuffDamage();
+                        }
+                        if (devilEffect != null)
+                        {
+                            devilEffect.debuffDamage();
+                        }
                     }
                 }
             } 

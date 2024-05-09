@@ -16,13 +16,14 @@ namespace CompleteProject
         PetHealth petHealth;        // Reference to this pet's health.
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
         public float speed = 5.0f;
-        private Animator animator;
+        private AttackerAnimationBaseClass anim;
         void Awake()
         {
-            animator = this.GetComponent<Animator>();
+            anim = GetComponent<AttackerAnimationBaseClass>();
             pet = transform;
             petHealth = GetComponent<PetHealth>();
             nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
+            nav.speed = speed;
 
         }
 
@@ -33,9 +34,13 @@ namespace CompleteProject
             if (target != null)
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
-                if (enemyHealth.currentHealth > 0 && petHealth.currentHealth > 0 && distanceToTarget > 1f)
+                if (enemyHealth.currentHealth > 0 && petHealth.currentHealth > 0)
                 {
-                    nav.SetDestination(target.position);
+                    if (distanceToTarget > pet.GetComponent<Attack>().attackRange)
+                    {
+                        anim.walk();
+                        nav.SetDestination(target.position);
+                    }
                 }
             }
         }

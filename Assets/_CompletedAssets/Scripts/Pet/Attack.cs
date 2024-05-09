@@ -12,16 +12,30 @@ namespace CompleteProject
         EnemyHealth enemyHealth;      // Reference to the target's health.
         PetHealth petHealth;        // Reference to this pet's health.
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
-        public int damage = 10;
-        public float speed = 5.0f;
-        private Animator animator;
+        public float damage = 10;
+        public float attackRange = 2.5f;
+        public float attackRate = 1.2f;
+        private float rangedDamage;
+        private float meleeDamage;
+        private float rangedRange;
+        private float meleeRange;
+        private AttackerAnimationBaseClass anim;
+        bool isRanged;
+
         void Awake()
         {
-            animator = this.GetComponent<Animator>();
             pet = transform;
             petHealth = GetComponent<PetHealth>();
             nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
-
+            anim = GetComponent<AttackerAnimationBaseClass>();
+            ShootSpike shootSpike = GetComponent<ShootSpike>();
+            if (shootSpike != null)
+            {
+                meleeDamage = damage;
+                meleeRange = attackRange;
+                rangedDamage = 5 * damage;
+                rangedRange = 5 * attackRange;
+            }
             StartCoroutine(AttackEnemy());
         }
 
@@ -32,14 +46,38 @@ namespace CompleteProject
                 FindClosestEnemy();
                 if (target != null)
                 {
-                    
+                    ShootSpike shootSpike = GetComponent<ShootSpike>();
+                    if (shootSpike != null)
+                    {
+                        if (shootSpike.isRanged)
+                        {
+                            damage = rangedDamage;
+                            attackRange = rangedRange;
+                        }
+                        else
+                        {
+                            damage = meleeDamage;
+                            attackRange = meleeRange;
+                        }
+                    }
                     float distanceToTarget = Vector3.Distance(transform.position, target.position);
                     Debug.Log("Target Found, distance: " + distanceToTarget);
-                    if (enemyHealth.currentHealth > 0 && petHealth.currentHealth > 0 && distanceToTarget < 2.5f)
+                    if (enemyHealth.currentHealth > 0 && petHealth.currentHealth > 0 && distanceToTarget < attackRange)
                     {
+                        anim.setTarget(target);
+                        if (shootSpike == null)
+                        {
+                            anim.attack();
+                        }
+                        else
+                        {
+                            anim.attack(shootSpike.isRanged);
+                        }
                         enemyHealth.TakeDamage(damage, transform.position);
+
                         Debug.Log("pet ngedamage musuh, sisa hp musuh: " + enemyHealth.currentHealth);
-                        yield return new WaitForSeconds(0.8f);
+                        
+                        yield return new WaitForSeconds(attackRate);
                     }
                     else
                     {
