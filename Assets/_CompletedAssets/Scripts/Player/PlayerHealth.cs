@@ -63,16 +63,27 @@ namespace CompleteProject
             }
         }
 
-        public void Heal()
+        public void Heal(float amount = 0)
         {
             healed = true;
-            if ((currentHealth / startingHealth) > 0.8f)
+            if (amount > 0)
             {
-                currentHealth = startingHealth;
+                currentHealth += amount;
+                if (currentHealth > startingHealth)
+                {
+                    currentHealth = startingHealth;
+                }
             }
             else
             {
-                currentHealth += 0.2f * startingHealth;
+                if ((currentHealth / startingHealth) > 0.8f)
+                {
+                    currentHealth = startingHealth;
+                }
+                else
+                {
+                    currentHealth += 0.2f * startingHealth;
+                }
             }
             healthSlider.value = currentHealth;
         }
@@ -119,8 +130,7 @@ namespace CompleteProject
             anim.SetTrigger("Die");
 
             // Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
-            playerAudio.clip = deathClip;
-            playerAudio.Play();
+            playerAudio.PlayOneShot(deathClip);
 
             // Turn off the movement and shooting scripts.
             playerMovement.enabled = false;
@@ -128,10 +138,10 @@ namespace CompleteProject
         }
 
 
-        public void RestartLevel()
-        {
-            // Reload the level that is currently loaded.
-            SceneManager.LoadScene(0);
-        }
+        // public void RestartLevel()
+        // {
+        //     // Reload the level that is currently loaded.
+        //     SceneManager.LoadScene(0);
+        // }
     }
 }

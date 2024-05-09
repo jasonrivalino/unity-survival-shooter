@@ -112,6 +112,10 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: c9a851438855582499831507f0b6db3e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -648,7 +652,7 @@ MonoBehaviour:
   startingHealth: 200
   currentHealth: 0
   sinkSpeed: 2.5
-  scoreValue: 200
+  scoreValue: 100
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
 --- !u!114 &-119079227388712028
 MonoBehaviour:
@@ -676,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea9a6ed18654d14db02bf0076cfe488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 8027011620341182745}
 --- !u!114 &5120494418956796106
 MonoBehaviour:
   m_ObjectHideFlags: 0

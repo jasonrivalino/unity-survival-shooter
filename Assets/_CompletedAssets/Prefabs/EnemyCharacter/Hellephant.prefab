@@ -5962,6 +5962,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4089604486440124617}
     m_Modifications:
+    - target: {fileID: 1021076032002798, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
+      propertyPath: m_TagString
+      value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1304552910494454, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
+      propertyPath: m_TagString
+      value: Shotgun
+      objectReference: {fileID: 0}
     - target: {fileID: 1652954791862484, guid: b02ea55a7090ed64ba3cafe8b77625f6, type: 3}
       propertyPath: m_Name
       value: Double-barrel_gun
@@ -6033,6 +6041,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2490491275528314486}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2492144002617441954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1652954791862484, guid: b02ea55a7090ed64ba3cafe8b77625f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2490491275528314486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4089604486440262221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6075,15 +6089,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b77f122f451a2394898a24191c26107c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1387336
+      value: 2.3285213
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b77f122f451a2394898a24191c26107c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000011920929
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b77f122f451a2394898a24191c26107c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.1340494
+      value: 0.70194864
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: b77f122f451a2394898a24191c26107c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6161,6 +6175,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: -1281840735975330253}
+    - targetCorrespondingSourceObject: {fileID: 100004, guid: b77f122f451a2394898a24191c26107c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4202389370167420097}
   m_SourcePrefab: {fileID: 100100000, guid: b77f122f451a2394898a24191c26107c, type: 3}
 --- !u!4 &4089604486440124617 stripped
 Transform:
@@ -6277,7 +6295,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1d4840678e677424b8921716c72397ea, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fce027b40770a44298a6f5a4233bfb04, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6379,7 +6397,7 @@ MonoBehaviour:
   currentHealth: 0
   sinkSpeed: 2.5
   scoreValue: 50
-  deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
+  deathClip: {fileID: 8300000, guid: 8c615fd0429f34edf85539d70279360d, type: 3}
 --- !u!114 &3372904241579948125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6392,6 +6410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea9a6ed18654d14db02bf0076cfe488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 2492144002617441954}
 --- !u!114 &-1281840735975330253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6404,6 +6423,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f58c1d9ce56e1749830b8aebe8ba3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4202389370167420097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4089604486440164585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307ad57d4dd7816439a96eb794f5ebc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 3875457313305475475, guid: c404faf04981f284896deb98cfdf1b9f, type: 3}
+  spawnTime: 25
+  spawnPoints:
+  - {fileID: 4089604486440124617}
 --- !u!1001 &7251856614111500605
 PrefabInstance:
   m_ObjectHideFlags: 0

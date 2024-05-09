@@ -8,7 +8,7 @@ namespace CompleteProject
         public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
         public int attackDamage = 10;               // The amount of health taken away per attack.
 
-
+        private int attackBuff;
         Animator anim;                              // Reference to the animator component.
         UnityEngine.GameObject player;                          // Reference to the player GameObject.
         PlayerHealth playerHealth;                  // Reference to the player's health.
@@ -24,6 +24,7 @@ namespace CompleteProject
             playerHealth = player.GetComponent <PlayerHealth> ();
             enemyHealth = GetComponent<EnemyHealth>();
             anim = GetComponent <Animator> ();
+            attackBuff = Mathf.RoundToInt(attackDamage * 0.2f);
         }
 
 
@@ -81,6 +82,16 @@ namespace CompleteProject
                 // ... damage the player.
                 playerHealth.TakeDamage (attackDamage);
             }
+        }
+
+        public void buffDamage()
+        {
+            attackDamage += attackBuff;
+        }
+
+        public void debuffDamage()
+        {
+            attackDamage -= attackBuff;
         }
     }
 }
