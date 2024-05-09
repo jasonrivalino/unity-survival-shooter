@@ -13,7 +13,6 @@ TagManager:
   - Interactor
   - Enemy
   - ScoreText
-
   layers:
   - Default
   - TransparentFX
