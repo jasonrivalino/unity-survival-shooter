@@ -7,63 +7,52 @@ namespace CompleteProject
     public class Buff : MonoBehaviour
     {
         public string enemyTag = "Enemy";
-        public string bossName = "Boss(Clone)";
-        public string devilName = "Devils(Clone)";
-        
-        Transform target;               // Reference to the target's position.
-        EnemyHealth enemyHealth;      // Reference to the target's health.
+        public Transform owner;
         PetHealth petHealth;        // Reference to this pet's health.
-        UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
-        public float speed = 5.0f;
+        EnemyHealth ownerHealth;
         private Animator animator;
-        private List<GameObject> buffedEnemy = new List<GameObject>();
+        bool isBuffing = false;
         void Awake()
         {
             animator = this.GetComponent<Animator>();
             petHealth = GetComponent<PetHealth>();
-            nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
-
-            StartCoroutine(BuffEnemy());
         }
 
-        IEnumerator BuffEnemy()
+        void BuffOwner()
         {
-            while (petHealth.currentHealth > 0)
+            BossEffect bossEffect = ownerHealth.gameObject.GetComponent<BossEffect>();
+            DevilEffect devilEffect = ownerHealth.gameObject.GetComponent<DevilEffect>();
+            if (bossEffect != null)
             {
-                yield return new WaitForSeconds(1f);
-                buffedEnemy.RemoveAll(obj => obj == null);
-
-                GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-                foreach (GameObject obj in enemies)
-                {
-                    // Perform processing for each GameObject
-                    if (!buffedEnemy.Contains(obj))
-                    {
-                        BossEffect bossEffect = obj.GetComponent<BossEffect>();
-                        if (bossEffect != null)
-                        {
-                            buffedEnemy.Add(obj);
-                            bossEffect.buffDamage();
-                        }
-                        DevilEffect devilEffect = obj.GetComponent<DevilEffect>();
-                        if (devilEffect != null)
-                        {
-                            buffedEnemy.Add(obj);
-                            devilEffect.buffDamage();
-                        }
-                    }
-                }
+                Debug.Log("BOSS DETECTED. ATTACK DAMAGE: " + bossEffect.attackDamage);
+                bossEffect.buffDamage();
+                Debug.Log("BOSS BUFFED. ATTACK DAMAGE: " + bossEffect.attackDamage);
+            }
+            if (devilEffect != null)
+            {
+                Debug.Log("DEVIL DETECTED. ATTACK DAMAGE: " + devilEffect.attackDamage);
+                devilEffect.buffDamage();
+                Debug.Log("DEVIL BUFFED. ATTACK DAMAGE: " + devilEffect.attackDamage);
             }
         }
 
         private void Update()
         {
-            if(petHealth.currentHealth <= 0)
+            if (!isBuffing)
             {
-                foreach (GameObject obj in buffedEnemy)
+                if (owner != null)
                 {
-                    BossEffect bossEffect = obj.GetComponent<BossEffect>();
-                    DevilEffect devilEffect = obj.GetComponent<DevilEffect>();
+                    ownerHealth = owner.gameObject.GetComponent<EnemyHealth>();
+                    BuffOwner();
+                    isBuffing = true;
+                }
+            }
+            if(isBuffing)
+            {
+                if ( petHealth.currentHealth <= 0 || ownerHealth.currentHealth <= 0)
+                {
+                    BossEffect bossEffect = ownerHealth.gameObject.GetComponent<BossEffect>();
+                    DevilEffect devilEffect = ownerHealth.gameObject.GetComponent<DevilEffect>();
                     
                     if (bossEffect != null)
                     {
@@ -74,7 +63,8 @@ namespace CompleteProject
                         devilEffect.debuffDamage();
                     }
                 }
-            }
+            } 
+
         }
     }
 }
