@@ -12,6 +12,8 @@ TagManager:
   - Door
   - Interactor
   - Enemy
+  - Pet
+  - PetEnemy
   - ScoreText
   layers:
   - Default
