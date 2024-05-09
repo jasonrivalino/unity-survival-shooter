@@ -12,7 +12,6 @@ TagManager:
   - Door
   - Interactor
   - Enemy
-  - Undefined
   - Pet
   - PetEnemy
   layers:

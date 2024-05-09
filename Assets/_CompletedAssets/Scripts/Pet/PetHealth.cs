@@ -6,8 +6,8 @@ namespace CompleteProject
 {
     public class PetHealth : MonoBehaviour
     {
-        public int startingHealth = 50;
-        public int currentHealth;
+        public float startingHealth = 50;
+        public float currentHealth;
         public float sinkSpeed = 2.5f;
         public AudioClip deathClip;
         Animator anim;
@@ -29,17 +29,19 @@ namespace CompleteProject
             }
         }
 
-        public void TakeDamage(int amount, Vector3 hitPoint)
+        public void TakeDamage(float amount)
         {
-            if (isDead)
-                return;
-
-            currentHealth -= amount;
-            Debug.Log("Enemy Health: " + currentHealth);
-
-            if (currentHealth <= 0)
+            if (!PlayerPrefs.HasKey("NoDamagePet"))
             {
-                Death();
+                if (isDead)
+                    return;
+
+                currentHealth -= amount;
+                Debug.Log("Enemy Health: " + currentHealth);
+                if (currentHealth <= 0)
+                {
+                    Death();
+                }
             }
         }
 
@@ -55,6 +57,16 @@ namespace CompleteProject
             GetComponent<Rigidbody>().isKinematic = true;
             isSinking = true;
             Destroy(gameObject, 2f);
+        }
+
+        public void kill()
+        {
+            TakeDamage(999);
+        }
+
+        public void heal()
+        {
+            currentHealth = startingHealth;
         }
     }
 }

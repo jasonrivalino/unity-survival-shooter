@@ -7,6 +7,7 @@ namespace CompleteProject
 {
     public class Heal : MonoBehaviour
     {
+        public AudioClip healAudio;
         int healAmount = 10;
         Transform player;
         PlayerHealth playerHealth;      // Reference to the player's health.
@@ -25,11 +26,7 @@ namespace CompleteProject
         {
             while (petHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
             {
-                playerHealth.currentHealth += healAmount;
-                if (playerHealth.currentHealth > 100)
-                {
-                    playerHealth.currentHealth = 100;
-                }
+                playerHealth.Heal(healAmount);
                 Debug.Log("Player healed. current health: " + playerHealth.currentHealth);
 
                 yield return new WaitForSeconds(2f);

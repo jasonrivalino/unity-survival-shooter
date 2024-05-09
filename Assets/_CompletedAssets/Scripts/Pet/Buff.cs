@@ -9,8 +9,7 @@ namespace CompleteProject
         public string enemyTag = "Enemy";
         public string bossName = "Boss(Clone)";
         public string devilName = "Devils(Clone)";
-        DevilEffect devilEffect;
-        BossEffect bossEffect;
+        
         Transform target;               // Reference to the target's position.
         EnemyHealth enemyHealth;      // Reference to the target's health.
         PetHealth petHealth;        // Reference to this pet's health.
@@ -38,31 +37,20 @@ namespace CompleteProject
                 foreach (GameObject obj in enemies)
                 {
                     // Perform processing for each GameObject
-                    if (obj.name == bossName)
+                    if (!buffedEnemy.Contains(obj))
                     {
-                        if (!buffedEnemy.Contains(obj))
+                        BossEffect bossEffect = obj.GetComponent<BossEffect>();
+                        if (bossEffect != null)
                         {
                             buffedEnemy.Add(obj);
-                            bossEffect = obj.GetComponent<BossEffect>();
-                            if (bossEffect != null)
-                            {
-                                bossEffect.buffDamage();
-                            }
+                            bossEffect.buffDamage();
                         }
-
-                    }
-                    if (obj.name == devilName)
-                    {
-                        if (!buffedEnemy.Contains(obj))
+                        DevilEffect devilEffect = obj.GetComponent<DevilEffect>();
+                        if (devilEffect != null)
                         {
                             buffedEnemy.Add(obj);
-                            devilEffect = obj.GetComponent<DevilEffect>();
-                            if (devilEffect != null)
-                            {
-                                devilEffect.buffDamage();
-                            }
+                            devilEffect.buffDamage();
                         }
-
                     }
                 }
             }
@@ -74,31 +62,16 @@ namespace CompleteProject
             {
                 foreach (GameObject obj in buffedEnemy)
                 {
-                    if (obj.name == bossName)
+                    BossEffect bossEffect = obj.GetComponent<BossEffect>();
+                    DevilEffect devilEffect = obj.GetComponent<DevilEffect>();
+                    
+                    if (bossEffect != null)
                     {
-                        if (!buffedEnemy.Contains(obj))
-                        {
-                            buffedEnemy.Add(obj);
-                            bossEffect = obj.GetComponent<BossEffect>();
-                            if (bossEffect != null)
-                            {
-                                bossEffect.debuffDamage();
-                            }
-                        }
-
+                        bossEffect.debuffDamage();
                     }
-                    if (obj.name == devilName)
+                    if (devilEffect != null)
                     {
-                        if (!buffedEnemy.Contains(obj))
-                        {
-                            buffedEnemy.Add(obj);
-                            devilEffect = obj.GetComponent<DevilEffect>();
-                            if (devilEffect != null)
-                            {
-                                devilEffect.debuffDamage();
-                            }
-                        }
-
+                        devilEffect.debuffDamage();
                     }
                 }
             }
