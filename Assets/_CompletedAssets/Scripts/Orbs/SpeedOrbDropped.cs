@@ -24,6 +24,18 @@ namespace CompleteProject
                     orbPickedAudio.Play();
                     // Set speedup for player
                     playerMovement.SpeedUp();
+
+                    // Update statistics
+                    if (PlayerPrefs.HasKey("numSpeedOrbPicked"))
+                    {
+                        PlayerPrefs.SetInt("numSpeedOrbPicked", PlayerPrefs.GetInt("numSpeedOrbPicked") + 1);
+                    }
+                    else 
+                    {
+                        PlayerPrefs.SetInt("numSpeedOrbPicked", 1);
+                    }
+
+
                     base.Dissapear();
                 }
             }

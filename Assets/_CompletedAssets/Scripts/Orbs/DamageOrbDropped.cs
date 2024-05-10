@@ -27,7 +27,18 @@ namespace CompleteProject
                         isPicked = true;
                         orbPickedAudio.Play();
                         weaponManager.PowerUp();
-                        Dissapear();
+
+                        // Update statistics
+                        if (PlayerPrefs.HasKey("numDamageOrbPicked"))
+                        {
+                            PlayerPrefs.SetInt("numDamageOrbPicked", PlayerPrefs.GetInt("numDamageOrbPicked") + 1);
+                        }
+                        else
+                        {
+                            PlayerPrefs.SetInt("numDamageOrbPicked", 1);
+                        }
+
+                        base.Dissapear();
                     }
                 }
             }

@@ -37,6 +37,16 @@ Untuk memainkan game, clone repository ini, lalu buka Unity Editor, buka scene M
 - Menggunakan Serialization Formatter untuk meng-save file
 
 ## Screenshot aplikasi (dimasukkan dalam folder screenshot)
+### Main Menu
+![MainMenu](./Screenshots/mainmenu.png)
+### Cutscene
+![Cutscene](./Screenshots/cutscene.png)
+### Gameplay
+![Gameplay](./Screenshots/gameplay.png)
+### Town Scene
+![Town Scene](./Screenshots/town.png)
+### Shop
+![Shop](./Screenshots/shop.png)
 
 ![Gameplay](./Screenshots/gameplay.png)
 ![Town Scene](./Screenshots/town.png)
