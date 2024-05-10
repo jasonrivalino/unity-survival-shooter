@@ -16,6 +16,7 @@ namespace CompleteProject
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
         private Animator animator;
         bool canMove = false;
+        public float moveSpeed;
         void Awake()
         {
             animator = this.GetComponent<Animator>();
@@ -24,6 +25,7 @@ namespace CompleteProject
             playerHealth = player.gameObject.GetComponent<PlayerHealth>();
             petHealth = GetComponent<PetHealth>();
             nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
+            nav.speed = moveSpeed;
 
         }
 
@@ -36,10 +38,15 @@ namespace CompleteProject
         {
             if (playerHealth.currentHealth > 0 && petHealth.currentHealth > 0)
             {
-                if (canMove)
+                if (canMove && Vector3.Distance(player.position, pet.position) > 3) 
                 {
+                    animator.SetTrigger("walk");
                     Vector3 targetPosition = (player.position + pet.position) / 2f;
                     nav.SetDestination(targetPosition);
+                }
+                else if (Vector3.Distance(player.position, pet.position) < 3)
+                {
+                    animator.SetTrigger("idle");
                 }
             }
             else

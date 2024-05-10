@@ -98,7 +98,7 @@ namespace CompleteProject
                         buffedEnemy.Add(obj);
                         int petCount = Random.Range(0, 3);
                         Debug.Log("BOSS DETECTED. " + petCount + "PET(S) SPAWNED");
-                        spawnEnemyPet(bossEffect.gameObject.transform, petCount);
+                        spawnEnemyPet(bossEffect.gameObject.transform, 2);
                     }
                     DevilEffect devilEffect = obj.GetComponent<DevilEffect>();
                     if (devilEffect != null)
@@ -106,7 +106,7 @@ namespace CompleteProject
                         buffedEnemy.Add(obj);
                         int petCount = Random.Range(0, 2);
                         Debug.Log("DEVIL DETECTED. " + petCount + "PET(S) SPAWNED");
-                        spawnEnemyPet(devilEffect.gameObject.transform, petCount);
+                        spawnEnemyPet(devilEffect.gameObject.transform, 1);
                     }
                 }
             }

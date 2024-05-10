@@ -560,7 +560,7 @@ Animator:
   m_GameObject: {fileID: 1000011593744314}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 59afa1f2c595d6343b15e945602e1f8f, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3bab992d6733cd24f8b62623323562b4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -659,9 +659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTag: Enemy
-  bossName: Boss(Clone)
-  devilName: Devils(Clone)
-  speed: 5
+  owner: {fileID: 0}
 --- !u!114 &-3523106145838518316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,6 +689,7 @@ MonoBehaviour:
   currentHealth: 0
   sinkSpeed: 2.5
   deathClip: {fileID: 8300000, guid: fd27dad5b50788d49834b1ba9c84b66a, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1 &1000011643250032
 GameObject:
   m_ObjectHideFlags: 0

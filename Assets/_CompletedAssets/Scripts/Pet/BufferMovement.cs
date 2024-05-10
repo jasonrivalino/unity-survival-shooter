@@ -31,6 +31,7 @@ namespace CompleteProject
             {
                 float distanceToPlayer = Vector3.Distance(player.position, pet.position);
 
+                animator.SetTrigger("walk");
                 if (distanceToPlayer < 10)
                 {
                     Vector3 awayFromPlayerDirection = (pet.position - player.position).normalized;
