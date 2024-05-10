@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_Name
-      value: Devils
+      value: Jenderal
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: c9a851438855582499831507f0b6db3e, type: 3}
       propertyPath: m_Layer

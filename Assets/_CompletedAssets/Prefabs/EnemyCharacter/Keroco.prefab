@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
       propertyPath: m_Name
-      value: ZomBear
+      value: Keroco
       objectReference: {fileID: 0}
     - target: {fileID: 100074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
       propertyPath: m_Layer
