@@ -27,6 +27,7 @@ namespace CompleteProject
 
         void Start()
         {
+            PlayerPrefs.SetInt("bomb", 1);
             // spawn attacker
             if (PlayerPrefs.HasKey("dog"))
             {

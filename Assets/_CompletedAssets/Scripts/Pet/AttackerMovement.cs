@@ -40,14 +40,19 @@ namespace CompleteProject
                 {
                     if (distanceToTarget > pet.GetComponent<Attack>().attackRange)
                     {
-                        anim.walk();
+                        animator.SetTrigger("walk");
                         nav.SetDestination(target.position);
                     }
                     else
                     {
-                        animator.SetTrigger("idle");
+                        animator.SetTrigger("damage");
+                        nav.SetDestination(pet.position);
                     }
                 }
+            }
+            else
+            {
+                animator.SetTrigger("idle");
             }
         }
 

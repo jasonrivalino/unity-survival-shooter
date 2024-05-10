@@ -47,6 +47,7 @@ namespace CompleteProject
                 else if (Vector3.Distance(player.position, pet.position) < 3)
                 {
                     animator.SetTrigger("idle");
+                    nav.SetDestination(pet.position);
                 }
             }
             else

@@ -65,8 +65,12 @@ namespace CompleteProject
                     if (enemyHealth.currentHealth > 0 && petHealth.currentHealth > 0 && distanceToTarget < attackRange)
                     {
                         anim.setTarget(target);
+                        Vector3 direction = target.position - transform.position;
+                        Quaternion targetRotation = Quaternion.LookRotation(direction);
+                        pet.rotation = Quaternion.Lerp(pet.rotation, targetRotation, Time.deltaTime * 360f);
                         if (shootSpike == null)
                         {
+
                             anim.attack();
                         }
                         else
