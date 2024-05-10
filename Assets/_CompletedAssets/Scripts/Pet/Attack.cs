@@ -20,7 +20,6 @@ namespace CompleteProject
         private float rangedRange;
         private float meleeRange;
         private AttackerAnimationBaseClass anim;
-        bool isRanged;
 
         void Awake()
         {
@@ -61,7 +60,6 @@ namespace CompleteProject
                         }
                     }
                     float distanceToTarget = Vector3.Distance(transform.position, target.position);
-                    Debug.Log("Target Found, distance: " + distanceToTarget);
                     if (enemyHealth.currentHealth > 0 && petHealth.currentHealth > 0 && distanceToTarget < attackRange)
                     {
                         anim.setTarget(target);
@@ -92,7 +90,6 @@ namespace CompleteProject
                 {
                     yield return new WaitForSeconds(0.1f);
                 }
-                Debug.Log("pet Location: " + pet.position);
             }
         }
 
@@ -112,7 +109,6 @@ namespace CompleteProject
                     closestDistanceSqr = distanceSqr;
                     target = enemy.transform;
                     enemyHealth = target.GetComponent<EnemyHealth>();
-                    Debug.Log("EnemyFound");
 
                 }
             }

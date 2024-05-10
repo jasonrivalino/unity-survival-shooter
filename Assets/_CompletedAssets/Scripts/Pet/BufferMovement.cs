@@ -22,7 +22,7 @@ namespace CompleteProject
             playerHealth = player.gameObject.GetComponent<PlayerHealth>();
             petHealth = GetComponent<PetHealth>();
             nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
-
+            nav.speed = speed;
         }
 
         void Update()

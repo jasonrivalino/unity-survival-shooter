@@ -45,7 +45,12 @@ namespace CompleteProject
                     }
                     else
                     {
-                        animator.SetTrigger("damage");
+                        ThrowBomb isBomb = pet.GetComponent<ThrowBomb>();
+                        if (isBomb != null)
+                        {
+                            animator.SetTrigger("damage");
+                        }
+                        
                         nav.SetDestination(pet.position);
                     }
                 }
@@ -53,6 +58,7 @@ namespace CompleteProject
             else
             {
                 animator.SetTrigger("idle");
+                
             }
         }
 
