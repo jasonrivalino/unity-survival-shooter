@@ -32,7 +32,8 @@ namespace CompleteProject
 
         public void TakeDamage(float amount)
         {
-            if (!PlayerPrefs.HasKey("NoDamagePet"))
+            bool isFriendly = transform.gameObject.tag.Equals("Pet");
+            if (!PlayerPrefs.HasKey("NoDamagePet") || !isFriendly)
             {
                 if (isDead)
                     return;
@@ -49,7 +50,7 @@ namespace CompleteProject
         void Death()
         {
             isDead = true;
-            
+            anim.SetTrigger("die");
             StartSinking();
         }
 
@@ -66,9 +67,5 @@ namespace CompleteProject
             TakeDamage(999);
         }
 
-        public void heal()
-        {
-            currentHealth = startingHealth;
-        }
     }
 }
