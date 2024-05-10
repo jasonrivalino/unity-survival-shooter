@@ -17,9 +17,11 @@ namespace CompleteProject
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
         public float speed = 5.0f;
         private AttackerAnimationBaseClass anim;
+        private Animator animator;
         void Awake()
         {
             anim = GetComponent<AttackerAnimationBaseClass>();
+            animator = GetComponent<Animator>();
             pet = transform;
             petHealth = GetComponent<PetHealth>();
             nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -40,6 +42,10 @@ namespace CompleteProject
                     {
                         anim.walk();
                         nav.SetDestination(target.position);
+                    }
+                    else
+                    {
+                        animator.SetTrigger("idle");
                     }
                 }
             }

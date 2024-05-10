@@ -38,10 +38,15 @@ namespace CompleteProject
         {
             if (playerHealth.currentHealth > 0 && petHealth.currentHealth > 0)
             {
-                if (canMove && Vector3.Distance(player.position, pet.position) > 2) 
+                if (canMove && Vector3.Distance(player.position, pet.position) > 3) 
                 {
+                    animator.SetTrigger("walk");
                     Vector3 targetPosition = (player.position + pet.position) / 2f;
                     nav.SetDestination(targetPosition);
+                }
+                else if (Vector3.Distance(player.position, pet.position) < 3)
+                {
+                    animator.SetTrigger("idle");
                 }
             }
             else
