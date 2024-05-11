@@ -572,6 +572,16 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 1139190137}
+    - target: {fileID: 4564212333443853797, guid: 31db2b96ec2925347875a65b3aaea693,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 403.1097
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564212333443853797, guid: 31db2b96ec2925347875a65b3aaea693,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9.266907
+      objectReference: {fileID: 0}
     - target: {fileID: 5811538227032464787, guid: 31db2b96ec2925347875a65b3aaea693,
         type: 3}
       propertyPath: m_Name
@@ -839,6 +849,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
+  pointsText: {fileID: 0}
+  countdownText: {fileID: 0}
+  gameOverScreen: {fileID: 0}
 --- !u!95 &1139190137
 Animator:
   serializedVersion: 5
