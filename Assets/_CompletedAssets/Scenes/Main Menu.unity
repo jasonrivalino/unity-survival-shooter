@@ -9013,6 +9013,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -322.0649
       objectReference: {fileID: 0}
+    - target: {fileID: 5577222124365197196, guid: ac7a565691ef7cd46b4574bf39f97a5c,
+        type: 3}
+      propertyPath: m_Text
+      value: Statistik Total
+      objectReference: {fileID: 0}
     - target: {fileID: 5689685709656604302, guid: ac7a565691ef7cd46b4574bf39f97a5c,
         type: 3}
       propertyPath: m_AnchorMax.y

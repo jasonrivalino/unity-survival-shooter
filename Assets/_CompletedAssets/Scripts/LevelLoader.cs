@@ -20,7 +20,7 @@ public class LevelLoader : MonoBehaviour
     {
         StartCoroutine(LoadLevel(levelName));
     }
-    
+
     IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("Start");
@@ -59,6 +59,17 @@ public class LevelLoader : MonoBehaviour
             yield return new WaitForSeconds(1f);
             countdownTime--;
         }
+        MainMenu();
         // SceneManager.LoadScene(0);
+    }
+
+    public void MainMenu()
+    {
+        LoadLevelString("Main Menu");
+    }
+
+    public void Restart()
+    {
+        LoadLevelString("Opening");
     }
 }
