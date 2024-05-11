@@ -49,10 +49,10 @@ namespace CompleteProject
         }
 
 
-        public void TakeDamage(float amount, Vector3 hitPoint)
+        public void TakeDamage(float amount, Vector3 hitPoint, bool fromPet = false)
         {
             // Death if OneHitKill Cheat activated
-            if (PlayerPrefs.HasKey("OneHitKill"))
+            if (PlayerPrefs.HasKey("OneHitKill") && !fromPet)
             {
                 currentHealth = 0;
                 Death();
