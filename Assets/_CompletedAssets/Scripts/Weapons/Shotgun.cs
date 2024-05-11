@@ -99,6 +99,7 @@ namespace CompleteProject
                 timeDisplay-= Time.deltaTime;
                 yield return null;
             }
+            
             shootLineObject.GetComponent<LineRenderer>().enabled = false;
             Destroy(shootLineObject);
         }
