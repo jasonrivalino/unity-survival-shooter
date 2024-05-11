@@ -75,7 +75,7 @@ namespace CompleteProject
                         {
                             anim.attack(shootSpike.isRanged);
                         }
-                        enemyHealth.TakeDamage(damage, transform.position);
+                        enemyHealth.TakeDamage(damage, transform.position, true);
 
                         Debug.Log("pet ngedamage musuh, sisa hp musuh: " + enemyHealth.currentHealth);
                         
