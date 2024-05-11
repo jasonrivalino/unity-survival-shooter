@@ -585,7 +585,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -635,7 +635,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 1
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -671,6 +671,7 @@ MonoBehaviour:
   currentHealth: 0
   sinkSpeed: 2.5
   deathClip: {fileID: 8300000, guid: fd27dad5b50788d49834b1ba9c84b66a, type: 3}
+  audioSource: {fileID: 0}
 --- !u!114 &6515894746609809605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,9 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTag: Enemy
-  bossName: Boss(Clone)
-  devilName: Devils(Clone)
-  speed: 5
+  owner: {fileID: 0}
 --- !u!1 &1532652994627396
 GameObject:
   m_ObjectHideFlags: 0

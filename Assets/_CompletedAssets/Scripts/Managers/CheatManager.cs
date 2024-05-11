@@ -152,20 +152,15 @@ namespace CompleteProject
             else if (cheatInput == "KILLPET")
             {
                 isCheatActivated = true;
-                bool isNoDamagePet = false;
-                if (PlayerPrefs.HasKey("NoDamagePet"))
-                {
-                    isNoDamagePet = true;
-                    PlayerPrefs.DeleteKey("NoDamagePet");
-                }
                 PetHealth[] petHealths = FindObjectsOfType<PetHealth>();
                 foreach (PetHealth petHealth in petHealths)
                 {
-                    petHealth.kill();
-                }
-                if (isNoDamagePet)
-                {
-                    PlayerPrefs.SetInt("NoDamagePet", 1);
+                    Buff bufferType = petHealth.gameObject.GetComponent<Buff>();
+                    if (bufferType != null)
+                    {
+                        petHealth.kill();
+
+                    }
                 }
 
             }
