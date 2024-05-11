@@ -1503,6 +1503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: 5b84db49d40ea449aa4f3e3bd229ab5b, type: 2}
+  sfxLvl: {fileID: 269909663}
+  musicLvl: {fileID: 885988012}
 --- !u!1 &251361283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,7 +1539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 290}
+  m_AnchoredPosition: {x: -55, y: 290}
   m_SizeDelta: {x: 225, y: 76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &251361285
@@ -2554,7 +2556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 290}
+  m_AnchoredPosition: {x: -55, y: 290}
   m_SizeDelta: {x: 225, y: 76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &430921310
@@ -3519,6 +3521,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: 5b84db49d40ea449aa4f3e3bd229ab5b, type: 2}
+  sfxLvl: {fileID: 0}
+  musicLvl: {fileID: 0}
 --- !u!114 &762231184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5393,7 +5397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 290}
+  m_AnchoredPosition: {x: -55, y: 290}
   m_SizeDelta: {x: 225, y: 76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1338820201
@@ -5716,7 +5720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 290}
+  m_AnchoredPosition: {x: -55, y: 290}
   m_SizeDelta: {x: 225, y: 76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1397817883
@@ -7753,7 +7757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 290}
+  m_AnchoredPosition: {x: -55, y: 290}
   m_SizeDelta: {x: 225, y: 76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1990805018
@@ -7888,7 +7892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70, y: 290}
+  m_AnchoredPosition: {x: -55, y: 290}
   m_SizeDelta: {x: 225, y: 76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2002080859

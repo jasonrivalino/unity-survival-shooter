@@ -11,8 +11,30 @@ public class Weapon : MonoBehaviour
     public bool isUsed = false;
     public bool isPlayerOwner = true;
     protected float timer;  // A timer to determine when to attack
+    protected static int hitCount = 0; // The amount of hit count.
+    protected static int totalShootCount = 0; // The amount of shoot count.
     protected GameObject weapon; // Weapon 3D physics
     protected GameObject weapon2; // for weapon rendered by more than 1 gameObject
+
+    public int GetHitCount()
+    {
+        return hitCount;
+    }
+
+    public void SetHitCount(int count)
+    {
+        hitCount = count;
+    }
+
+    public int GetTotalShootCount()
+    {
+        return totalShootCount;
+    }
+
+    public void SetTotalShootCount(int count)
+    {
+        totalShootCount = count;
+    }
 
     public void PowerUp()
     {
@@ -54,5 +76,7 @@ public class Weapon : MonoBehaviour
     {
         // Add the time since Update was last called to the timer.
         timer += Time.deltaTime;
+        Debug.Log("Weapon::Update() Shoot count: " + totalShootCount);
+        Debug.Log("Weapon::Update() Hit count: " + hitCount);
     }
 }
