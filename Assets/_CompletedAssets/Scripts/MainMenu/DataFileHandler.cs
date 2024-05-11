@@ -18,32 +18,46 @@ public static class DataFileHandler
         string path = Path.Combine(dirPath, profileId, fileName);
         Debug.Log("DataFileHandler::SavePlayer() path: " + path);
 
-        if (!Directory.Exists(Path.GetDirectoryName(path)))
+        if (!Directory.Exists(Path.Combine(dirPath, profileId)))
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(path));
+            Directory.CreateDirectory(Path.Combine(dirPath, profileId));
         }
 
         BinaryFormatter formatter = new BinaryFormatter();
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        formatter.Serialize(stream, gameData);
-        stream.Close();
+        using (FileStream stream = new FileStream(path, FileMode.Create))
+        {
+            try
+            {
+                formatter.Serialize(stream, gameData);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"DataFileHandler::SavePlayer() Error while saving player data: {e}");
+            }
+        }
     }
 
     public static GameData LoadPlayer(string dirPath, string fileName, string profileId)
     {
         string path = Path.Combine(dirPath, profileId, fileName);
-        Debug.Log("DataFileHandler::LoadPlayer() path: " + path);
 
-        if (File.Exists (path)) 
+        if (File.Exists(path)) 
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
-
-            GameData gameData = formatter.Deserialize(stream) as GameData;
-            stream.Close();
-        
-            return gameData;
+            using (FileStream stream = new FileStream(path, FileMode.Open))
+            {
+                try
+                {
+                    GameData gameData = formatter.Deserialize(stream) as GameData;
+                    Debug.Log("DataFileHandler::LoadPlayer() gameData: " + gameData.ToString());
+                    return gameData;
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"DataFileHandler::LoadPlayer() Error while loading player data: {e}");
+                    return null;
+                }
+            }
         }
         else 
         {
@@ -56,10 +70,10 @@ public static class DataFileHandler
     public static void DeletePlayer(string dirPath, string fileName, string profileId)
     {
         string path = Path.Combine(dirPath, profileId, fileName);
-        Debug.Log("DataFileHandler::DeletePlayer() path: " + path);
 
         if (File.Exists (path)) 
         {
+            Debug.Log("DataFileHandler::DeletePlayer() Deleting file in " + path);
             File.Delete(path);
         }
         else 

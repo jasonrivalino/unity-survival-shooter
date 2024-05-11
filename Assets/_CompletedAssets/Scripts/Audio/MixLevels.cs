@@ -31,7 +31,7 @@ public class MixLevels : MonoBehaviour {
 	{
 		masterMixer.SetFloat ("musicVol", musicLvl);
 		PlayerPrefs.SetFloat ("musicVol", musicLvl);
-		PlayerPrefs.Save ();
+		PlayerPrefs.Save();
 		Debug.Log ("Music Level: " + musicLvl);
 	}
 
