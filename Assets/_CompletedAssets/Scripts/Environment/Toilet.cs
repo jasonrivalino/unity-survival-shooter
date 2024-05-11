@@ -4,8 +4,22 @@ using UnityEngine;
 
 public class Toilet : MonoBehaviour
 {
+    [SerializeField] private Canvas saveCanvas;
+
     public void Interact()
     {
-        Debug.Log("Interact toilet");
+        saveCanvas.enabled = true;
+        Time.timeScale = 0;
+        Debug.Log("Interact save");
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        // if (Input.GetKeyDown(KeyCode.Escape) || (shop != null && !shop.activeSelf))
+        {
+            saveCanvas.enabled = false;
+            Time.timeScale = 1;
+        }
     }
 }
