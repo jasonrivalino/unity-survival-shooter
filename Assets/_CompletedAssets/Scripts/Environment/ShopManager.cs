@@ -28,6 +28,7 @@ public class ShopManager : MonoBehaviour
     public void CloseCanvas()
     {
         canvas.enabled = false;
+        Time.timeScale = 1;
     }
 
 

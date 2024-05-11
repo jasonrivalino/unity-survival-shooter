@@ -16,6 +16,7 @@ public class Shop : MonoBehaviour
     public void Interact()
     {
         canvas.enabled = true;
+        Time.timeScale = 0;
         Debug.Log("Interact shop");
     }
 
@@ -25,6 +26,7 @@ public class Shop : MonoBehaviour
         // if (Input.GetKeyDown(KeyCode.Escape) || (shop != null && !shop.activeSelf))
         {
             canvas.enabled = false;
+            Time.timeScale = 1;
         }
     }
 }

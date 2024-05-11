@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using CompleteProject;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SaveMenu : MonoBehaviour {
     [Header("Confirmation Dialog")]
     [SerializeField] private ConfirmationDialog confirmationDialog;
     [SerializeField] private SaveName slotnNameInput;
+    [SerializeField] private Button closeButton;
     
     private SaveSlot[] saveSlots;
 
@@ -19,12 +21,20 @@ public class SaveMenu : MonoBehaviour {
         ActivateMenu();
     }
 
+    public void OnCloseButtonClicked() 
+    {
+        gameObject.GetComponent<Canvas>().enabled = false;
+        Time.timeScale = 1;
+    }
+
     private void DisableInteraction() 
     {
         foreach (SaveSlot saveSlot in saveSlots) 
         {
             saveSlot.SetInteractable(false);
         }
+
+        closeButton.interactable = false;
     }
 
     private void EnableInteraction() 
@@ -33,6 +43,8 @@ public class SaveMenu : MonoBehaviour {
         {
             saveSlot.SetInteractable(true);
         }
+
+        closeButton.interactable = true;
     }
 
     private GameData GetGameData() {
