@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,13 @@ using UnityEngine.UI;
 
 public class StatisticMenu : MonoBehaviour
 {
-    [SerializeField] private Text shootAccuracy;
-    [SerializeField] private Text distanceTravelled;
-    [SerializeField] private Text playTime;
-    [SerializeField] private Text enemiesKilled;
-    [SerializeField] private Text moneyCollected;
-    [SerializeField] private Text totalScore;
+    [SerializeField] private Text AllshootAccuracy;
+    [SerializeField] private Text AlldistanceTravelled;
+    [SerializeField] private Text AllplayTime;
+    [SerializeField] private Text AllenemiesKilled;
+    [SerializeField] private Text AllmoneyCollected;
+    [SerializeField] private Text HighestTotalScore;
+    [SerializeField] private Text TotalOrbCollected;
 
     private void Start()
     {
@@ -19,23 +21,30 @@ public class StatisticMenu : MonoBehaviour
 
     private void SetData()
     {
-        shootAccuracy.text = PlayerPrefs.GetFloat("ShootAccuracy", 0).ToString("F2") + "%";
-        distanceTravelled.text = PlayerPrefs.GetFloat("DistanceTravelled", 0).ToString("F2") + "m";
-        playTime.text = PlayerPrefs.GetFloat("PlayTime", 0).ToString("F2") + "s";
-        enemiesKilled.text = PlayerPrefs.GetInt("EnemiesKilled", 0).ToString();
-        moneyCollected.text = PlayerPrefs.GetInt("MoneyCollected", 0).ToString();
-        totalScore.text = PlayerPrefs.GetInt("TotalScore", 0).ToString();
+        AllshootAccuracy.text = (PlayerPrefs.GetFloat(Statistics.AllShootAccuracy, 0) * 100).ToString("F3") + "%";
+        AlldistanceTravelled.text = PlayerPrefs.GetFloat(Statistics.AllDistanceTravelled, 0).ToString("F2") + "m";
+        float timeElapsed = PlayerPrefs.GetFloat(Statistics.AllPlayTime, 0);
+        TimeSpan time = TimeSpan.FromSeconds(timeElapsed);
+        AllplayTime.text = string.Format("{0:D2}h:{1:D2}m:{2:D2}s:{3:D3}ms", 
+            time.Hours, 
+            time.Minutes,
+            time.Seconds,
+            time.Milliseconds);
+        AllenemiesKilled.text = PlayerPrefs.GetInt(Statistics.AllEnemiesKilled, 0).ToString();
+        AllmoneyCollected.text = PlayerPrefs.GetInt(Statistics.AllMoneyCollected, 0).ToString();
+        HighestTotalScore.text = PlayerPrefs.GetInt(Statistics.AllHighTotalScore, 0).ToString();
+        TotalOrbCollected.text = PlayerPrefs.GetInt(Statistics.AllOrbCollected, 0).ToString();
     }
 
-    public void ResetData()
+    public static void ResetAllTimeStatData()
     {
-        PlayerPrefs.SetFloat("ShootAccuracy", 0);
-        PlayerPrefs.SetFloat("DistanceTravelled", 0);
-        PlayerPrefs.SetFloat("PlayTime", 0);
-        PlayerPrefs.SetInt("EnemiesKilled", 0);
-        PlayerPrefs.SetInt("MoneyCollected", 0);
-        PlayerPrefs.SetInt("TotalScore", 0);
-        SetData();
+        PlayerPrefs.SetFloat(Statistics.AllShootAccuracy, 0);
+        PlayerPrefs.SetFloat(Statistics.AllDistanceTravelled, 0);
+        PlayerPrefs.SetFloat(Statistics.AllPlayTime, 0);
+        PlayerPrefs.SetInt(Statistics.AllEnemiesKilled, 0);
+        PlayerPrefs.SetInt(Statistics.AllMoneyCollected, 0);
+        PlayerPrefs.SetInt(Statistics.AllHighTotalScore, 0);
+        PlayerPrefs.SetInt(Statistics.AllOrbCollected, 0);
     }
         
 }
