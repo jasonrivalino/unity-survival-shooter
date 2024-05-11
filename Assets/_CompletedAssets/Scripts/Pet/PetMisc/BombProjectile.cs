@@ -11,7 +11,6 @@ namespace CompleteProject
         public float rotationSpeed = 360f; // Speed at which the projectile rotates (in degrees per second)
         Vector3 offset = new Vector3(0, 0.5f, 0);
         private bool isMoving = true;
-        private Animation anim;
         private Animator animator;
 
         private void Start()

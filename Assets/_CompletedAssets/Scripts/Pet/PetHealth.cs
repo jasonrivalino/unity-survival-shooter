@@ -9,8 +9,6 @@ namespace CompleteProject
         public float startingHealth = 50;
         public float currentHealth;
         public float sinkSpeed = 2.5f;
-        public AudioClip deathClip;
-        public AudioSource audioSource;
         Animator anim;
         bool isDead;
         bool isSinking;
@@ -39,7 +37,7 @@ namespace CompleteProject
                     return;
 
                 currentHealth -= amount;
-                Debug.Log("Enemy Health: " + currentHealth);
+                Debug.Log("Pet Health: " + currentHealth);
                 if (currentHealth <= 0)
                 {
                     Death();
