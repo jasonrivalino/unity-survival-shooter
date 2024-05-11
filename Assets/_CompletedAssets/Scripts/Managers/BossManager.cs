@@ -9,6 +9,8 @@ namespace CompleteProject
     public class BossManager : MonoBehaviour
     {
         public GameObject boss;
+
+        public StatisticManager statisticManager;
         EnemyHealth bossHealth;
         public UnityEvent interactAction;
 
@@ -44,6 +46,9 @@ namespace CompleteProject
                 shotgun.SetActive(false);
                 gunbarrelEnd.SetActive(false);
                 katana.SetActive(false);
+                statisticManager.UpdateData();
+                statisticManager.CalculateAllTimeStatistic();
+                statisticManager.showStatistic();
                 StartCoroutine(ActivateFunction());
             }
         }

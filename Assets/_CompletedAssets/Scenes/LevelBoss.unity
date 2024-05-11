@@ -1596,6 +1596,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUDCanvas (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3935974254808794679, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5158076066006132266, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
       propertyPath: katana
@@ -3130,6 +3135,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e772e5b9f45d07e408062e894107aaa6, type: 3}
+--- !u!114 &945251722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1116354047580473904, guid: e772e5b9f45d07e408062e894107aaa6,
+    type: 3}
+  m_PrefabInstance: {fileID: 945251721}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5adf33a49b7da49a887077de0a1a75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1038376789
 GameObject:
   m_ObjectHideFlags: 0
@@ -4977,6 +4994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 25265323}
+  statisticManager: {fileID: 945251722}
   interactAction:
     m_PersistentCalls:
       m_Calls:
