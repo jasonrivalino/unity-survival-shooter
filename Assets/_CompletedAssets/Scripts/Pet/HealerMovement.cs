@@ -15,7 +15,7 @@ namespace CompleteProject
         PetHealth petHealth;        // Reference to this enemy's health.
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
         private Animator animator;
-        bool canMove = false;
+        public bool canMove = false;
         public float moveSpeed;
         void Awake()
         {
@@ -47,6 +47,7 @@ namespace CompleteProject
                 else if (Vector3.Distance(player.position, pet.position) < 3)
                 {
                     animator.SetTrigger("idle");
+                    nav.SetDestination(pet.position);
                 }
             }
             else

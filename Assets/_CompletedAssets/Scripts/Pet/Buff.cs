@@ -6,7 +6,6 @@ namespace CompleteProject
 {
     public class Buff : MonoBehaviour
     {
-        public string enemyTag = "Enemy";
         public Transform owner;
         PetHealth petHealth;        // Reference to this pet's health.
         EnemyHealth ownerHealth;

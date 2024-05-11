@@ -16,13 +16,9 @@ namespace CompleteProject
 
         void Start()
         {
-            Debug.Log("Start method called.");
             pet = transform;
             animator = pet.GetComponent<Animator>();
-            if (animator == null)
-            {
-                Debug.LogError("Animator component not found on GameObject: " + gameObject.name);
-            }
+
         }
 
         public override void attack(bool ranged = true)

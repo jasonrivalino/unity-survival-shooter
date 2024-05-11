@@ -108,7 +108,6 @@ GameObject:
   - component: {fileID: 178560101459360467}
   - component: {fileID: 6096312193273766057}
   - component: {fileID: -6541114117943995370}
-  - component: {fileID: -184371437475910449}
   - component: {fileID: 2930937254909909696}
   - component: {fileID: -8520458214133471887}
   - component: {fileID: -902424973161483714}
@@ -186,32 +185,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!143 &-184371437475910449
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662468794185850985}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 1
-  m_Radius: 0.3
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &2930937254909909696
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -263,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTag: Enemy
-  speed: 6
+  speed: 3
 --- !u!114 &6883497329515407097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,8 +252,6 @@ MonoBehaviour:
   startingHealth: 50
   currentHealth: 0
   sinkSpeed: 2.5
-  deathClip: {fileID: 8300000, guid: fd27dad5b50788d49834b1ba9c84b66a, type: 3}
-  audioSource: {fileID: 0}
 --- !u!114 &684789188047177027
 MonoBehaviour:
   m_ObjectHideFlags: 0

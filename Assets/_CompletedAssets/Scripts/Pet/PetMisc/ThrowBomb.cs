@@ -21,9 +21,6 @@ namespace CompleteProject
         // Update is called once per frame
         public override void attack(bool ranged = true)
         {
-            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-            string currentStateName = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
-            if (currentStateName != "mon00_damage")
             animator.SetTrigger("damage");
             BombProjectile bombProjectile = projectilePrefabs.GetComponent<BombProjectile>();
             bombProjectile.target = this.target;
@@ -33,10 +30,6 @@ namespace CompleteProject
         public override void walk()
         {
             animator.SetTrigger("walk");
-            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-            string currentStateName = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
-
-            Debug.Log("Current state name: " + currentStateName);
         }
 
         public override void die()
