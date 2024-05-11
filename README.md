@@ -49,14 +49,17 @@ Untuk memainkan game, clone repository ini, lalu buka Unity Editor, buka scene M
 ![Shop](./Screenshots/shop.png)
 ### Save & Load Game
 Save Game
+
 ![Save Game](./Screenshots/savegame.png)
+
 Load Game
+
 ![Load Game](./Screenshots/loadgame.png)
 ### Statistik
 ![Stats](./Screenshots/statistik.png)
 ### Settings
 ![Settings](./Screenshots/settings.png)
-### Statistik
+### Pause Menu
 ![Pause Menu](./Screenshots/pausemenu.png)
 
 
