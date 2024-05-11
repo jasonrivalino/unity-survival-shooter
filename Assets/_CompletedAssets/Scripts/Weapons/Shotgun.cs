@@ -98,10 +98,6 @@ namespace CompleteProject
         IEnumerator DestroyLine(GameObject shootLineObject) { 
             float timeDisplay = timeBetweenAttack* effectsDisplayTime;
 
-            if (enemyHealth.currentHealth <= 0) { 
-                timeDisplay = 0;
-            }
-
             while (timeDisplay > 0) { 
                 timeDisplay-= Time.deltaTime;
                 yield return null;
