@@ -8,8 +8,8 @@ Game ini memiliki storyline berupa Jirna yang mengalami mimpi buruk, di mana dir
 Terdapat 4 buah jenis mob:
 - Keroco: Makhluk berwarna pink yang gesit dan membawa katana.
 - Kepala keroco: Makhluk kuning yang besar dan melompat, memiliki shotgun dan dapat meng-spawn keroco setiap 25 detik.
-- Jenderal: Makhluk yang memiliki bentuk seperti iblis. Jenderal dapat menyerang dalam jarak dekat dan menggunakan sword sebagai alat serangnya. Jenderal mampu 
-- Boss/Raja: Setiap ada pemain yang mendekatinya dalam jarak tertentu, pemain tersebut akan mengalami perlambatan gerak, penurunan nilai serangan, dan pengurangan nyawa tiap detik
+- Jenderal: Makhluk yang memiliki bentuk seperti iblis. Jenderal dapat menyerang dalam jarak dekat dan menggunakan sword sebagai alat serangnya. Jenderal mampu untuk memberikan damage kepada pemain dalam jarak tertentu dan memiliki 1 buah pet.
+- Boss/Raja: Setiap ada pemain yang mendekatinya dalam jarak tertentu, pemain tersebut akan mengalami perlambatan gerak, penurunan nilai serangan, dan pengurangan nyawa tiap detik. Boss juga dapat menyerang dengan shotgun dan memiliki 2 buah pet.
 
 Pemain memiliki 3 buah weapon:
 - Gun: Menembak peluru yang memiliki range tidak terbatas. 
@@ -47,10 +47,18 @@ Untuk memainkan game, clone repository ini, lalu buka Unity Editor, buka scene M
 ![Town Scene](./Screenshots/town.png)
 ### Shop
 ![Shop](./Screenshots/shop.png)
+### Save & Load Game
+Save Game
+![Save Game](./Screenshots/savegame.png)
+Load Game
+![Load Game](./Screenshots/loadgame.png)
+### Statistik
+![Stats](./Screenshots/statistik.png)
+### Settings
+![Settings](./Screenshots/settings.png)
+### Statistik
+![Pause Menu](./Screenshots/pausemenu.png)
 
-![Gameplay](./Screenshots/gameplay.png)
-![Town Scene](./Screenshots/town.png)
-![Shop](./Screenshots/shop.png)
 
 ## Pembagian kerja anggota kelompok
 
