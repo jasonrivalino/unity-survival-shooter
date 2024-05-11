@@ -12,6 +12,7 @@ namespace CompleteProject
         public Text speedUpTimeText;
         public Text speedUpText;
         int movementCount = 0; // Variable to count every movement the player does
+        float distanceTravelled = 0f; // Variable to store the distance travelled by the player
 
 
         Vector3 movement;                   // The vector to store the direction of the player's movement.
@@ -77,6 +78,14 @@ namespace CompleteProject
 
             // Move the player to it's current position plus the movement.
             playerRigidbody.MovePosition(transform.position + movement);
+
+            // Calculate distance travelled
+            distanceTravelled += movement.magnitude;
+        }
+
+        public float GetDistanceTravelled()
+        {
+            return distanceTravelled;
         }
 
 

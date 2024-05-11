@@ -158,18 +158,23 @@ namespace CompleteProject
                     // Try and find an EnemyHealth script on the gameobject hit.
                     if (isPlayerOwner)
                     {
+                        // if miss just add 1 to totalShootCount
+                        if (shootHit.collider.TryGetComponent<EnemyHealth>(out var enemyHealth) == false && shootHit.collider.TryGetComponent<PetHealth>(out var petHealth) == false)
+                        {
+                            totalShootCount += 1;
+                        }
                         // If the EnemyHealth component exist...
-                        if (shootHit.collider.TryGetComponent<EnemyHealth>(out var enemyHealth))
+                        if (shootHit.collider.TryGetComponent<EnemyHealth>(out enemyHealth))
                         {
                             // ... the enemy should take damage.
                             float bulletDamage = countBulletDamage(shootHit.point);
                             Debug.Log("Peluru ke-" + i.ToString() + " damage: " + bulletDamage);
 
                             hitCount += 1;
-                            Debug.Log("Hit Count: " + hitCount);
+                            totalShootCount += 1;
                             enemyHealth.TakeDamage(bulletDamage, shootHit.point);
                         }
-                        if (shootHit.collider.TryGetComponent<PetHealth>(out var petHealth))
+                        if (shootHit.collider.TryGetComponent<PetHealth>(out petHealth))
                         {
                             // ... the enemy should take damage.
                             if (shootHit.collider.tag == "PetEnemy")

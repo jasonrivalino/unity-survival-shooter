@@ -5,7 +5,13 @@ public class SceneStopwatch : MonoBehaviour
 {
     public Text timerText;
     private float startTime;
+    private float elapsedTime;
     private bool isTimerRunning = false;
+
+    public float GetElapsedTime()
+    {
+        return elapsedTime;
+    }
 
     void Start()
     {
@@ -18,7 +24,7 @@ public class SceneStopwatch : MonoBehaviour
         if (isTimerRunning)
         {
             // Calculate the elapsed time since the stopwatch started
-            float elapsedTime = Time.time - startTime;
+            elapsedTime = Time.time - startTime;
 
             // Update the timer text
             UpdateTimerText(elapsedTime);

@@ -106,16 +106,23 @@ namespace CompleteProject
                 {
                     // Try and find an EnemyHealth script on the gameobject hit.
                     EnemyHealth enemyHealth = shootHit.collider.GetComponent<EnemyHealth>();
+                    // if miss just add 1 to totalShootCount
+                    if (enemyHealth == null && petHealth == null)
+                    {
+                        totalShootCount += 1;
+                    }
+
                     // If the EnemyHealth component exist...
                     if (enemyHealth != null)
                     {
                         // ... the enemy should take damage.
                         enemyHealth.TakeDamage(damagePerAttack * (1f + powerUp), shootHit.point);
                         hitCount += 1;
-                        Debug.Log("Hit Count: " + hitCount);
+                        totalShootCount += 1;
                     }
                     if (petHealth != null && shootHit.collider.gameObject.tag == "PetEnemy")
                     {
+
                         petHealth.TakeDamage(damagePerAttack * (1f + powerUp));
                     }
                 }
