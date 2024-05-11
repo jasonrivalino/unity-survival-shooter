@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 24fbae9580fab304196a7bc8bfef284e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - healClip: {fileID: 8300000, guid: 74b1e4ce1448eaf489c503bc9b2e792e, type: 3}
+  executionOrder: 300
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

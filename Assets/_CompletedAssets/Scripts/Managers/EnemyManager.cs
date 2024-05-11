@@ -5,32 +5,55 @@ namespace CompleteProject
     public class EnemyManager : MonoBehaviour
     {
         public PlayerHealth playerHealth;       // Reference to the player's heatlh.
-        public GameObject enemy;                // The enemy prefab to be spawned.
+        public UnityEngine.GameObject enemy;                // The enemy prefab to be spawned.
         public float spawnTime = 3f;            // How long between each spawn.
         public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
 
-
-        void Start ()
+        void Start()
         {
             // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
-            InvokeRepeating ("Spawn", spawnTime, spawnTime);
+            InvokeRepeating("Spawn", spawnTime, spawnTime);
+
+            // set spawn time based on difficulty level mudah = 5, normal = 3, sulit = 2
+          
+            switch (PlayerPrefs.GetString("Difficulty", "mudah"))
+            {
+                case "mudah":
+                    spawnTime = 5f;
+                    break;
+                case "normal":
+                    spawnTime = 3f;
+                    break;
+                case "sulit":
+                    spawnTime = 2f;
+                    break;
+                default:
+                    spawnTime = 5f;
+                    break;
+            }
+    
         }
 
 
-        void Spawn ()
+        void Spawn()
         {
             // If the player has no health left...
-            if(playerHealth.currentHealth <= 0f)
+            if (playerHealth.currentHealth <= 0f)
             {
                 // ... exit the function.
                 return;
             }
 
             // Find a random index between zero and one less than the number of spawn points.
-            int spawnPointIndex = Random.Range (0, spawnPoints.Length);
+            int spawnPointIndex = Random.Range(0, spawnPoints.Length);
 
             // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-            Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        }
+
+        public void DisableEnemy()
+        {
+            enemy.SetActive(false);
         }
     }
 }
