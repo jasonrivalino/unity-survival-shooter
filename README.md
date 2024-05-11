@@ -48,6 +48,10 @@ Untuk memainkan game, clone repository ini, lalu buka Unity Editor, buka scene M
 ### Shop
 ![Shop](./Screenshots/shop.png)
 
+![Gameplay](./Screenshots/gameplay.png)
+![Town Scene](./Screenshots/town.png)
+![Shop](./Screenshots/shop.png)
+
 ## Pembagian kerja anggota kelompok
 
 | Nama                      | NIM       | Pembagian kerja     |
