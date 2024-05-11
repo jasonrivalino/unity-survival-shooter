@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8849857974068889211}
   - component: {fileID: 5238843749234509961}
+  - component: {fileID: 8715392843248018793}
   m_Layer: 0
   m_Name: ShotgunLine
   m_TagString: Untagged
@@ -136,3 +137,25 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &8715392843248018793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209258724073731464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175848193c5e7f148bff2f9d0dacbc3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerAttack: 0
+  timeBetweenAttack: 0
+  powerUp: 0
+  isUsed: 0
+  isPlayerOwner: 1
+  range: 10
+  bulletsPerShoot: 7
+  inaccuracyDistance: 2
+  shotgunLine: {fileID: 0}
+  faceLight: {fileID: 0}
