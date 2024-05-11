@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt(Statistics.MoneyCollected, 0);
         PlayerPrefs.SetInt(Statistics.TotalScore, 0);
         PlayerPrefs.SetInt(Statistics.OrbCollected, 0);
+        PlayerPrefs.SetInt("DeathCount", 0);
         PlayerPrefs.Save();
     }
 
