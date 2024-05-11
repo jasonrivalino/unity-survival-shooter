@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
   enemy: {fileID: 3875457313305475475, guid: c404faf04981f284896deb98cfdf1b9f, type: 3}
-  spawnTime: 15
+  spawnTime: 10
   spawnPoints:
   - {fileID: 2110588830}
 --- !u!4 &14871712
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
   enemy: {fileID: 4089604486440164585, guid: 2a35f043e94a50444a270b4670bfb66b, type: 3}
-  spawnTime: 15
+  spawnTime: 10
   spawnPoints:
   - {fileID: 854501577}
 --- !u!114 &14871714
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
   enemy: {fileID: 4795060569972924578, guid: db2b73e90c38b0d4a8d5c8c5b99fad1c, type: 3}
-  spawnTime: 15
+  spawnTime: 10
   spawnPoints:
   - {fileID: 1812440275}
 --- !u!1 &25265323 stripped
@@ -4280,6 +4280,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
       propertyPath: speedUpText
       value: 
       objectReference: {fileID: 433861361}
@@ -4299,6 +4303,10 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 433861358}
+    - target: {fileID: 13600000, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
+      propertyPath: m_Radius
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 399669218063535372, guid: 4e5a0d387dc27394b81600988ad0216f,
         type: 3}
       propertyPath: powerUpText
