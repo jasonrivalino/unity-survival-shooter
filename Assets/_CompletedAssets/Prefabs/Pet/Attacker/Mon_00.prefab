@@ -30613,7 +30613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTag: Enemy
-  speed: 8
+  speed: 4
 --- !u!114 &5535656724074623742
 MonoBehaviour:
   m_ObjectHideFlags: 0
