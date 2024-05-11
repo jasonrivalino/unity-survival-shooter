@@ -20,6 +20,7 @@ namespace CompleteProject
         Light gunLight;                                 // Reference to the light component.
         public Light faceLight;								// Duh
         float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
+        EnemyHealth enemyHealth;                        // Reference to the EnemyHealth script.
 
         void Awake()
         {
@@ -35,6 +36,8 @@ namespace CompleteProject
             // Setup the physical 3D reference
             weapon= UnityEngine.GameObject.FindGameObjectsWithTag("Shotgun")[0];
             weapon2 = UnityEngine.GameObject.FindGameObjectsWithTag("Shotgun")[1];
+
+            enemyHealth = GetComponent<EnemyHealth>();
 
             // UnUse weapon at init state of game
             UnUseWeapon();
@@ -95,10 +98,15 @@ namespace CompleteProject
         IEnumerator DestroyLine(GameObject shootLineObject) { 
             float timeDisplay = timeBetweenAttack* effectsDisplayTime;
 
+            if (enemyHealth.currentHealth <= 0) { 
+                timeDisplay = 0;
+            }
+
             while (timeDisplay > 0) { 
                 timeDisplay-= Time.deltaTime;
                 yield return null;
             }
+            
             shootLineObject.GetComponent<LineRenderer>().enabled = false;
             Destroy(shootLineObject);
         }
