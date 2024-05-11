@@ -142,7 +142,6 @@ GameObject:
   - component: {fileID: 1221083948262841476}
   - component: {fileID: 1691260113314563210}
   - component: {fileID: 3950212216661384700}
-  - component: {fileID: -8206509309814146372}
   - component: {fileID: 8397285175264328931}
   - component: {fileID: 437417870373635743}
   - component: {fileID: -4521361119162165085}
@@ -215,32 +214,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!143 &-8206509309814146372
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997902569578628670}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 1
-  m_Radius: 0.4
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8397285175264328931
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -295,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137a031435f14704792bd74bc525b77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 3
 --- !u!114 &-4403744560476453840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,8 +284,6 @@ MonoBehaviour:
   startingHealth: 50
   currentHealth: 0
   sinkSpeed: 2.5
-  deathClip: {fileID: 8300000, guid: fd27dad5b50788d49834b1ba9c84b66a, type: 3}
-  audioSource: {fileID: 0}
 --- !u!82 &-7638597091113200153
 AudioSource:
   m_ObjectHideFlags: 0
