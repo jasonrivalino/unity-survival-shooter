@@ -1813,6 +1813,16 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1091976340}
+    - target: {fileID: 4564212333443853797, guid: 31db2b96ec2925347875a65b3aaea693,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 391.5261
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564212333443853797, guid: 31db2b96ec2925347875a65b3aaea693,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.7919
+      objectReference: {fileID: 0}
     - target: {fileID: 5811538227032464787, guid: 31db2b96ec2925347875a65b3aaea693,
         type: 3}
       propertyPath: m_Name

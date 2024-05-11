@@ -3572,6 +3572,16 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 363229162}
+    - target: {fileID: 8283325633908098608, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 356.7753
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283325633908098608, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9.266785
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

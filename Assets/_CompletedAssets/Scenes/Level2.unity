@@ -4337,6 +4337,16 @@ PrefabInstance:
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ReadCheatInput
       objectReference: {fileID: 0}
+    - target: {fileID: 6497108586751928660, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 96.599976
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497108586751928660, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -27.400024
+      objectReference: {fileID: 0}
     - target: {fileID: 7137992207659941092, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
       propertyPath: pointsText
@@ -4357,6 +4367,31 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1413291112}
+    - target: {fileID: 8283325633908098608, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283325633908098608, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283325633908098608, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 423.9603
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283325633908098608, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283325633908098608, guid: 420d052720d6dee47abc3b3b63b1264c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.791687
+      objectReference: {fileID: 0}
     - target: {fileID: 9207442082530403052, guid: 420d052720d6dee47abc3b3b63b1264c,
         type: 3}
       propertyPath: transition
