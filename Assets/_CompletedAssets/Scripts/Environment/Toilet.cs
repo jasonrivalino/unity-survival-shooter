@@ -9,6 +9,7 @@ public class Toilet : MonoBehaviour
     public void Interact()
     {
         saveCanvas.enabled = true;
+        Time.timeScale = 0;
         Debug.Log("Interact save");
     }
 
@@ -18,6 +19,7 @@ public class Toilet : MonoBehaviour
         // if (Input.GetKeyDown(KeyCode.Escape) || (shop != null && !shop.activeSelf))
         {
             saveCanvas.enabled = false;
+            Time.timeScale = 1;
         }
     }
 }
