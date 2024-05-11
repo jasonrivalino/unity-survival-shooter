@@ -34,6 +34,7 @@ public class SaveSlot : MonoBehaviour
         // No data for this profileId
         if (gameData == null) 
         {
+            slotName.text = "Empty Slot";
             hasData = false;
             noDataUI.SetActive(true);
             hasDataUI.SetActive(false);
@@ -54,11 +55,6 @@ public class SaveSlot : MonoBehaviour
             score.text = gameData.score.ToString();
             // playTime.text = gameData.playTime;
         }
-    }
-
-    public string GetProfileId() 
-    {
-        return profileId;
     }
 
     public string GetSlotName() 

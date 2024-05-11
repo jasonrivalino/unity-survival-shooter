@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Xml.Serialization;
 using CompleteProject;
 using UnityEngine;
 using UnityEngine.UI;
@@ -51,6 +50,11 @@ public class LoadMenu : MonoBehaviour {
             confirmationDialog.ActivateDialog (
                 "Load this save?", "Load", "Cancel",
                  () => {
+                    
+                    MainMenu.ResetCheatData();
+                    MainMenu.ResetGameStatData();
+                    MainMenu.ResetPetsData();
+
                     LoadGame(saveSlot.ProfileId);
                  },
                  () => {
@@ -65,7 +69,7 @@ public class LoadMenu : MonoBehaviour {
         confirmationDialog.ActivateDialog (
             "Delete this save?", "Delete", "Cancel",
             () => {
-                SaveManager.instance.DeletePlayer(saveSlot.ProfileId);
+                LoadManager.instance.DeletePlayer(saveSlot.ProfileId);
                 saveSlot.SetData(null);
                 EnableInteraction();
             },
@@ -81,7 +85,13 @@ Data yang harus sama ketika selesai load
     public void LoadGame(string profileId)
     {
         DisableInteraction();
-        GameData gameData = SaveManager.instance.LoadPlayer(profileId);
+        GameData gameData = LoadManager.instance.LoadPlayer(profileId);
+        
+
+        MainMenu.ResetGameStatData();
+        MainMenu.ResetPetsData();
+        MainMenu.ResetOrbData();
+
         levelLoader.LoadLevelString(gameData.sceneName);
     }
 
@@ -89,7 +99,7 @@ Data yang harus sama ketika selesai load
     {
         gameObject.SetActive(true);
 
-        Dictionary<string, GameData> players = DataFileHandler.LoadAllPlayers(SaveManager.instance.dirPath, SaveManager.instance.fileName);
+        Dictionary<string, GameData> players = DataFileHandler.LoadAllPlayers(LoadManager.instance.dirPath, LoadManager.instance.fileName);
 
         foreach (SaveSlot saveSlot in saveSlots) 
         {
