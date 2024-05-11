@@ -43,12 +43,12 @@ public class StatisticManager : MonoBehaviour
         shootAccuracy = (shootAccuracy + accuracy) / 2;
         distanceTravelled = distanceTravelled + playerMovement.GetDistanceTravelled();
         playTime = playTime + sceneStopwatch.GetElapsedTime();
-        enemiesKilled = enemiesKilled + EnemyHealth.deathCount;
+        enemiesKilled = enemiesKilled + PlayerPrefs.GetInt("DeathCount", 0);
         moneyCollected = moneyCollected + MoneyManager.money;
         totalScore = totalScore + ScoreManager.score;
         orbCollected = orbCollected + PlayerPrefs.GetInt("numDamageOrbPicked", 0) + PlayerPrefs.GetInt("numSpeedOrbPicked", 0) + PlayerPrefs.GetInt("numHealthOrbPicked", 0);
 
-        Debug.Log("StatisticManager::UpdateData()  EnemyHealth.deathCount: " + EnemyHealth.deathCount);
+        Debug.Log("StatisticManager::UpdateData()  EnemyHealth.deathCount: " + PlayerPrefs.GetInt("DeathCount", 0));
 
         PlayerPrefs.SetFloat(Statistics.ShootAccuracy, shootAccuracy);
         PlayerPrefs.SetFloat(Statistics.DistanceTravelled, distanceTravelled);

@@ -18,7 +18,7 @@ namespace CompleteProject
         CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
         bool isDead;                                // Whether the enemy is dead.
         bool isSinking;                             // Whether the enemy has started sinking through the floor.
-        public static int deathCount;               // The amount of death count.
+        // public static int deathCount;               // The amount of death count.
 
 
         void Awake()
@@ -34,7 +34,7 @@ namespace CompleteProject
             currentHealth = startingHealth;
 
             // reset death count
-            deathCount = 0;
+            // deathCount = 0;
         }
 
 
@@ -132,7 +132,9 @@ namespace CompleteProject
 
         public void deathCountIncrement()
         {
-            deathCount++;
+            int deathCount = PlayerPrefs.GetInt("DeathCount", 0);
+            PlayerPrefs.SetInt("DeathCount", deathCount + 1);
+            // deathCount++;
             Debug.Log("EnemyHealth::deathCountIncrement deathCount: " + deathCount);
         }
     }
