@@ -34,7 +34,13 @@ public class StatisticManager : MonoBehaviour
 
     public void UpdateData()
     {
-        shootAccuracy = (shootAccuracy + ((float) weapons.GetHitCount() / weapons.GetTotalShootCount())) / 2;
+        float accuracy = (float) weapons.GetHitCount() / weapons.GetTotalShootCount();
+        if (float.IsNaN(accuracy))
+        {
+            accuracy = 0f;
+        }
+
+        shootAccuracy = (shootAccuracy + accuracy) / 2;
         distanceTravelled = distanceTravelled + playerMovement.GetDistanceTravelled();
         playTime = playTime + sceneStopwatch.GetElapsedTime();
         enemiesKilled = enemiesKilled + EnemyHealth.deathCount;
