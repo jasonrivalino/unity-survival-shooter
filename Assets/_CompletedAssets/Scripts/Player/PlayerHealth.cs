@@ -7,7 +7,7 @@ namespace CompleteProject
 {
     public class PlayerHealth : MonoBehaviour
     {
-        public float startingHealth = 100f;                            // The amount of health the player starts the game with.
+        public float startingHealth = 125f;                            // The amount of health the player starts the game with.
         public float currentHealth;                                   // The current health the player has.
         public Slider healthSlider;                                 // Reference to the UI's health bar.
         public Image effectImage;                                   // Reference to an image to flash on the screen on being hurt.
@@ -33,8 +33,28 @@ namespace CompleteProject
             playerMovement = GetComponent<PlayerMovement>();
             riffle = GetComponentInChildren<Riffle>();
 
+            // set starting health based on difficulty level mudah = 100, normal = 50, sulit = 25
+            
+            switch (PlayerPrefs.GetString("Difficulty", "mudah"))
+            {
+                case "mudah":
+                    startingHealth = 125f;
+                    break;
+                case "normal":
+                    startingHealth = 100f;
+                    break;
+                case "sulit":
+                    startingHealth = 50f;
+                    break;
+                default:
+                    startingHealth = 125f;
+                    break;
+            }
+            
             // Set the initial health of the player.
             currentHealth = startingHealth;
+
+
         }
 
 

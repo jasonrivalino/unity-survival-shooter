@@ -13,6 +13,25 @@ namespace CompleteProject
         {
             // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
             InvokeRepeating("Spawn", spawnTime, spawnTime);
+
+            // set spawn time based on difficulty level mudah = 5, normal = 3, sulit = 2
+          
+            switch (PlayerPrefs.GetString("Difficulty", "mudah"))
+            {
+                case "mudah":
+                    spawnTime = 5f;
+                    break;
+                case "normal":
+                    spawnTime = 3f;
+                    break;
+                case "sulit":
+                    spawnTime = 2f;
+                    break;
+                default:
+                    spawnTime = 5f;
+                    break;
+            }
+    
         }
 
 
