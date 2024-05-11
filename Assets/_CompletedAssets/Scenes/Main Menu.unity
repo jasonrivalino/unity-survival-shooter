@@ -1862,7 +1862,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -281, y: -87.662}
+  m_AnchoredPosition: {x: -271, y: -87.662}
   m_SizeDelta: {x: 236.4473, y: 50.8493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565725898
@@ -1898,7 +1898,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Max Health\t  : 125\nenemy spaw rate : 2s"
+  m_Text: "Max Health\t  : 125\nenemy spaw rate : 5s"
 --- !u!222 &565725899
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6231,7 +6231,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Max Health\t  : 75\nenemy spaw rate : 1s"
+  m_Text: "Max Health\t  : 75\nenemy spaw rate : 2s"
 --- !u!222 &1511892639
 CanvasRenderer:
   m_ObjectHideFlags: 0
