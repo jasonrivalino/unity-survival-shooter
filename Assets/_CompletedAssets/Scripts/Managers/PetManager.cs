@@ -79,9 +79,25 @@ namespace CompleteProject
         {
             for (int  i = 0;  i < petCount;  i++)
             {
-                turtlePrefab.TryGetComponent<Buff>(out var buff);
-                buff.owner = owner;
-                Instantiate(turtlePrefab, owner.position, owner.rotation);
+                int randomPet = Random.Range(0, 3);
+                if (randomPet == 0)
+                {
+                    turtlePrefab.TryGetComponent<Buff>(out var buff);
+                    buff.owner = owner;
+                    Instantiate(turtlePrefab, owner.position, owner.rotation);
+                }
+                else if (randomPet == 1)
+                {
+                    slimePrefab.TryGetComponent<Buff>(out var buff);
+                    buff.owner = owner;
+                    Instantiate(slimePrefab, owner.position, owner.rotation);
+                }
+                else
+                {
+                    batPrefab.TryGetComponent<Buff>(out var buff);
+                    buff.owner = owner;
+                    Instantiate(batPrefab, owner.position, owner.rotation);
+                }
             }
         }
         void Update()

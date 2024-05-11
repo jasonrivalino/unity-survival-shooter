@@ -29,7 +29,7 @@ namespace CompleteProject
             yield return new WaitForSeconds(4f);
             while (petHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
             {
-                if (Vector3.Distance(player.position, transform.position) <= healRange)
+                if (Vector3.Distance(player.position, transform.position) <= healRange && transform.gameObject.GetComponent<HealerMovement>().canMove)
                 {
                     healAudio.PlayOneShot(healClip);
                     playerHealth.Heal(healAmount);
