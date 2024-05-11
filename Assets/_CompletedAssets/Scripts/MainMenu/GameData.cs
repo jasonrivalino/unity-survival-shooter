@@ -1,40 +1,55 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 [System.Serializable]
 public class GameData
 {
+    // [Header("Only Slot Data")]
     public string slotName;
+    public string sceneName;
     public string playerName;
+    public string saveTime;
+
+    // [Header("Used Game Data")]
     public int money;
     public int score;
-    public string sceneName;
-    public string saveTime;
-    public string playTime;
-    // public string[] pets;
+    public float playTime;
+    public float accuracy;
+    public float distanceTravelled;
+    public int enemiesKilled;
+    public int orbCollected;
 
-    public GameData(string slotName, string playerName, int money, int score, string sceneName, string saveTime, string playTime)
+    public Dictionary<string, int> pets = new Dictionary<string, int>();
+
+    public GameData(string slotName, string sceneName, string playerName, string saveTime, int money, int score, float playTime, float accuracy, float distanceTravelled, int enemiesKilled, int orbCollected, Dictionary<string, int> pets)
     {
         this.slotName = slotName;
+        this.sceneName = sceneName;
         this.playerName = playerName;
+        this.saveTime = saveTime;
         this.money = money;
         this.score = score;
-        this.sceneName = sceneName;
-        this.saveTime = saveTime;
         this.playTime = playTime;
-        // this.pets = pets;
+        this.accuracy = accuracy;
+        this.distanceTravelled = distanceTravelled;
+        this.enemiesKilled = enemiesKilled;
+        this.orbCollected = orbCollected;
+        this.pets = pets;
     }
 
-    public string toString()
+    
+    override public string ToString()
     {
-        return "Slot Name: " + slotName + "\n" +
-               "Player Name: " + playerName + "\n" +
-               "Money: " + money + "\n" +
-               "Score: " + score + "\n" +
-               "Scene Name: " + sceneName + "\n" +
-               "Save Time: " + saveTime + "\n" +
-               "Play Time: " + playTime + "\n";
-            //    "Pets: " + pets;
+        return "GameData:\n" + 
+            "slotName: " + slotName + "\n" +
+            "sceneName: " + sceneName + "\n" +
+            "playerName: " + playerName + "\n" +
+            "saveTime: " + saveTime + "\n" +
+            "money: " + money + "\n" +
+            "score: " + score + "\n" +
+            "playTime: " + playTime + "\n" +
+            "accuracy: " + accuracy + "\n" +
+            "distanceTravelled: " + distanceTravelled + "\n" +
+            "enemiesKilled: " + enemiesKilled + "\n" +
+            "pets: " + pets;
     }
 }
